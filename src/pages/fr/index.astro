@@ -1,0 +1,110 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../components/layout/Layout.astro";
+import EntryCard from "../../components/entry/EntryCard.astro";
+import SubscribeForm from "../../components/ui/SubscribeForm.astro";
+
+const entries = (await getCollection("entries-fr")).filter((entry) => !entry.data.draft);
+const fallbackEntries = (await getCollection("entries")).filter((entry) => !entry.data.draft);
+
+const source = entries.length > 0 ? entries : fallbackEntries;
+const sorted = source.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const latest = sorted.slice(0, 5);
+
+const categories = ["Economics", "Demographics", "Technology", "Governance", "Rankings"];
+const counts = categories.map((category) => ({
+  category,
+  count: sorted.filter((entry) => entry.data.category === category).length
+}));
+
+const latestEntry = sorted[0];
+---
+
+<Layout
+  title="Open Ordinal"
+  description="Analyse structuree des donnees africaines."
+  lang="fr"
+  canonical="https://openordinal.org/fr"
+>
+  <section class="archive-shell flex min-h-[calc(100vh-48px)] flex-col justify-center border-b border-rule">
+    <p class="ui-meta text-[11px] uppercase tracking-[0.18em] text-dim">Open Ordinal</p>
+    <h1 class="mt-4 max-w-3xl text-[56px] leading-[0.95] text-ink md:text-[72px]">Open Ordinal</h1>
+    <p class="mt-4 max-w-2xl text-[22px] text-ink">Analyse structuree des donnees africaines.</p>
+    <p class="mt-6 max-w-xl text-[19px] italic text-dim">"In God we trust. All others must bring data." - W. Edwards Deming</p>
+
+    <div class="mt-10 grid gap-6 border-t border-rule pt-6 md:grid-cols-2">
+      <div>
+        <p class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">Compteur d'entrees</p>
+        <p class="mt-2 text-[40px] leading-none text-ink">{sorted.length}</p>
+      </div>
+      <div>
+        <p class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">Derniere entree</p>
+        {
+          latestEntry ? (
+            <a class="mt-2 block text-[24px] leading-tight text-ink" href={`/fr/entries/${latestEntry.slug}`}>
+              {latestEntry.data.title_fr || latestEntry.data.title}
+            </a>
+          ) : (
+            <p class="mt-2 text-[18px] text-dim">Aucune entree pour le moment.</p>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-shell border-b border-rule">
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <h2 class="text-[34px] leading-tight text-ink">Dernieres entrees</h2>
+      <a href="/fr/archive" class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">Voir l'archive</a>
+    </div>
+
+    {
+      latest.length > 0 ? (
+        latest.map((entry) => <EntryCard entry={entry} lang="fr" />)
+      ) : (
+        <p class="text-[18px] text-dim">Les entrees apparaitront ici apres publication.</p>
+      )
+    }
+  </section>
+
+  <section class="archive-shell border-b border-rule">
+    <h2 class="text-[34px] leading-tight text-ink">Par categorie</h2>
+    <div class="mt-6 border-t border-rule">
+      {
+        counts.map((item) => (
+          <div class="flex items-center justify-between border-b border-rule py-4">
+            <span class="text-[24px] text-ink">{item.category}</span>
+            <span class="ui-meta text-[12px] text-dim">{item.count}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="archive-shell">
+    <h2 class="text-[34px] leading-tight text-ink">Declaration de methode</h2>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      Open Ordinal s'appuie sur des jeux de donnees publics, notamment la Banque mondiale,
+      la Banque africaine de developpement, les agences de l'ONU et les instituts statistiques nationaux,
+      pour produire des analyses structurees et reproductibles des conditions economiques et sociales en Afrique.
+    </p>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      Les outils d'IA assistent le nettoyage des donnees, la visualisation preliminaire et la redaction de plans
+      structurels. Toutes les interpretations sont revisees et ecrites par un humain. Quand un langage genere
+      par l'IA est utilise, il est traite comme un premier brouillon, pas comme une conclusion.
+    </p>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      Nous documentons les lacunes de donnees, reconnaissons les limites et evitons d'inferer une causalite
+      a partir d'une correlation. L'objectif n'est pas d'avoir raison sur tout; il est d'etre honnete sur ce
+      que les donnees peuvent et ne peuvent pas soutenir.
+    </p>
+    <div class="ui-meta mt-4 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.15em] text-dim">
+      <span class="border border-rule px-2 py-1">Sources d'abord</span>
+      <span class="border border-rule px-2 py-1">Flux assiste par IA</span>
+      <span class="border border-rule px-2 py-1">Contenu CC BY 4.0</span>
+    </div>
+    <div class="mt-8">
+      <SubscribeForm lang="fr" />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,95 @@
+---
+import Nav from "./Nav.astro";
+import Footer from "./Footer.astro";
+import DevThemeToggle from "../ui/DevThemeToggle.astro";
+import "../../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: "en" | "fr";
+  type?: "website" | "article";
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: Record<string, unknown>;
+}
+
+const {
+  title = "Open Ordinal",
+  description = "Structured analysis of African data.",
+  lang = "en",
+  type = "website",
+  canonical,
+  ogImage,
+  structuredData
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const site = Astro.site ?? new URL("https://openordinal.org");
+const canonicalUrl = canonical ?? new URL(pathname, site).toString();
+
+const enPath = pathname.startsWith("/fr")
+  ? pathname.replace(/^\/fr(?=\/|$)/, "") || "/"
+  : pathname;
+const frPath = pathname.startsWith("/fr") ? pathname : pathname === "/" ? "/fr" : `/fr${pathname}`;
+
+const enUrl = new URL(enPath, site).toString();
+const frUrl = new URL(frPath, site).toString();
+
+const ldJson =
+  structuredData ??
+  ({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Open Ordinal",
+    url: "https://openordinal.org"
+  } as Record<string, unknown>);
+
+const fullTitle = title.includes("Open Ordinal") ? title : `${title} - Open Ordinal`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Geist+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="fr" href={frUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(ldJson)}></script>
+
+    {import.meta.env.PROD && (
+      <script defer data-domain="openordinal.org" src="https://plausible.io/js/script.js"></script>
+    )}
+
+    <slot name="head" />
+  </head>
+
+  <body>
+    <Nav lang={lang} pathname={pathname} />
+    <main class="pt-12">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    {import.meta.env.DEV && <DevThemeToggle />}
+  </body>
+</html>

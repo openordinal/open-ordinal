@@ -1,0 +1,45 @@
+---
+const { lang = "en", compact = false } = Astro.props;
+const formAction = "https://buttondown.com/api/emails/embed-subscribe/openordinal";
+
+const copy =
+  lang === "fr"
+    ? {
+        label: "Recevez de nouvelles entrees par email.",
+        placeholder: "Votre email",
+        button: "S'abonner"
+      }
+    : {
+        label: "Get new entries by email.",
+        placeholder: "Your email",
+        button: "Subscribe"
+      };
+---
+
+<form
+  class:list={[
+    "subscribe-form border border-rule p-4",
+    compact ? "max-w-sm" : "max-w-xl"
+  ]}
+  action={formAction}
+  method="post"
+  target="_blank"
+>
+  <p class="ui-meta text-[11px] uppercase tracking-[0.15em] text-dim">{copy.label}</p>
+  <div class="mt-3 flex flex-col gap-2 sm:flex-row">
+    <input
+      class="ui-meta w-full border border-rule bg-paper px-3 py-2 text-[13px] text-ink outline-none"
+      type="email"
+      name="email"
+      autocomplete="email"
+      placeholder={copy.placeholder}
+      required
+    />
+    <button
+      class="ui-meta border border-rule px-4 py-2 text-[11px] uppercase tracking-[0.12em] hover:bg-ink hover:text-paper"
+      type="submit"
+    >
+      {copy.button}
+    </button>
+  </div>
+</form>

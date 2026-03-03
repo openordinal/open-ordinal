@@ -1,0 +1,31 @@
+---
+import Layout from "../components/layout/Layout.astro";
+
+const dataFiles = Object.keys(import.meta.glob("/src/content/data/*.csv"))
+  .map((path) => path.split("/").pop())
+  .filter((name) => name && name !== ".gitkeep");
+---
+
+<Layout
+  title="Data"
+  description="Downloadable datasets for Open Ordinal entries."
+  lang="en"
+  canonical="https://openordinal.org/data"
+>
+  <section class="archive-shell">
+    <h1 class="text-[46px] leading-tight text-ink">Data</h1>
+
+    {
+      dataFiles.length > 0 ? (
+        <ul class="mt-8 space-y-3 border-t border-rule pt-4">
+          {dataFiles.map((file) => <li class="ui-meta text-[13px] text-ink">{file}</li>)}
+        </ul>
+      ) : (
+        <p class="mt-6 max-w-2xl text-[20px] text-dim">
+          Data downloads coming soon. Raw data files are stored in the project repository.
+          <a href="https://github.com/openordinal/open-ordinal" target="_blank" rel="noreferrer"> GitHub repo</a>.
+        </p>
+      )
+    }
+  </section>
+</Layout>

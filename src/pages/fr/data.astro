@@ -1,0 +1,31 @@
+---
+import Layout from "../../components/layout/Layout.astro";
+
+const dataFiles = Object.keys(import.meta.glob("/src/content/data/*.csv"))
+  .map((path) => path.split("/").pop())
+  .filter((name) => name && name !== ".gitkeep");
+---
+
+<Layout
+  title="Donnees"
+  description="Jeux de donnees telechargeables pour les entrees Open Ordinal."
+  lang="fr"
+  canonical="https://openordinal.org/fr/data"
+>
+  <section class="archive-shell">
+    <h1 class="text-[46px] leading-tight text-ink">Donnees</h1>
+
+    {
+      dataFiles.length > 0 ? (
+        <ul class="mt-8 space-y-3 border-t border-rule pt-4">
+          {dataFiles.map((file) => <li class="ui-meta text-[13px] text-ink">{file}</li>)}
+        </ul>
+      ) : (
+        <p class="mt-6 max-w-2xl text-[20px] text-dim">
+          Telechargements de donnees bientot disponibles. Les fichiers de donnees brutes sont stockes dans le depot du projet.
+          <a href="https://github.com/openordinal/open-ordinal" target="_blank" rel="noreferrer"> Depot GitHub</a>.
+        </p>
+      )
+    }
+  </section>
+</Layout>

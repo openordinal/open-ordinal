@@ -1,0 +1,42 @@
+---
+const { lang = "en" } = Astro.props;
+const prefix = lang === "fr" ? "/fr" : "";
+const copy =
+  lang === "fr"
+    ? {
+        attribution: "Open Ordinal est un projet de Utopia UGX Group Ltd.",
+        contact: "Contact",
+        copyright: "(c) 2026 Open Ordinal. Contenu CC BY 4.0. Code MIT.",
+        privacy: "Confidentialite",
+        terms: "Conditions",
+        licenses: "Licences"
+      }
+    : {
+        attribution: "Open Ordinal is a project of Utopia UGX Group Ltd.",
+        contact: "Contact",
+        copyright: "(c) 2026 Open Ordinal. Content CC BY 4.0. Code MIT.",
+        privacy: "Privacy",
+        terms: "Terms",
+        licenses: "Licenses"
+      };
+---
+
+<footer class="border-t border-rule">
+  <div class="archive-shell">
+    <div>
+      <div>
+        <p class="ui-meta text-[11px] uppercase tracking-[0.18em] text-dim">Open Ordinal</p>
+        <p class="mt-2 max-w-lg text-[17px] leading-relaxed text-ink">{copy.attribution}</p>
+        <p class="ui-meta mt-3 text-[11px] text-dim">
+          {copy.contact}: <a href="mailto:hello@openordinal.org">hello@openordinal.org</a>
+        </p>
+        <p class="ui-meta mt-4 text-[10px] uppercase tracking-[0.14em] text-dim">{copy.copyright}</p>
+        <div class="ui-meta mt-3 flex flex-wrap gap-3 text-[10px] uppercase tracking-[0.12em] text-dim">
+          <a href={`${prefix}/legal/privacy`}>{copy.privacy}</a>
+          <a href={`${prefix}/legal/terms`}>{copy.terms}</a>
+          <a href={`${prefix}/legal/licenses`}>{copy.licenses}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

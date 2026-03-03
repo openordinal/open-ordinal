@@ -1,0 +1,14 @@
+---
+interface Props {
+  items?: string[];
+}
+
+const { items = [] }: Props = Astro.props;
+---
+
+<section class="my-8 border-t border-rule pt-4">
+  <h2 class="ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">Limitations</h2>
+  <ul class="mt-3 list-disc pl-5 text-[17px] text-ink">
+    {items.map((item) => <li class="mb-1">{item}</li>)}
+  </ul>
+</section>

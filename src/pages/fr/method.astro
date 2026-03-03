@@ -1,0 +1,49 @@
+---
+import Layout from "../../components/layout/Layout.astro";
+---
+
+<Layout
+  title="Methode"
+  description="Methodologie d'Open Ordinal."
+  lang="fr"
+  canonical="https://openordinal.org/fr/method"
+>
+  <section class="archive-shell entry-prose">
+    <h1 class="text-[46px] leading-tight text-ink">Methode</h1>
+
+    <h2>Hierarchie des sources</h2>
+    <p>Open Ordinal privilegie d'abord les donnees publiques officielles, puis les referentiels institutionnels reconnus, puis les jeux de reconstruction evalues par les pairs lorsque les donnees primaires manquent.</p>
+    <ol>
+      <li>Sources multilaterales et statistiques nationales (World Bank, IMF, AfDB, UN, agences nationales)</li>
+      <li>Referentiels institutionnels avec definitions documentees et historique de revision</li>
+      <li>Series de reconstruction academique quand les lacunes empechent la comparaison directe</li>
+    </ol>
+
+    <h2>Flux de collecte et normalisation</h2>
+    <ul>
+      <li>Collecter les series brutes et archiver les liens de source d'origine</li>
+      <li>Normaliser unites, fenetres temporelles et definitions avant comparaison</li>
+      <li>Generer graphiques et tableaux de synthese depuis le jeu nettoye</li>
+      <li>Documenter caveats, exclusions et incertitudes dans chaque entree</li>
+    </ul>
+
+    <h2>Limites du flux assiste par IA</h2>
+    <p>Les outils d'IA assistent les controles de nettoyage, les brouillons visuels preliminaires et la redaction structurelle. Le cadrage final, l'interpretation et la publication sont revus et rediges par un humain.</p>
+
+    <h2>Principes d'interpretation</h2>
+    <ul>
+      <li>Les donnees avant le recit</li>
+      <li>Les definitions avant les comparaisons</li>
+      <li>Les limites avant les conclusions</li>
+      <li>Aucune causalite deduite d'une simple correlation</li>
+    </ul>
+
+    <h2>Corrections et versionnage</h2>
+    <p>Les entrees sont des instantanes dates. Si un probleme est detecte, une nouvelle entree de correction est publiee et liee depuis l'originale. Les originales ne sont pas reecrites en silence.</p>
+
+    <h2>Reproductibilite et licences</h2>
+    <p>Le code est sous licence MIT. Le contenu et les donnees sont sous licence CC BY 4.0. Depot: <a href="https://github.com/openordinal/open-ordinal" target="_blank" rel="noreferrer">https://github.com/openordinal/open-ordinal</a>.</p>
+
+    <p class="ui-meta text-[12px] text-dim">Questions de methode et de politique: <a href="mailto:hello@openordinal.org">hello@openordinal.org</a></p>
+  </section>
+</Layout>

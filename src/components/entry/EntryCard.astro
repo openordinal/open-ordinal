@@ -1,0 +1,22 @@
+---
+const { entry, lang = "en" } = Astro.props;
+const href = lang === "fr" ? `/fr/entries/${entry.slug}` : `/entries/${entry.slug}`;
+const displayTitle = lang === "fr" ? entry.data.title_fr || entry.data.title : entry.data.title;
+const dateFmt = new Intl.DateTimeFormat(lang === "fr" ? "fr-FR" : "en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric"
+}).format(entry.data.date);
+---
+
+<article class="border-b border-rule py-4">
+  <a href={href} class="block hover:no-underline">
+    <div class="ui-meta flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-dim">
+      <span>{entry.data.entry_number}</span>
+      <span>{entry.data.category}</span>
+      <span>{dateFmt}</span>
+    </div>
+    <h3 class="mt-2 text-[30px] leading-tight text-ink">{displayTitle}</h3>
+    <p class="ui-meta mt-2 text-[11px] text-dim">{lang === "fr" ? entry.data.scope_fr || entry.data.scope : entry.data.scope}</p>
+  </a>
+</article>

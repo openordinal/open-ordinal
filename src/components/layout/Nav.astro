@@ -1,0 +1,72 @@
+---
+import LanguageSwitcher from "../ui/LanguageSwitcher.astro";
+
+const { lang = "en", pathname = "/" } = Astro.props;
+const prefix = lang === "fr" ? "/fr" : "";
+
+const links = [
+  { key: "archive", en: "Archive", fr: "Archive", href: `${prefix}/archive` },
+  { key: "data", en: "Data", fr: "Donnees", href: `${prefix}/data` },
+  { key: "method", en: "Method", fr: "Methode", href: `${prefix}/method` },
+  { key: "about", en: "About", fr: "A propos", href: `${prefix}/about` }
+];
+
+const homeHref = prefix || "/";
+
+const isActive = (href: string) =>
+  href === "/"
+    ? pathname === "/"
+    : pathname === href || pathname.startsWith(`${href}/`);
+---
+
+<nav class="fixed inset-x-0 top-0 z-50 h-12 border-b border-rule bg-paper/95 backdrop-blur-sm">
+  <div class="mx-auto flex h-full max-w-[1200px] items-center justify-between px-5">
+    <div class="flex items-center gap-6">
+      <a href={homeHref} class="text-xl font-medium text-ink hover:no-underline">Open Ordinal</a>
+
+      <div class="hidden items-center gap-4 md:flex">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "ui-meta text-[10px] uppercase tracking-[0.2em]",
+                isActive(link.href) ? "text-ink" : "text-dim hover:text-ink"
+              ]}
+            >
+              {lang === "fr" ? link.fr : link.en}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="hidden md:block">
+      <LanguageSwitcher lang={lang} pathname={pathname} />
+    </div>
+
+    <details class="ui-meta md:hidden">
+      <summary class="list-none cursor-pointer text-[10px] uppercase tracking-[0.2em] text-dim">Menu</summary>
+      <div class="absolute right-5 top-12 min-w-[170px] border border-rule bg-paper p-3">
+        <div class="flex flex-col gap-2">
+          {
+            links.map((link) => (
+              <a
+                href={link.href}
+                class:list={[
+                  "ui-meta text-[10px] uppercase tracking-[0.2em]",
+                  isActive(link.href) ? "text-ink" : "text-dim"
+                ]}
+              >
+                {lang === "fr" ? link.fr : link.en}
+              </a>
+            ))
+          }
+        </div>
+        <div class="mt-3 border-t border-rule pt-3">
+          <LanguageSwitcher lang={lang} pathname={pathname} />
+        </div>
+      </div>
+    </details>
+  </div>
+</nav>

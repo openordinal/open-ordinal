@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../components/layout/Layout.astro";
+import EntryCard from "../components/entry/EntryCard.astro";
+import SubscribeForm from "../components/ui/SubscribeForm.astro";
+
+const entries = (await getCollection("entries")).filter((entry) => !entry.data.draft);
+const sorted = entries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const latest = sorted.slice(0, 5);
+
+const categories = ["Economics", "Demographics", "Technology", "Governance", "Rankings"];
+const counts = categories.map((category) => ({
+  category,
+  count: sorted.filter((entry) => entry.data.category === category).length
+}));
+
+const latestEntry = sorted[0];
+---
+
+<Layout
+  title="Open Ordinal"
+  description="Structured analysis of African data."
+  lang="en"
+  canonical="https://openordinal.org/"
+>
+  <section class="archive-shell flex min-h-[calc(100vh-48px)] flex-col justify-center border-b border-rule">
+    <p class="ui-meta text-[11px] uppercase tracking-[0.18em] text-dim">Open Ordinal</p>
+    <h1 class="mt-4 max-w-3xl text-[56px] leading-[0.95] text-ink md:text-[72px]">Open Ordinal</h1>
+    <p class="mt-4 max-w-2xl text-[22px] text-ink">Structured analysis of African data.</p>
+    <p class="mt-6 max-w-xl text-[19px] italic text-dim">"In God we trust. All others must bring data." - W. Edwards Deming</p>
+
+    <div class="mt-10 grid gap-6 border-t border-rule pt-6 md:grid-cols-2">
+      <div>
+        <p class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">Entry counter</p>
+        <p class="mt-2 text-[40px] leading-none text-ink">{sorted.length}</p>
+      </div>
+      <div>
+        <p class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">Latest entry</p>
+        {
+          latestEntry ? (
+            <a class="mt-2 block text-[24px] leading-tight text-ink" href={`/entries/${latestEntry.slug}`}>
+              {latestEntry.data.title}
+            </a>
+          ) : (
+            <p class="mt-2 text-[18px] text-dim">No entries yet.</p>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-shell border-b border-rule">
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <h2 class="text-[34px] leading-tight text-ink">Latest entries</h2>
+      <a href="/archive" class="ui-meta text-[10px] uppercase tracking-[0.16em] text-dim">View full archive</a>
+    </div>
+
+    {
+      latest.length > 0 ? (
+        latest.map((entry) => <EntryCard entry={entry} lang="en" />)
+      ) : (
+        <p class="text-[18px] text-dim">Entries will appear here once publication starts.</p>
+      )
+    }
+  </section>
+
+  <section class="archive-shell border-b border-rule">
+    <h2 class="text-[34px] leading-tight text-ink">Browse by category</h2>
+    <div class="mt-6 border-t border-rule">
+      {
+        counts.map((item) => (
+          <div class="flex items-center justify-between border-b border-rule py-4">
+            <span class="text-[24px] text-ink">{item.category}</span>
+            <span class="ui-meta text-[12px] text-dim">{item.count}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="archive-shell">
+    <h2 class="text-[34px] leading-tight text-ink">Method statement</h2>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      Open Ordinal draws from publicly available datasets, including the World Bank, African Development Bank, UN agencies, and national statistical offices, to produce structured, reproducible analyses of African economic and social conditions.
+    </p>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      AI tools assist in data cleaning, preliminary visualisation, and drafting structural outlines. All interpretations are reviewed and authored by a human. Where AI-generated language is used, it is treated as a first draft, not a conclusion.
+    </p>
+    <p class="mt-4 max-w-3xl text-[20px] leading-relaxed text-ink">
+      We document data gaps, acknowledge limitations, and avoid inferring causality from correlation. The goal is not to be right about everything; it is to be honest about what the data can and cannot support.
+    </p>
+    <div class="ui-meta mt-4 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.15em] text-dim">
+      <span class="border border-rule px-2 py-1">Data sources first</span>
+      <span class="border border-rule px-2 py-1">AI-assisted workflow</span>
+      <span class="border border-rule px-2 py-1">CC BY 4.0 content</span>
+    </div>
+    <div class="mt-8">
+      <SubscribeForm lang="en" />
+    </div>
+  </section>
+</Layout>

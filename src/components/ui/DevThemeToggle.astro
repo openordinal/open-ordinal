@@ -1,0 +1,63 @@
+<div class="dev-theme-toggle no-print ui-meta" data-dev-theme-toggle>
+  <span class="dev-theme-toggle__label">Theme</span>
+  <button type="button" data-theme-choice="system">System</button>
+  <button type="button" data-theme-choice="light">Light</button>
+  <button type="button" data-theme-choice="dark">Dark</button>
+</div>
+
+<script is:inline>
+  const STORAGE_KEY = "openordinal-dev-theme";
+  const root = document.documentElement;
+  const toggle = document.querySelector("[data-dev-theme-toggle]");
+
+  if (toggle) {
+    const buttons = Array.from(toggle.querySelectorAll("button[data-theme-choice]"));
+
+    const setActive = (theme) => {
+      buttons.forEach((button) => {
+        const isActive = button.dataset.themeChoice === theme;
+        button.toggleAttribute("data-active", isActive);
+      });
+    };
+
+    const applyTheme = (theme) => {
+      if (theme === "light" || theme === "dark") {
+        root.setAttribute("data-theme", theme);
+      } else {
+        root.removeAttribute("data-theme");
+      }
+
+      setActive(theme);
+    };
+
+    let initialTheme = "system";
+
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === "light" || stored === "dark") {
+        initialTheme = stored;
+      }
+    } catch {
+      initialTheme = "system";
+    }
+
+    applyTheme(initialTheme);
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextTheme = button.dataset.themeChoice || "system";
+        applyTheme(nextTheme);
+
+        try {
+          if (nextTheme === "system") {
+            localStorage.removeItem(STORAGE_KEY);
+          } else {
+            localStorage.setItem(STORAGE_KEY, nextTheme);
+          }
+        } catch {
+          // Ignore storage access issues in strict browser modes.
+        }
+      });
+    });
+  }
+</script>

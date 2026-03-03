@@ -1,0 +1,90 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../components/layout/Layout.astro";
+import EntryHeader from "../../../components/entry/EntryHeader.astro";
+import StatBlock from "../../../components/entry/StatBlock.astro";
+import ChartBlock from "../../../components/entry/ChartBlock.astro";
+import LimitationsList from "../../../components/entry/LimitationsList.astro";
+import SourcesList from "../../../components/entry/SourcesList.astro";
+import TranslationNotice from "../../../components/ui/TranslationNotice.astro";
+
+export async function getStaticPaths() {
+  const [entriesEn, entriesFr] = await Promise.all([
+    getCollection("entries"),
+    getCollection("entries-fr")
+  ]);
+
+  const slugs = new Set([
+    ...entriesEn.filter((entry) => !entry.data.draft).map((entry) => entry.slug),
+    ...entriesFr.filter((entry) => !entry.data.draft).map((entry) => entry.slug)
+  ]);
+
+  return Array.from(slugs).map((slug) => ({ params: { slug } }));
+}
+
+const slug = Astro.params.slug ?? "";
+
+const [entriesEn, entriesFr] = await Promise.all([
+  getCollection("entries"),
+  getCollection("entries-fr")
+]);
+
+const frEntry = entriesFr.find((entry) => entry.slug === slug && !entry.data.draft);
+const enEntry = entriesEn.find((entry) => entry.slug === slug && !entry.data.draft);
+const entry = frEntry ?? enEntry;
+
+if (!entry) {
+  throw new Error(`Entry not found for slug: ${slug}`);
+}
+
+const { Content } = await entry.render();
+const isFallback = !frEntry && Boolean(enEntry);
+
+const title = frEntry
+  ? frEntry.data.title_fr || frEntry.data.title
+  : enEntry?.data.title || "Open Ordinal";
+
+const description =
+  (frEntry?.data.description || enEntry?.data.description) ||
+  `Analyse de ${entry.data.category} pour ${entry.data.scope_fr || entry.data.scope}.`;
+
+const canonical = `https://openordinal.org/fr/entries/${slug}`;
+const ogImage = `https://openordinal.org/og/${slug}.png`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  datePublished: entry.data.date.toISOString(),
+  inLanguage: isFallback ? "en" : "fr",
+  author: {
+    "@type": "Organization",
+    name: "Open Ordinal"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Open Ordinal"
+  },
+  mainEntityOfPage: canonical
+};
+---
+
+<Layout
+  title={title}
+  description={description}
+  lang="fr"
+  type="article"
+  canonical={canonical}
+  ogImage={ogImage}
+  structuredData={structuredData}
+>
+  {isFallback && <TranslationNotice />}
+
+  <article class="archive-shell entry-prose">
+    <EntryHeader entry={entry} lang="fr" />
+
+    <div class="mt-8">
+      <Content components={{ StatBlock, ChartBlock, LimitationsList, SourcesList }} />
+    </div>
+  </article>
+</Layout>

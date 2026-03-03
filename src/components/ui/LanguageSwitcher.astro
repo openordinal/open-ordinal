@@ -1,0 +1,19 @@
+---
+const { lang = "en", pathname = "/" } = Astro.props;
+
+const enPath = pathname.startsWith("/fr")
+  ? pathname.replace(/^\/fr(?=\/|$)/, "") || "/"
+  : pathname;
+
+const frPath = pathname.startsWith("/fr")
+  ? pathname
+  : pathname === "/"
+    ? "/fr"
+    : `/fr${pathname}`;
+---
+
+<div class="language-switcher ui-meta text-[10px] uppercase tracking-[0.2em]">
+  <a href={enPath} class:list={["px-1", lang === "en" ? "text-ink" : "text-dim"]}>EN</a>
+  <span class="text-dim">|</span>
+  <a href={frPath} class:list={["px-1", lang === "fr" ? "text-ink" : "text-dim"]}>FR</a>
+</div>

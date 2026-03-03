@@ -1,0 +1,31 @@
+---
+const {
+  message =
+    "Cette entree n'est pas encore disponible en francais. Vous lisez la version anglaise."
+} = Astro.props;
+---
+
+<div class="translation-notice" data-translation-notice>
+  <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-5 py-2 text-[12px] text-dim">
+    <p class="ui-meta">{message}</p>
+    <button
+      type="button"
+      class="ui-meta text-[10px] uppercase tracking-[0.12em] text-dim hover:text-ink"
+      data-dismiss-notice
+      aria-label="Dismiss translation notice"
+    >
+      Close
+    </button>
+  </div>
+</div>
+
+<script>
+  const button = document.querySelector("[data-dismiss-notice]");
+  const notice = document.querySelector("[data-translation-notice]");
+
+  if (button && notice) {
+    button.addEventListener("click", () => {
+      notice.remove();
+    });
+  }
+</script>

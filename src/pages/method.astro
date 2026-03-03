@@ -1,0 +1,49 @@
+---
+import Layout from "../components/layout/Layout.astro";
+---
+
+<Layout
+  title="Method"
+  description="Methodology for Open Ordinal analysis and publication workflow."
+  lang="en"
+  canonical="https://openordinal.org/method"
+>
+  <section class="archive-shell entry-prose">
+    <h1 class="text-[46px] leading-tight text-ink">Method</h1>
+
+    <h2>Data source hierarchy</h2>
+    <p>Open Ordinal prioritizes official public datasets first, then recognized institutional repositories, then peer-reviewed reconstruction datasets when primary data is unavailable.</p>
+    <ol>
+      <li>Multilateral and national statistical sources (World Bank, IMF, AfDB, UN, national agencies)</li>
+      <li>Institutional repositories with documented definitions and revision history</li>
+      <li>Academic reconstruction series when gaps prevent direct comparison</li>
+    </ol>
+
+    <h2>Collection and normalization workflow</h2>
+    <ul>
+      <li>Collect raw series and archive original source links</li>
+      <li>Normalize units, date windows, and definitions before comparison</li>
+      <li>Generate charts and summary tables from the cleaned dataset</li>
+      <li>Document caveats, exclusions, and uncertainty in each entry</li>
+    </ul>
+
+    <h2>AI-assisted workflow boundaries</h2>
+    <p>AI tools assist with data cleaning checks, preliminary visual drafts, and structural drafting. Final framing, interpretation, and publication decisions are human-reviewed and human-authored.</p>
+
+    <h2>Interpretation principles</h2>
+    <ul>
+      <li>Data before narrative</li>
+      <li>Definitions before comparisons</li>
+      <li>Limitations before conclusions</li>
+      <li>No causal claims from correlation alone</li>
+    </ul>
+
+    <h2>Corrections and versioning</h2>
+    <p>Entries are dated snapshots. If an issue is found, a new correction entry is published and linked from the original entry. Original entries are not silently rewritten.</p>
+
+    <h2>Reproducibility and licensing</h2>
+    <p>Code is licensed under MIT. Content and data are licensed under CC BY 4.0. Repository: <a href="https://github.com/openordinal/open-ordinal" target="_blank" rel="noreferrer">https://github.com/openordinal/open-ordinal</a>.</p>
+
+    <p class="ui-meta text-[12px] text-dim">Method and policy questions: <a href="mailto:hello@openordinal.org">hello@openordinal.org</a></p>
+  </section>
+</Layout>

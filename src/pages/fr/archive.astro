@@ -1,0 +1,212 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../components/layout/Layout.astro";
+import EntryCard from "../../components/entry/EntryCard.astro";
+
+const entriesFr = (await getCollection("entries-fr")).filter((entry) => !entry.data.draft);
+const entriesEn = (await getCollection("entries")).filter((entry) => !entry.data.draft);
+
+const entries = (entriesFr.length > 0 ? entriesFr : entriesEn).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const categories = ["All", "Economics", "Demographics", "Technology", "Governance", "Rankings"];
+---
+
+<Layout
+  title="Archive"
+  description="Archive complete des entrees Open Ordinal."
+  lang="fr"
+  canonical="https://openordinal.org/fr/archive"
+>
+  <Fragment slot="head">
+    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  </Fragment>
+
+  <section class="archive-shell">
+    <h1 class="text-[46px] leading-tight text-ink">Archive</h1>
+    <p class="mt-2 max-w-2xl text-[20px] text-dim">Toutes les entrees. Filtre par categorie. Pagination de 20 entrees.</p>
+
+    {
+      entries.length > 0 ? (
+        <>
+          <div class="no-print mt-8 border-y border-rule py-4">
+            <p class="ui-meta text-[10px] uppercase tracking-[0.14em] text-dim">Recherche archive</p>
+            <div id="archive-pagefind" class="mt-3"></div>
+            <p id="archive-pagefind-hint" class="ui-meta mt-2 hidden text-[10px] text-dim">
+              L'index de recherche est disponible apres un build de production.
+            </p>
+          </div>
+
+          <div class="no-print mt-8 grid gap-3 border-y border-rule py-3 md:grid-cols-[180px,1fr]">
+            <label class="ui-meta flex flex-col gap-1 text-[10px] uppercase tracking-[0.14em] text-dim">
+              Categorie
+              <select id="category-filter" class="border border-rule bg-paper px-2 py-2 text-[12px] text-ink">
+                {categories.map((category) => <option value={category}>{category}</option>)}
+              </select>
+            </label>
+            <div class="ui-meta hidden md:block"></div>
+          </div>
+
+          <ul id="archive-list" class="mt-2">
+            {
+              entries.map((entry) => (
+                <li
+                  data-archive-card
+                  data-category={entry.data.category}
+                  data-search={`${entry.data.title} ${entry.data.title_fr} ${entry.data.scope} ${entry.data.scope_fr}`.toLowerCase()}
+                >
+                  <EntryCard entry={entry} lang="fr" />
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="no-print mt-6 flex items-center justify-between border-t border-rule pt-4">
+            <button
+              id="archive-prev"
+              class="ui-meta border border-rule px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-dim disabled:opacity-40"
+              type="button"
+            >
+              Precedent
+            </button>
+            <p id="archive-page" class="ui-meta text-[10px] uppercase tracking-[0.15em] text-dim">Page 1</p>
+            <button
+              id="archive-next"
+              class="ui-meta border border-rule px-3 py-2 text-[10px] uppercase tracking-[0.15em] text-dim disabled:opacity-40"
+              type="button"
+            >
+              Suivant
+            </button>
+          </div>
+        </>
+      ) : (
+        <p class="mt-8 text-[20px] text-dim">Aucune entree publiee pour le moment.</p>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+  type PagefindUIConstructor = new (options: Record<string, unknown>) => unknown;
+
+  const initPagefind = () => {
+    const mount = document.getElementById("archive-pagefind");
+    const hint = document.getElementById("archive-pagefind-hint");
+
+    if (!(mount instanceof HTMLElement)) {
+      return;
+    }
+
+    const start = () => {
+      const pagefindCtor = (window as Window & { PagefindUI?: unknown }).PagefindUI;
+
+      if (typeof pagefindCtor !== "function") {
+        return;
+      }
+
+      const PagefindUI = pagefindCtor as PagefindUIConstructor;
+
+      new PagefindUI({
+        element: "#archive-pagefind",
+        resetStyles: false,
+        showSubResults: true,
+        pageSize: 8,
+        excerptLength: 16,
+        placeholder: "Rechercher entrees, perimetre et source"
+      });
+    };
+
+    if ((window as Window & { PagefindUI?: unknown }).PagefindUI) {
+      start();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "/pagefind/pagefind-ui.js";
+    script.async = true;
+    script.addEventListener("load", start);
+    script.addEventListener("error", () => {
+      if (hint instanceof HTMLElement) {
+        hint.classList.remove("hidden");
+      }
+    });
+    document.body.appendChild(script);
+  };
+
+  initPagefind();
+
+  const PAGE_SIZE = 20;
+  const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-archive-card]"));
+  const categoryFilter = document.getElementById("category-filter");
+  const prevButton = document.getElementById("archive-prev");
+  const nextButton = document.getElementById("archive-next");
+  const pageText = document.getElementById("archive-page");
+
+  let page = 1;
+
+  const getFilteredCards = () => {
+    const category = categoryFilter instanceof HTMLSelectElement ? categoryFilter.value : "All";
+
+    return cards.filter((card) => {
+      const cardCategory = card.getAttribute("data-category") || "";
+      const categoryMatch = category === "All" || cardCategory === category;
+      return categoryMatch;
+    });
+  };
+
+  const render = () => {
+    const filtered = getFilteredCards();
+    const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+
+    if (page > totalPages) {
+      page = totalPages;
+    }
+
+    cards.forEach((card) => {
+      card.style.display = "none";
+    });
+
+    const start = (page - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+
+    filtered.slice(start, end).forEach((card) => {
+      card.style.display = "block";
+    });
+
+    if (pageText) {
+      pageText.textContent = `Page ${page} sur ${totalPages}`;
+    }
+
+    if (prevButton instanceof HTMLButtonElement) {
+      prevButton.disabled = page <= 1;
+    }
+
+    if (nextButton instanceof HTMLButtonElement) {
+      nextButton.disabled = page >= totalPages;
+    }
+  };
+
+  if (categoryFilter) {
+    categoryFilter.addEventListener("change", () => {
+      page = 1;
+      render();
+    });
+  }
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      page -= 1;
+      render();
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      page += 1;
+      render();
+    });
+  }
+
+  render();
+</script>

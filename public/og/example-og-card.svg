@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-label="Open Ordinal example OG card">
+  <rect width="1200" height="627" fill="#f7f6f2" />
+
+  <line x1="60" y1="60" x2="1140" y2="60" stroke="#d8d6d0" stroke-width="1" />
+  <line x1="60" y1="567" x2="1140" y2="567" stroke="#d8d6d0" stroke-width="1" />
+
+  <text x="80" y="92" fill="#0f0f0f" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="2.6" text-transform="uppercase">OPEN ORDINAL</text>
+
+  <rect x="80" y="108" width="146" height="28" fill="none" stroke="#d8d6d0" stroke-width="1" />
+  <text x="93" y="126" fill="#1a3a5c" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="1.4">ECONOMICS</text>
+
+  <text x="80" y="292" fill="#0f0f0f" font-family="'EB Garamond', Georgia, serif" font-size="64" font-weight="500">
+    <tspan x="80" dy="0">Sub-Saharan Growth Slows</tspan>
+    <tspan x="80" dy="74">as Food Inflation Holds Above 12%</tspan>
+  </text>
+
+  <text x="80" y="474" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="0.7">Key datapoint: median food inflation (2025) = 12.4%</text>
+
+  <text x="1120" y="544" text-anchor="end" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="1.2">ENTRY 038 | 2026-03-03</text>
+</svg>
