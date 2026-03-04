@@ -365,9 +365,11 @@ const fullTitle = title.includes("Open Ordinal") ? title : `${title} - Open Ordi
 
           targets.forEach((target) => {
             target.classList.add("chart-tooltip-target");
-            if (!target.hasAttribute("tabindex")) {
+            const isNativeFocusable = target instanceof HTMLElement;
+            if (!target.hasAttribute("tabindex") && isNativeFocusable) {
               target.setAttribute("tabindex", "0");
             }
+            const supportsKeyboardTooltip = target.hasAttribute("tabindex");
 
             const payload = getTooltipPayload(target);
             if (payload && !target.hasAttribute("aria-label")) {
@@ -390,16 +392,18 @@ const fullTitle = title.includes("Open Ordinal") ? title : `${title} - Open Ordi
 
             target.addEventListener("pointerleave", onPointerLeave);
 
-            target.addEventListener("focus", () => {
-              showTooltip(target);
-            });
+            if (supportsKeyboardTooltip) {
+              target.addEventListener("focus", () => {
+                showTooltip(target);
+              });
 
-            target.addEventListener("blur", () => {
-              if (pinnedTarget) {
-                return;
-              }
-              hideTooltip();
-            });
+              target.addEventListener("blur", () => {
+                if (pinnedTarget) {
+                  return;
+                }
+                hideTooltip();
+              });
+            }
 
             target.addEventListener("click", (event) => {
               if (pinnedTarget === target) {
