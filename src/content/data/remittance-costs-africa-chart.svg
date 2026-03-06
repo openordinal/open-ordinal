@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="694" viewBox="0 0 980 694" role="img" aria-label="Highest remittance costs to Sub-Saharan African destinations in Q1 2025">
+<rect width="100%" height="100%" fill="var(--paper)"/>
+<line x1="260.00" y1="46" x2="260.00" y2="634" stroke="var(--rule)" stroke-width="1"/>
+<text x="260.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">0</text>
+<line x1="330.00" y1="46" x2="330.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="330.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">5</text>
+<line x1="400.00" y1="46" x2="400.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="400.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">10</text>
+<line x1="470.00" y1="46" x2="470.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="470.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">15</text>
+<line x1="540.00" y1="46" x2="540.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="540.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">20</text>
+<line x1="610.00" y1="46" x2="610.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="610.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">25</text>
+<line x1="680.00" y1="46" x2="680.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="680.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">30</text>
+<line x1="750.00" y1="46" x2="750.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="750.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">35</text>
+<line x1="820.00" y1="46" x2="820.00" y2="634" stroke="var(--rule)" stroke-width="1" stroke-dasharray="4 6"/>
+<text x="820.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">40</text>
+<line x1="890.00" y1="46" x2="890.00" y2="634" stroke="var(--rule)" stroke-width="1"/>
+<text x="890.00" y="38" text-anchor="middle" font-family="Geist Mono, monospace" font-size="11" fill="var(--dim)">45</text>
+<text x="250" y="75.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Malawi</text>
+<rect x="260" y="58" width="606.88" height="26" fill="#8b2a2a"/>
+<text x="874.88" y="75.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">43.35%</text>
+<text x="250" y="113.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Uganda</text>
+<rect x="260" y="96" width="375.96" height="26" fill="#8b2a2a"/>
+<text x="643.96" y="113.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">26.85%</text>
+<text x="250" y="151.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Kenya</text>
+<rect x="260" y="134" width="240.93" height="26" fill="#6b4a1a"/>
+<text x="508.93" y="151.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">17.21%</text>
+<text x="250" y="189.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Angola</text>
+<rect x="260" y="172" width="229.56" height="26" fill="#6b4a1a"/>
+<text x="497.56" y="189.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">16.40%</text>
+<text x="250" y="227.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Rwanda</text>
+<rect x="260" y="210" width="229.13" height="26" fill="#6b4a1a"/>
+<text x="497.13" y="227.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">16.37%</text>
+<text x="250" y="265.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Botswana</text>
+<rect x="260" y="248" width="208.04" height="26" fill="#6b4a1a"/>
+<text x="476.04" y="265.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">14.86%</text>
+<text x="250" y="303.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Gambia, The</text>
+<rect x="260" y="286" width="171.74" height="26" fill="#6b4a1a"/>
+<text x="439.74" y="303.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">12.27%</text>
+<text x="250" y="341.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Mali</text>
+<rect x="260" y="324" width="162.78" height="26" fill="#6b4a1a"/>
+<text x="430.78" y="341.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">11.63%</text>
+<text x="250" y="379.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Eswatini</text>
+<rect x="260" y="362" width="160.38" height="26" fill="#6b4a1a"/>
+<text x="428.38" y="379.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">11.46%</text>
+<text x="250" y="417.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Lesotho</text>
+<rect x="260" y="400" width="155.57" height="26" fill="#6b4a1a"/>
+<text x="423.57" y="417.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">11.11%</text>
+<text x="250" y="455.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Tanzania</text>
+<rect x="260" y="438" width="149.07" height="26" fill="#6b4a1a"/>
+<text x="417.07" y="455.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">10.65%</text>
+<text x="250" y="493.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Namibia</text>
+<rect x="260" y="476" width="146.58" height="26" fill="#6b4a1a"/>
+<text x="414.58" y="493.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">10.47%</text>
+<text x="250" y="531.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Zambia</text>
+<rect x="260" y="514" width="136.43" height="26" fill="#1a3a5c"/>
+<text x="404.43" y="531.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">9.75%</text>
+<text x="250" y="569.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Zimbabwe</text>
+<rect x="260" y="552" width="110.78" height="26" fill="#1a3a5c"/>
+<text x="378.78" y="569.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">7.91%</text>
+<text x="250" y="607.0" text-anchor="end" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">Cabo Verde</text>
+<rect x="260" y="590" width="101.53" height="26" fill="#1a3a5c"/>
+<text x="369.53" y="607.0" font-family="Geist Mono, monospace" font-size="12" fill="var(--ink)">7.25%</text>
+<line x1="260" y1="646" x2="890" y2="646" stroke="var(--rule)" stroke-width="1"/>
+</svg>

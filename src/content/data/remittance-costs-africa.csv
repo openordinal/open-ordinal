@@ -1,0 +1,47 @@
+iso3,country,cost_percent,cost_usd_equivalent_200,corridor_count,service_count,cost_band,data_available,period,method_note
+AGO,Angola,16.3973,32.79,1,15,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+BEN,Benin,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+BWA,Botswana,14.86,29.72,1,30,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+BFA,Burkina Faso,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+BDI,Burundi,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+CPV,Cabo Verde,7.2524,14.5,2,19,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+CMR,Cameroon,4.8491,9.7,1,22,below_5,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+CAF,Central African Republic,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+TCD,Chad,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+COM,Comoros,4.8331,9.67,1,16,below_5,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+COD,"Congo, Dem. Rep.",5.6263,11.25,1,19,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+CIV,Côte d'Ivoire,4.1808,8.36,1,24,below_5,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+ERI,Eritrea,6.6773,13.35,2,22,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SWZ,Eswatini,11.4556,22.91,1,9,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+ETH,Ethiopia,7.038,14.08,4,61,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+GAB,Gabon,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+GMB,"Gambia, The",12.2674,24.53,1,23,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+GHA,Ghana,6.6356,13.27,5,147,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+GIN,Guinea,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+GNB,Guinea-Bissau,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+KEN,Kenya,17.2093,34.42,6,143,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+LSO,Lesotho,11.1118,22.22,1,11,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+LBR,Liberia,5.765,11.53,1,18,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+MDG,Madagascar,5.174,10.35,1,15,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+MWI,Malawi,43.3487,86.7,1,26,20_plus,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+MLI,Mali,11.6271,23.25,3,31,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+MRT,Mauritania,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+MUS,Mauritius,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+MOZ,Mozambique,6.9386,13.88,2,49,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+NAM,Namibia,10.47,20.94,1,1,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+NER,Niger,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+NGA,Nigeria,5.7412,11.48,10,159,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+RWA,Rwanda,16.3667,32.73,4,55,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SEN,Senegal,5.8957,11.79,2,53,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SYC,Seychelles,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+SLE,Sierra Leone,5.0011,10.0,1,18,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SOM,Somalia,6.0353,12.07,5,51,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+ZAF,South Africa,6.9363,13.87,2,43,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SSD,South Sudan,6.8596,13.72,5,42,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+SDN,Sudan,3.01,6.02,3,4,below_5,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+STP,São Tomé and Principe,,,0,0,no_data,false,2025_1Q,No non-negative RPW service observations for this destination in Q1 2025.
+TZA,Tanzania,10.6481,21.3,3,58,10_to_20,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+TGO,Togo,4.6252,9.25,2,32,below_5,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+UGA,Uganda,26.8545,53.71,3,70,20_plus,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+ZMB,Zambia,9.7452,19.49,2,63,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."
+ZWE,Zimbabwe,7.9132,15.83,4,106,5_to_10,true,2025_1Q,"Average of non-negative service-level cc1 total cost % first by corridor, then by destination country."

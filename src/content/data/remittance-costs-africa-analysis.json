@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "dataset": "World Bank RPW (Issue 53, workbook 2011_1Q to 2025_1Q)",
+    "focus_period": "2025_1Q",
+    "focus_region": "Sub-Saharan Africa destinations",
+    "aggregation": "non-negative service-level cc1 total cost % -> corridor average -> destination-country average",
+    "generated_at": "2026-03-06"
+  },
+  "q1_2025_distribution": {
+    "country_count_with_data": 33,
+    "country_count_universe": 46,
+    "country_count_missing": 13,
+    "min_cost_percent": 3.01,
+    "p25_cost_percent": 5.7412,
+    "median_cost_percent": 6.9386,
+    "mean_cost_percent": 9.9803,
+    "p75_cost_percent": 11.4556,
+    "max_cost_percent": 43.3487
+  },
+  "trend_checkpoints": [
+    {
+      "period": "2011_1Q",
+      "country_median": 14.808920454545454,
+      "country_mean": 13.486771961217055,
+      "country_count": 22
+    },
+    {
+      "period": "2015_4Q",
+      "country_median": 8.725019230769231,
+      "country_mean": 10.463406346807028,
+      "country_count": 30
+    },
+    {
+      "period": "2020_1Q",
+      "country_median": 8.66531746031746,
+      "country_mean": 9.642310684169066,
+      "country_count": 34
+    },
+    {
+      "period": "2024_4Q",
+      "country_median": 7.345325077399381,
+      "country_mean": 9.511216307607487,
+      "country_count": 33
+    },
+    {
+      "period": "2025_1Q",
+      "country_median": 6.938571428571429,
+      "country_mean": 9.980289497217836,
+      "country_count": 33
+    }
+  ],
+  "region_comparison_q1_2025": [
+    {
+      "destination_region": "Sub-Saharan Africa",
+      "country_mean": 9.980289497217836,
+      "country_median": 6.938571428571429,
+      "country_count": 33
+    },
+    {
+      "destination_region": "Europe & Central Asia",
+      "country_mean": 8.303195115546607,
+      "country_median": 6.856410619351409,
+      "country_count": 14
+    },
+    {
+      "destination_region": "East Asia & Pacific",
+      "country_mean": 7.158941041155587,
+      "country_median": 6.256156942520133,
+      "country_count": 13
+    },
+    {
+      "destination_region": "Latin America & Caribbean",
+      "country_mean": 6.589182300999564,
+      "country_median": 5.932592592592592,
+      "country_count": 19
+    },
+    {
+      "destination_region": "Middle East & North Africa",
+      "country_mean": 6.327067245914295,
+      "country_median": 5.138763197430588,
+      "country_count": 9
+    },
+    {
+      "destination_region": "South Asia",
+      "country_mean": 5.228119152584805,
+      "country_median": 4.775708449425194,
+      "country_count": 6
+    }
+  ],
+  "top_corridors_for_top3_destinations_q1_2025": [
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "Tanzania",
+      "corridor": "TZAKEN",
+      "corridor_cost": 58.175,
+      "corridor_fx": 14.484,
+      "service_count": 10,
+      "corridor_fee_implied": 43.691
+    },
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "Rwanda",
+      "corridor": "RWAKEN",
+      "corridor_cost": 17.71857142857143,
+      "corridor_fx": 6.73,
+      "service_count": 7,
+      "corridor_fee_implied": 10.98857142857143
+    },
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "South Africa",
+      "corridor": "ZAFKEN",
+      "corridor_cost": 10.45138888888889,
+      "corridor_fx": 2.9813888888888886,
+      "service_count": 36,
+      "corridor_fee_implied": 7.470000000000001
+    },
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "Canada",
+      "corridor": "CANKEN",
+      "corridor_cost": 7.275555555555555,
+      "corridor_fx": 3.701111111111112,
+      "service_count": 27,
+      "corridor_fee_implied": 3.574444444444444
+    },
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "United States",
+      "corridor": "USAKEN",
+      "corridor_cost": 5.198064516129032,
+      "corridor_fx": 2.389032258064516,
+      "service_count": 31,
+      "corridor_fee_implied": 2.8090322580645157
+    },
+    {
+      "destination_code": "KEN",
+      "destination_name": "Kenya",
+      "source_name": "United Kingdom",
+      "corridor": "GBRKEN",
+      "corridor_cost": 4.4371875,
+      "corridor_fx": 2.399375,
+      "service_count": 32,
+      "corridor_fee_implied": 2.0378125
+    },
+    {
+      "destination_code": "MWI",
+      "destination_name": "Malawi",
+      "source_name": "South Africa",
+      "corridor": "ZAFMWI",
+      "corridor_cost": 43.34872262773722,
+      "corridor_fx": 31.990384615384617,
+      "service_count": 26,
+      "corridor_fee_implied": 11.358338012352608
+    },
+    {
+      "destination_code": "UGA",
+      "destination_name": "Uganda",
+      "source_name": "Tanzania",
+      "corridor": "TZAUGA",
+      "corridor_cost": 63.625,
+      "corridor_fx": 12.766,
+      "service_count": 10,
+      "corridor_fee_implied": 50.859
+    },
+    {
+      "destination_code": "UGA",
+      "destination_name": "Uganda",
+      "source_name": "Kenya",
+      "corridor": "KENUGA",
+      "corridor_cost": 11.89925925925926,
+      "corridor_fx": 2.4762962962962964,
+      "service_count": 27,
+      "corridor_fee_implied": 9.422962962962965
+    },
+    {
+      "destination_code": "UGA",
+      "destination_name": "Uganda",
+      "source_name": "United Kingdom",
+      "corridor": "GBRUGA",
+      "corridor_cost": 5.039090909090909,
+      "corridor_fx": 2.914848484848485,
+      "service_count": 33,
+      "corridor_fee_implied": 2.1242424242424245
+    }
+  ],
+  "cost_components_q1_2025": {
+    "ssa_average_total_cost_percent": 9.9803,
+    "ssa_average_fx_margin_percent": 3.3911,
+    "ssa_average_implied_non_fx_percent": 6.5892,
+    "ssa_average_fx_share_percent": 30.81,
+    "top_fx_share_destinations": [
+      {
+        "destination_name": "Gambia, The",
+        "country_cost": 12.267391304347823,
+        "fx_share_pct": 78.67446393762182
+      },
+      {
+        "destination_name": "Malawi",
+        "country_cost": 43.34872262773722,
+        "fx_share_pct": 73.79775614175806
+      },
+      {
+        "destination_name": "Somalia",
+        "country_cost": 6.035342483660131,
+        "fx_share_pct": 59.537491252506754
+      },
+      {
+        "destination_name": "Ghana",
+        "country_cost": 6.635594458173405,
+        "fx_share_pct": 58.71339863073308
+      },
+      {
+        "destination_name": "Ethiopia",
+        "country_cost": 7.0379649491375496,
+        "fx_share_pct": 57.29693028530186
+      },
+      {
+        "destination_name": "Congo, Dem. Rep.",
+        "country_cost": 5.626315789473685,
+        "fx_share_pct": 56.333021515434986
+      },
+      {
+        "destination_name": "Madagascar",
+        "country_cost": 5.174,
+        "fx_share_pct": 55.92062878495039
+      },
+      {
+        "destination_name": "Sierra Leone",
+        "country_cost": 5.001111111111111,
+        "fx_share_pct": 45.10108864696734
+      },
+      {
+        "destination_name": "South Africa",
+        "country_cost": 6.936333333333334,
+        "fx_share_pct": 43.98673650824163
+      },
+      {
+        "destination_name": "Eritrea",
+        "country_cost": 6.677321428571429,
+        "fx_share_pct": 42.84491749792741
+      }
+    ]
+  },
+  "provider_segmentation_q1_2025": [
+    {
+      "firm_type": "Bank",
+      "service_count": 193,
+      "avg_cost": 24.775412805869674,
+      "median_cost": 19.35
+    },
+    {
+      "firm_type": "Bank / Money Transfer Operator",
+      "service_count": 28,
+      "avg_cost": 11.653915537017728,
+      "median_cost": 9.975
+    },
+    {
+      "firm_type": "Post Office",
+      "service_count": 1,
+      "avg_cost": 8.57,
+      "median_cost": 8.57
+    },
+    {
+      "firm_type": "Money Transfer Operator",
+      "service_count": 1209,
+      "avg_cost": 6.640738198305893,
+      "median_cost": 5.46
+    },
+    {
+      "firm_type": "Money Transfer Operator / Post Office",
+      "service_count": 6,
+      "avg_cost": 5.9816666666666665,
+      "median_cost": 6.74
+    },
+    {
+      "firm_type": "Mobile Operator",
+      "service_count": 18,
+      "avg_cost": 5.653333333333333,
+      "median_cost": 5.77
+    }
+  ],
+  "pickup_method_segmentation_q1_2025": [
+    {
+      "pickup method": "Own/partner Bank account",
+      "service_count": 5,
+      "avg_cost": 30.156,
+      "median_cost": 29.03
+    },
+    {
+      "pickup method": "Bank account",
+      "service_count": 313,
+      "avg_cost": 16.019759333970757,
+      "median_cost": 7.969999999999999
+    },
+    {
+      "pickup method": "Cash",
+      "service_count": 860,
+      "avg_cost": 7.372943048718383,
+      "median_cost": 6.05
+    },
+    {
+      "pickup method": "Mobile wallet",
+      "service_count": 276,
+      "avg_cost": 6.426453242356924,
+      "median_cost": 4.275
+    },
+    {
+      "pickup method": "Debit card",
+      "service_count": 1,
+      "avg_cost": 3.44,
+      "median_cost": 3.44
+    }
+  ],
+  "payment_instrument_segmentation_q1_2025": [
+    {
+      "payment instrument": "Bank account transfer",
+      "service_count": 399,
+      "avg_cost": 15.077510381793902,
+      "median_cost": 9.13
+    },
+    {
+      "payment instrument": "Cash",
+      "service_count": 318,
+      "avg_cost": 9.30454941927191,
+      "median_cost": 7.52
+    },
+    {
+      "payment instrument": "Credit card",
+      "service_count": 329,
+      "avg_cost": 6.061722538992301,
+      "median_cost": 5.050000000000001
+    },
+    {
+      "payment instrument": "Debit card",
+      "service_count": 392,
+      "avg_cost": 5.695017130939967,
+      "median_cost": 4.665
+    },
+    {
+      "payment instrument": "Mobile money",
+      "service_count": 17,
+      "avg_cost": 4.7829411764705885,
+      "median_cost": 4.78
+    }
+  ],
+  "missing_destinations_q1_2025": [
+    {
+      "destination_code": "BEN",
+      "destination_name": "Benin"
+    },
+    {
+      "destination_code": "BFA",
+      "destination_name": "Burkina Faso"
+    },
+    {
+      "destination_code": "BDI",
+      "destination_name": "Burundi"
+    },
+    {
+      "destination_code": "CAF",
+      "destination_name": "Central African Republic"
+    },
+    {
+      "destination_code": "TCD",
+      "destination_name": "Chad"
+    },
+    {
+      "destination_code": "GAB",
+      "destination_name": "Gabon"
+    },
+    {
+      "destination_code": "GIN",
+      "destination_name": "Guinea"
+    },
+    {
+      "destination_code": "GNB",
+      "destination_name": "Guinea-Bissau"
+    },
+    {
+      "destination_code": "MRT",
+      "destination_name": "Mauritania"
+    },
+    {
+      "destination_code": "MUS",
+      "destination_name": "Mauritius"
+    },
+    {
+      "destination_code": "NER",
+      "destination_name": "Niger"
+    },
+    {
+      "destination_code": "SYC",
+      "destination_name": "Seychelles"
+    },
+    {
+      "destination_code": "STP",
+      "destination_name": "São Tomé and Principe"
+    }
+  ]
+}

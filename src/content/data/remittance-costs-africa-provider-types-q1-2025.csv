@@ -1,0 +1,7 @@
+firm_type,service_count,avg_cost,median_cost
+Bank,193,24.775412805869674,19.35
+Bank / Money Transfer Operator,28,11.653915537017728,9.975
+Post Office,1,8.57,8.57
+Money Transfer Operator,1209,6.640738198305893,5.46
+Money Transfer Operator / Post Office,6,5.9816666666666665,6.74
+Mobile Operator,18,5.653333333333333,5.77

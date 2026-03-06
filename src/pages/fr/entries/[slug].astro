@@ -7,7 +7,9 @@ import StatBlock from "../../../components/entry/StatBlock.astro";
 import ChartBlock from "../../../components/entry/ChartBlock.astro";
 import LimitationsList from "../../../components/entry/LimitationsList.astro";
 import SourcesList from "../../../components/entry/SourcesList.astro";
+import SeeAlso from "../../../components/entry/SeeAlso.astro";
 import TranslationNotice from "../../../components/ui/TranslationNotice.astro";
+import { getRelatedEntries } from "../../../utils/relatedEntries";
 
 export async function getStaticPaths() {
   const [entriesEn, entriesFr] = await Promise.all([
@@ -30,8 +32,11 @@ const [entriesEn, entriesFr] = await Promise.all([
   getCollection("entries-fr")
 ]);
 
-const frEntry = entriesFr.find((entry) => entry.slug === slug && !entry.data.draft);
-const enEntry = entriesEn.find((entry) => entry.slug === slug && !entry.data.draft);
+const entriesEnPublished = entriesEn.filter((entry) => !entry.data.draft);
+const entriesFrPublished = entriesFr.filter((entry) => !entry.data.draft);
+
+const frEntry = entriesFrPublished.find((entry) => entry.slug === slug);
+const enEntry = entriesEnPublished.find((entry) => entry.slug === slug);
 const entry = frEntry ?? enEntry;
 
 if (!entry) {
@@ -40,6 +45,13 @@ if (!entry) {
 
 const { Content } = await entry.render();
 const isFallback = !frEntry && Boolean(enEntry);
+
+const frBySlug = new Map(entriesFrPublished.map((entry) => [entry.slug, entry]));
+const enBySlug = new Map(entriesEnPublished.map((entry) => [entry.slug, entry]));
+const relatedPool = Array.from(new Set([...frBySlug.keys(), ...enBySlug.keys()]))
+  .map((candidateSlug) => frBySlug.get(candidateSlug) ?? enBySlug.get(candidateSlug))
+  .filter((candidate): candidate is NonNullable<typeof candidate> => Boolean(candidate));
+const relatedEntries = getRelatedEntries(entry, relatedPool, { limit: 3 });
 
 const title = frEntry
   ? frEntry.data.title_fr || frEntry.data.title
@@ -87,5 +99,7 @@ const structuredData = {
     <div class="mt-8">
       <Content components={{ HeroVisual, StatBlock, ChartBlock, LimitationsList, SourcesList }} />
     </div>
+
+    <SeeAlso items={relatedEntries} lang="fr" />
   </article>
 </Layout>

@@ -1,0 +1,50 @@
+---
+import type { RelatedEntry } from "../../utils/relatedEntries";
+
+interface Props {
+  items?: RelatedEntry[];
+  lang?: "en" | "fr";
+}
+
+const { items = [], lang = "en" }: Props = Astro.props;
+
+const summaryLabel = lang === "fr" ? "Voir aussi" : "See also";
+const emptyLabel =
+  lang === "fr"
+    ? "Aucune entree connexe automatique pour le moment."
+    : "No related entries found yet.";
+
+const hrefBase = lang === "fr" ? "/fr/entries" : "/entries";
+
+const dateFormatter = new Intl.DateTimeFormat(lang === "fr" ? "fr-FR" : "en-GB", {
+  day: "2-digit",
+  month: "short",
+  year: "numeric"
+});
+---
+
+<details class="entry-collapsible my-8 border-t border-rule pt-4">
+  <summary class="entry-collapsible__summary ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">{summaryLabel}</summary>
+  <div class="entry-collapsible__body">
+    {
+      items.length > 0 ? (
+        <ul class="space-y-3">
+          {items.map((item) => (
+            <li>
+              <a href={`${hrefBase}/${item.slug}`} class="block hover:no-underline">
+                <p class="ui-meta text-[10px] uppercase tracking-[0.14em] text-dim">
+                  {item.data.entry_number} · {item.data.category} · {dateFormatter.format(item.data.date)}
+                </p>
+                <p class="mt-1 text-[18px] leading-tight text-ink">
+                  {lang === "fr" ? item.data.title_fr || item.data.title : item.data.title}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>{emptyLabel}</p>
+      )
+    }
+  </div>
+</details>

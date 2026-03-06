@@ -7,6 +7,8 @@ import StatBlock from "../../components/entry/StatBlock.astro";
 import ChartBlock from "../../components/entry/ChartBlock.astro";
 import LimitationsList from "../../components/entry/LimitationsList.astro";
 import SourcesList from "../../components/entry/SourcesList.astro";
+import SeeAlso from "../../components/entry/SeeAlso.astro";
+import { getRelatedEntries } from "../../utils/relatedEntries";
 
 export async function getStaticPaths() {
   const entries = (await getCollection("entries")).filter((entry) => !entry.data.draft);
@@ -22,6 +24,7 @@ const { Content } = await entry.render();
 
 const allEntries = (await getCollection("entries")).filter((item) => !item.data.draft);
 const correction = allEntries.find((item) => item.data.correction_of === entry.slug);
+const relatedEntries = getRelatedEntries(entry, allEntries, { limit: 3 });
 
 const description = entry.data.description || `${entry.data.category} analysis for ${entry.data.scope}.`;
 const canonical = `https://openordinal.org/entries/${entry.slug}`;
@@ -68,5 +71,7 @@ const structuredData = {
     <div class="mt-8">
       <Content components={{ HeroVisual, StatBlock, ChartBlock, LimitationsList, SourcesList }} />
     </div>
+
+    <SeeAlso items={relatedEntries} lang="en" />
   </article>
 </Layout>
