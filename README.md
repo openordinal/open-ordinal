@@ -45,6 +45,14 @@ PUBLIC_POSTHOG_KEY=phc_your_project_key
 PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
+## Analytics and consent
+
+- PostHog initializes only in production builds and only when `PUBLIC_POSTHOG_KEY` is provided.
+- A cookie consent banner controls whether PostHog loads.
+- The consent banner appears in production when PostHog is configured, and is also shown in dev for UI testing.
+- In dev mode, consent UI is visible but PostHog tracking is not initialized.
+- Consent choice is stored in local storage as `oo_cookie_consent_v1`.
+
 Build for production:
 
 ```bash
