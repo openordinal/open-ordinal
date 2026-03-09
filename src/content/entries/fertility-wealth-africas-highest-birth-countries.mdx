@@ -1,0 +1,162 @@
+---
+title: "Fertility and wealth in Africa's highest-birth countries"
+title_fr: "Fecondite et richesse dans les pays africains ou les naissances sont les plus nombreuses"
+slug: "fertility-wealth-africas-highest-birth-countries"
+category: "Demographics"
+date: "2026-03-09"
+scope: "15 countries accounting for 72.85% of Africa's projected 2026 births, using latest usable DHS fertility breakdowns by wealth, education, and residence"
+scope_fr: "15 pays representant 72.85% des naissances africaines projetees en 2026, avec les dernieres ventilations DHS utilisables par richesse, education et lieu de residence"
+dataset: "DHS Program total fertility rate indicator FE_FRTR_W_TFR with socioeconomic breakdowns, plus Our World in Data births and continent mapping based on UN World Population Prospects 2024"
+source_org: "The DHS Program; Our World in Data; United Nations World Population Prospects 2024"
+entry_number: "006"
+translated: true
+correction_of: ""
+description: "Across Africa's highest-birth countries, fertility is usually higher in poorer households, but the size of the gap varies sharply and sometimes weakens."
+key_stat: "Across 14 DHS-covered countries, poorest-quintile fertility averages 6.21 children per woman versus 3.31 in the richest."
+draft: false
+---
+
+import FertilityWealthGapRankChart from "../../components/entry/FertilityWealthGapRankChart.astro";
+import FertilityWealthHighBirthCountriesChart from "../../components/entry/FertilityWealthHighBirthCountriesChart.astro";
+
+A common shorthand says Africa's high fertility is mostly a story of poor households having more children. Across the 15 countries that account for 72.85% of Africa's projected 2026 births, the DHS data broadly points that way, but not with one uniform slope. In most countries fertility falls from the poorest wealth quintile to the richest, yet the gap ranges from 4.5 births per woman in Angola to 0.8 in Egypt, and Sudan remains a major data hole inside the same birth-heavy group.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+## What this entry asks
+
+- Is the wealth-fertility gap broadly consistent across the countries driving most of Africa's births?
+- Which countries show the widest and narrowest poorest-richest gaps?
+- Do education and urban-rural differences reinforce the same pattern, or weaken it?
+
+## Why these 15 countries
+
+This entry uses the same birth-concentration frame as [Africa's share of global births: from 1 in 8 to nearly 1 in 2](/entries/africas-share-of-global-births). The top 15 countries in the 2026 births series account for 72.85% of Africa's projected births, so this is a focused slice of where the continent's birth arithmetic is most concentrated.<sup><a href="#ref-3">[3]</a></sup><sup><a href="#ref-4">[4]</a></sup>
+
+Fourteen of the 15 have usable DHS household breakdowns for this comparison. Together they account for 69.29% of Africa's projected 2026 births. But the surveys are not synchronized: 2021+ standard DHS waves cover 46.70% of Africa's projected births in this frame, Ethiopia's latest completed DHS in the official system is still 2019, and Sudan's latest DHS is 1989-90, too old for a current household-level comparison.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+<StatBlock
+  label="Birth-share frame"
+  value="72.85%"
+  note="The top 15 countries in the 2026 births series account for 72.85% of Africa's projected births [3]."
+/>
+
+<StatBlock
+  label="Weighted wealth gap"
+  value="6.21 vs 3.31"
+  note="In this entry's birth-share-weighted calculation, poorest-quintile fertility averages 6.21 children per woman and richest-quintile fertility 3.31 across the 14 countries with usable DHS data [1][3]."
+/>
+
+<StatBlock
+  label="Gap range"
+  value="4.5 to 0.8"
+  note="Angola shows the widest poorest-richest gap, Egypt the narrowest in the usable comparison set [1]."
+/>
+
+## The broad pattern is downward, but the slope is not fixed
+
+Across the 10 countries in the full-analysis group, every panel in the chart slopes down from Q1 to Q5. That is the clearest headline. The more interesting second point is that the slope changes a lot. Angola, Mozambique, and Madagascar show steep declines, while Mali and Ethiopia remain high even in richer households.<sup><a href="#ref-1">[1]</a></sup>
+
+<ChartBlock
+  title="Fertility by wealth quintile in the core high-birth countries"
+  subtitle="Ten countries in the 15-country birth-heavy group with full comparison data, latest usable DHS 2019-2024"
+  note="Q1 is poorest and Q5 richest. Read each panel left to right as that country's within-sample wealth gradient."
+>
+  <FertilityWealthHighBirthCountriesChart lang="en" />
+</ChartBlock>
+
+### So what this means
+
+> The broad direction is consistent in the biggest recent-data countries. The strength of the gradient is not.
+
+In this entry's birth-share-weighted calculation across the 14 countries with usable data, the poorest quintile averages 6.21 children per woman, compared with 3.31 in the richest quintile. That supports a real within-country wealth gradient. It does not support treating Angola, Egypt, Niger, and South Africa as if the same gap is operating at the same intensity everywhere.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+## Where the pattern weakens or breaks
+
+No country in this dataset shows a full reversal where the richest quintile has higher fertility than the poorest. The breaks are subtler than that. Egypt is the clearest case: the middle quintile is at 3.9 children per woman, above both the poorest and second quintiles at 3.6, before fertility falls again in the richest group to 2.8. Niger shows a different break, with the lower four quintiles almost flat between 8.0 and 8.2 before the richest group drops to 6.1.<sup><a href="#ref-1">[1]</a></sup>
+
+In practice, those two cases likely need different readings: Egypt's pattern should be handled cautiously because the usable DHS comparison is from 2014, while Niger's flatter lower-quintile profile is more consistent with a very high-fertility setting where differences by wealth stay compressed until the richest group.
+
+<ChartBlock
+  title="Poorest-to-richest fertility gap by country"
+  subtitle="Q1 minus Q5, births per woman, 14-country usable comparison set"
+  note="Longer bars mean a steeper within-country wealth gradient."
+  disableTooltips={true}
+>
+  <FertilityWealthGapRankChart lang="en" />
+</ChartBlock>
+
+South Africa also matters here, not because the direction flips, but because the gradient is small. Its poorest-richest gap is just 1.0 child per woman, against 4.5 in Angola and 4.1 in Mozambique. Egypt's 0.8 gap is the smallest in the set, but it also rests on a 2014 survey, so the weakness of the gradient should be read with more caution than the newer 2022-2024 results.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+A blunt reading would say poor households consistently drive higher fertility across the main birth-heavy countries. A better reading is narrower: poorer households usually have higher fertility, but the size and shape of that relationship depends on country context, survey year, and where each country sits in the demographic transition.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+One reason the wealth gradient does not look the same everywhere is that these countries are not at the same point in the fertility transition. In earlier-transition settings, fertility can remain high across much of the wealth distribution, with sharper separation only at the top. In later-transition settings, fertility is usually lower overall and wealth gaps may be narrower or less uniform. That does not replace the wealth story, but it helps explain why Niger, Angola, and Mali do not look like South Africa or Egypt even when the same quintile framework is used.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+## Education and residence usually move in the same direction
+
+The wealth pattern is usually reinforced by schooling and place. Rural fertility is higher than urban fertility in all 14 countries with usable data, with the widest rural-urban gaps in Angola (3.1), Niger (2.5), D.R. Congo (2.2), and Mozambique (2.2). The no-education versus higher-education gap is widest in Niger (4.4), Angola (4.2), Mozambique (3.8), and Madagascar (3.7).<sup><a href="#ref-1">[1]</a></sup>
+
+Even here, the pattern is not perfectly mechanical. In D.R. Congo, primary-educated women record higher fertility than women with no education. In South Africa, primary education is also above the no-education group. That is a reminder that these categories are descriptive, not causal proof on their own.<sup><a href="#ref-1">[1]</a></sup>
+
+Taken together, wealth, schooling, and urban residence usually point in the same direction, but they still do not collapse into one simple causal story. The data supports a consistent social gradient. It does not tell us that wealth alone is doing all the work. Wealth quintiles are relative within countries, and they often bundle education, urbanization, and household composition together.<sup><a href="#ref-1">[1]</a></sup>
+
+## Full country scan
+
+The table below combines 2026 birth shares with the latest usable DHS comparison for each country in the 15-country birth-heavy group. Sudan stays in the frame because it is demographically important, even though it cannot be compared on current household fertility breakdowns.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+| Country | 2026 birth share | Latest usable DHS | Q1 poorest | Q5 richest | Gap | Reading |
+| --- | ---: | --- | ---: | ---: | ---: | --- |
+| Nigeria | 16.21% | 2024 DHS | 6.6 | 3.3 | 3.3 | Clear decline from poorest to richest |
+| D.R. Congo | 9.75% | 2023-24 DHS | 6.9 | 3.6 | 3.3 | Clear decline, but primary-education fertility exceeds no-education |
+| Ethiopia | 8.86% | 2019 DHS | 5.5 | 3.1 | 2.4 | Decline present, but recency caveat is large |
+| Tanzania | 5.17% | 2022 DHS | 6.7 | 3.3 | 3.4 | Clear decline |
+| Egypt | 5.17% | 2014 DHS | 3.6 | 2.8 | 0.8 | Weak gradient, middle quintile is highest |
+| Uganda | 3.67% | 2016 DHS | 7.1 | 3.8 | 3.3 | Clear decline, but older wave |
+| Sudan | 3.56% | 1989-90 DHS | No data | No data | No data | Birth share only, no usable current household comparison |
+| Kenya | 3.28% | 2022 DHS | 5.3 | 2.7 | 2.6 | Clear decline, especially between Q1 and Q2 |
+| Angola | 3.07% | 2023-24 DHS | 7.3 | 2.8 | 4.5 | Largest gap in this set |
+| Mozambique | 2.78% | 2022-23 DHS | 6.8 | 2.7 | 4.1 | Very steep decline |
+| South Africa | 2.46% | 2016 DHS | 3.1 | 2.1 | 1.0 | Small gap |
+| Niger | 2.43% | 2012 DHS | 8.2 | 6.1 | 2.1 | Bottom four quintiles are almost flat |
+| Madagascar | 2.17% | 2021 DHS | 6.6 | 2.7 | 3.9 | Steep decline |
+| Cote d'Ivoire | 2.16% | 2021 DHS | 5.9 | 3.0 | 2.9 | Clear decline |
+| Mali | 2.11% | 2023-24 DHS | 7.1 | 4.9 | 2.2 | Gradient exists, but richest-household fertility is still high |
+
+## Interpretation
+
+Lower household wealth is a robust marker of higher fertility across the countries now carrying most of Africa's births. The data supports that reading within countries. What it does not support is a single-cause story in which poverty alone explains the continental birth pattern, or a synchronized 2026 snapshot of all 15 countries at once.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+An alternative reading is that wealth quintiles are partly standing in for other social transitions, especially education, urban residence, and timing in the fertility transition. That alternative fits the same data better than a uniform poverty explanation, because it can accommodate both Angola's steep gradient and Egypt's weak one without pretending they describe the same process.<sup><a href="#ref-1">[1]</a></sup>
+
+<LimitationsList
+  items={[
+    "The comparison is built from surveys fielded between 2012 and 2024, so this is not one synchronized year. That matters most for Egypt, Niger, Uganda, South Africa, and Ethiopia.",
+    "DHS wealth quintiles are relative asset rankings inside each country, not comparable income bands across countries.",
+    "Total fertility rate is a synthetic summary of recent age-specific fertility, not completed family size or desired fertility.",
+    "Only 46.70% of Africa's projected 2026 births in this top-15 frame are covered by 2021+ standard DHS waves, and Sudan's 3.56% has no usable current household-level comparison.",
+    "The entry is intentionally limited to the 15 countries with the largest projected 2026 birth shares, so it is a high-weight slice, not a full continental census of all fertility gradients."
+  ]}
+/>
+
+<details class="entry-collapsible my-8 border-t border-rule pt-4">
+  <summary class="entry-collapsible__summary ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">Sources</summary>
+  <div class="entry-collapsible__body">
+    <h3>References</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li id="ref-1">The DHS Program. <em>Total fertility rate 15-49</em> (indicator <code>FE_FRTR_W_TFR</code>, <code>breakdown=all</code>, API extract for AO, CD, CI, EG, ET, KE, MD, ML, MZ, NI, NG, ZA, SD, TZ, UG). https://api.dhsprogram.com/rest/dhs/data/FE_FRTR_W_TFR?breakdown=all&amp;f=json&amp;countryIds=AO,CD,CI,EG,ET,KE,MD,ML,MZ,NI,NG,ZA,SD,TZ,UG&amp;perpage=5000</li>
+      <li id="ref-2">The DHS Program. <em>Survey metadata API</em> (used to identify the latest usable completed DHS wave for the same country set). https://api.dhsprogram.com/rest/dhs/surveys?countryIds=AO,CD,CI,EG,ET,KE,MD,ML,MZ,NI,NG,ZA,SD,TZ,UG&amp;f=json&amp;perpage=5000</li>
+      <li id="ref-3">Our World in Data. <em>Number of births per year</em> (grapher dataset, historical values plus projections based on UN World Population Prospects 2024). https://ourworldindata.org/grapher/number-of-births-per-year.csv</li>
+      <li id="ref-4">Our World in Data. <em>Continents according to Our World in Data</em> (country-to-continent mapping used for the Africa birth-share frame). https://ourworldindata.org/grapher/continents-according-to-our-world-in-data.csv</li>
+    </ol>
+
+    <h3>Primary</h3>
+    <ul class="mt-2 list-disc pl-5 space-y-1">
+      <li>DHS fertility breakdowns by wealth quintile, education level, and residence for the selected countries.</li>
+      <li>DHS survey metadata used to determine the latest usable completed standard DHS wave in each country.</li>
+    </ul>
+
+    <h3>Context</h3>
+    <ul class="mt-2 list-disc pl-5 space-y-1">
+      <li>Our World in Data births series, based on UN World Population Prospects 2024, used to identify the 15 countries and their 2026 birth shares.</li>
+      <li>Our World in Data continent mapping, used in the linked birth-share entry to keep the Africa country set consistent.</li>
+    </ul>
+  </div>
+</details>

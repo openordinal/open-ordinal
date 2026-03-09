@@ -1,0 +1,136 @@
+---
+title: "Africa's share of global births: from 1 in 8 to nearly 1 in 2"
+title_fr: "La part de l'Afrique dans les naissances mondiales: de 1 sur 8 a presque 1 sur 2"
+slug: "africas-share-of-global-births"
+category: "Demographics"
+date: "2026-03-04"
+scope: "Africa aggregate plus country-level breakdown, 1950-2100, using UN WPP 2024-based historical and projected births"
+scope_fr: "Agregat Afrique plus ventilation par pays, 1950-2100, a partir des naissances historiques et projetees fondees sur les WPP 2024 de l'ONU"
+dataset: "Our World in Data grapher births and fertility series using UN World Population Prospects 2024, plus OWID continent mapping"
+source_org: "Our World in Data; United Nations World Population Prospects 2024"
+entry_number: "005"
+translated: true
+correction_of: ""
+description: "Africa's share of world births rises from 11.85% in 1950 to 35.89% in 2026 and 48.02% by 2100, even as fertility declines."
+key_stat: "Africa accounts for 35.89% of projected world births in 2026, up from 11.85% in 1950 and heading toward 48.02% by 2100."
+draft: false
+---
+
+import AfricaBirthsChoroplethMap from "../../components/entry/AfricaBirthsChoroplethMap.astro";
+import AfricaWorldFertilityTrendChart from "../../components/entry/AfricaWorldFertilityTrendChart.astro";
+import GlobalBirthSharesByContinentChart from "../../components/entry/GlobalBirthSharesByContinentChart.astro";
+
+In 1950, about 1 in 8 babies born in the world were African. In 2026, the projected figure is a little over 1 in 3. By 2100, it approaches 1 in 2.<sup><a href="#ref-1">[1]</a></sup> The important point is not that African fertility is staying flat, because it is not. It is falling materially.<sup><a href="#ref-2">[2]</a></sup> Africa's share of global births keeps rising even as fertility declines, not because African births rise forever, but because they peak later and fall more slowly than the rest of the world's.<sup><a href="#ref-1">[1]</a></sup>
+
+## What this entry answers
+
+- How Africa's rising share compares with Asia and other continents between 1950 and 2100.
+- Why that rise does not mean African fertility is unchanged.
+- Why the long-run path is a rise, a peak in annual births, and then a decline rather than open-ended acceleration.
+
+## The birth share arc
+
+The long-run shift is large enough to state plainly. Africa's share of global births rises from 11.85% in 1950 to 23.69% in 2000, 35.89% in 2026, 41.69% in 2050, and 48.02% in 2100 under current UN projection assumptions. In raw birth totals, that is 10.88 million births in 1950, 32.16 million in 2000, and 47.56 million in 2026.<sup><a href="#ref-1">[1]</a></sup>
+
+The same dataset also shows why the share changes so quickly in recent decades. World births are projected at 132.50 million in 2026, below the 135.76 million recorded for 2000 in the same series, while Africa's own total is still rising over that span.<sup><a href="#ref-1">[1]</a></sup>
+
+That combination, rising births in Africa and flatter or falling totals elsewhere, is the core arithmetic behind the headline.
+
+<StatBlock
+  label="Africa share in 2026"
+  value="35.89%"
+  note="47.56 million of 132.50 million projected births worldwide in 2026 [1]."
+/>
+
+<StatBlock
+  label="Peak annual births"
+  value="56.54M"
+  note="Projected around 2067, before falling to 52.84 million by 2100 [1]."
+/>
+
+<StatBlock
+  label="Top 5 concentration"
+  value="45.16%"
+  note="Nigeria, D.R. Congo, Ethiopia, Tanzania, and Egypt account for nearly half of Africa's 2026 births [1]."
+/>
+
+<ChartBlock
+  title="Africa, Asia, and the rest of the world's share of births, 1950-2100"
+  subtitle="OWID grapher births series based on UN World Population Prospects 2024"
+  note="Africa and Asia are shown separately. Europe, North America, South America, and Oceania are combined into rest of world."
+>
+  <GlobalBirthSharesByContinentChart lang="en" />
+</ChartBlock>
+
+### So what this means
+
+> Africa's rise is happening mainly against Asia's declining share of world births, while the rest of the world moves much less.
+
+Asia still accounts for the largest share in 2026 at 48.98%, but down from 62.13% in 1950, while Africa rises from 11.85% to 35.89%. The combined rest of the world falls from 26.02% to 15.13% over the same span.<sup><a href="#ref-1">[1]</a></sup>
+
+## The fertility decline
+
+Africa's fertility rate does not stay high and fixed across the period. It declines from 5.163 children per woman in 2000 to 3.878 in 2026, 2.789 in 2050, and 2.020 by 2100 in the UN projection series used here. The world average also declines, but from a lower base: 2.754 in 2000, 2.230 in 2026, 2.097 in 2050, and 1.838 in 2100.<sup><a href="#ref-2">[2]</a></sup>
+
+<ChartBlock
+  title="Fertility still falls in Africa, just from a higher level"
+  subtitle="Africa and world fertility rate, 1950-2100, OWID grapher fertility series based on UN World Population Prospects 2024"
+  note="The shaded gap narrows over time, but Africa remains above the world average throughout the period shown."
+>
+  <AfricaWorldFertilityTrendChart lang="en" />
+</ChartBlock>
+
+### So what this means
+
+> Africa's fertility is falling, and the gap with the world average keeps narrowing.
+
+The gap between Africa and the world narrows from 2.409 children per woman in 2000 to 1.648 in 2026 and just 0.182 by 2100 in the same UN-based series.<sup><a href="#ref-2">[2]</a></sup>
+
+Africa's fertility still remains above the world level throughout the period. The pattern is consistent with Africa going through the same broad shift that most of the world already has, where birth rates fall as living standards, education access, and women's economic participation improve, but later than the global average.<sup><a href="#ref-2">[2]</a></sup> That is interpretive framing built from the trajectory, not a separate dataset claim.
+
+## The peak and trajectory
+
+Africa's annual birth total increases from 32.16 million in 2000 to 47.56 million in 2026, then reaches a projected peak of 56.54 million around 2067 before falling to 52.84 million by 2100.<sup><a href="#ref-1">[1]</a></sup> Africa's share of global births still rises after that peak, from 44.95% in 2067 to 48.02% in 2100, because world births fall faster over the same period.<sup><a href="#ref-1">[1]</a></sup>
+
+## Country concentration
+
+The 2026 births series covers all 54 sovereign African states in the country mapping used here.<sup><a href="#ref-3">[3]</a></sup> Nigeria, the Democratic Republic of Congo, Ethiopia, Tanzania, and Egypt together account for 45.16% of Africa's births in 2026, while the top ten countries account for 61.53%. Nigeria alone accounts for 16.21% of the continental total.<sup><a href="#ref-1">[1]</a></sup>
+
+<ChartBlock
+  title="Where 2026 births are most concentrated in Africa"
+  subtitle="All 54 sovereign African states shaded by their share of Africa's projected births in 2026"
+  note="Darker countries account for larger shares of the Africa aggregate in the same UN WPP 2024-based births series."
+>
+  <AfricaBirthsChoroplethMap lang="en" />
+</ChartBlock>
+
+### So what this means
+
+> The continental rise is real, but it is not evenly spread across the map.
+
+That matters because it changes how the continental trend should be read. The top five span West, Central, East, and North Africa, but much of the weight still sits in a relatively small number of large-population countries rather than being spread evenly across the continent.<sup><a href="#ref-1">[1]</a></sup>
+
+The headline is real, the fertility decline is real, and the country concentration is real. All three matter for reading the trend correctly.
+
+<LimitationsList
+  items={[
+    "Birth totals here are modeled estimates and projections from UN World Population Prospects 2024, as distributed by Our World in Data, not complete civil registration counts.",
+    "Values after 2023 are projections, so the 2026, 2050, 2067, and 2100 figures depend on UN assumptions about fertility, mortality, and migration.",
+    "This entry uses continent-level aggregates for the main trend and does not separately model North Africa and Sub-Saharan Africa.",
+    "Country concentration uses 2026 point estimates across all 54 sovereign African states in the OWID/UN-based series, so it is still a ranked snapshot rather than a full explanation of why those countries lead.",
+    "Fertility is only part of the mechanism. This entry does not directly model age structure, urbanization, or policy differences across countries."
+  ]}
+/>
+
+<details class="entry-collapsible my-8 border-t border-rule pt-4">
+  <summary class="entry-collapsible__summary ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">Sources</summary>
+  <div class="entry-collapsible__body">
+    <h3>References</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li id="ref-1">Our World in Data. <em>Number of births per year</em> (grapher dataset, historical values plus projections based on UN World Population Prospects 2024). https://ourworldindata.org/grapher/number-of-births-per-year.csv</li>
+      <li id="ref-2">Our World in Data. <em>Fertility rate with projections</em> (grapher dataset, based on UN World Population Prospects 2024). https://ourworldindata.org/grapher/fertility-rate-with-projections.csv</li>
+      <li id="ref-3">Our World in Data. <em>Continents according to Our World in Data</em> (grapher dataset used for country-to-continent mapping). https://ourworldindata.org/grapher/continents-according-to-our-world-in-data.csv</li>
+      <li id="ref-4">United Nations. <em>World Population Prospects 2024</em>. https://population.un.org/wpp/</li>
+    </ol>
+  </div>
+</details>

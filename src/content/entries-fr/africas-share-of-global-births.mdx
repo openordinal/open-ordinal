@@ -1,0 +1,136 @@
+---
+title: "Africa's share of global births: from 1 in 8 to nearly 1 in 2"
+title_fr: "La part de l'Afrique dans les naissances mondiales: de 1 sur 8 a presque 1 sur 2"
+slug: "africas-share-of-global-births"
+category: "Demographics"
+date: "2026-03-04"
+scope: "Africa aggregate plus country-level breakdown, 1950-2100, using UN WPP 2024-based historical and projected births"
+scope_fr: "Agregat Afrique plus ventilation par pays, 1950-2100, a partir des naissances historiques et projetees fondees sur les WPP 2024 de l'ONU"
+dataset: "Series grapher de naissances et de fecondite de Our World in Data utilisant les World Population Prospects 2024 de l'ONU, plus la cartographie des continents d'OWID"
+source_org: "Our World in Data; United Nations World Population Prospects 2024"
+entry_number: "005"
+translated: true
+correction_of: ""
+description: "La part de l'Afrique dans les naissances mondiales passe de 11.85% en 1950 a 35.89% en 2026 et 48.02% en 2100, malgre la baisse de la fecondite."
+key_stat: "L'Afrique represente 35.89% des naissances mondiales projetees en 2026, contre 11.85% en 1950 et 48.02% en 2100."
+draft: false
+---
+
+import AfricaBirthsChoroplethMap from "../../components/entry/AfricaBirthsChoroplethMap.astro";
+import AfricaWorldFertilityTrendChart from "../../components/entry/AfricaWorldFertilityTrendChart.astro";
+import GlobalBirthSharesByContinentChart from "../../components/entry/GlobalBirthSharesByContinentChart.astro";
+
+En 1950, environ 1 bebe sur 8 ne dans le monde etait africain. En 2026, la projection est un peu au-dessus de 1 sur 3. En 2100, elle s'approche de 1 sur 2.<sup><a href="#ref-1">[1]</a></sup> Le point important n'est pas que la fecondite africaine resterait plate, car ce n'est pas le cas. Elle baisse nettement.<sup><a href="#ref-2">[2]</a></sup> La part de l'Afrique dans les naissances mondiales continue de monter meme si la fecondite recule, non parce que les naissances africaines augmenteraient sans fin, mais parce qu'elles atteignent leur pic plus tard et baissent plus lentement que dans le reste du monde.<sup><a href="#ref-1">[1]</a></sup>
+
+## Ce a quoi cette entree repond
+
+- Comment la hausse de la part africaine se compare a l'Asie et aux autres continents entre 1950 et 2100.
+- Pourquoi cette hausse ne veut pas dire que la fecondite africaine reste inchangee.
+- Pourquoi la trajectoire de long terme est une hausse, puis un pic des naissances annuelles, puis une baisse, et non une acceleration sans fin.
+
+## L'arc de la part des naissances
+
+Le basculement de long terme est assez grand pour etre dit simplement. La part de l'Afrique dans les naissances mondiales passe de 11.85% en 1950 a 23.69% en 2000, 35.89% en 2026, 41.69% en 2050 et 48.02% en 2100 selon les hypotheses actuelles de projection de l'ONU. En nombre brut de naissances, cela correspond a 10.88 millions en 1950, 32.16 millions en 2000 et 47.56 millions en 2026.<sup><a href="#ref-1">[1]</a></sup>
+
+La meme serie montre aussi pourquoi la part change si vite dans les dernieres decennies. Les naissances mondiales sont projetees a 132.50 millions en 2026, donc sous les 135.76 millions de 2000 dans cette meme serie, alors que le total africain continue encore d'augmenter sur cet intervalle.<sup><a href="#ref-1">[1]</a></sup>
+
+Cette combinaison, hausse des naissances en Afrique et stabilisation ou baisse ailleurs, est le coeur arithmetique du titre.
+
+<StatBlock
+  label="Part de l'Afrique en 2026"
+  value="35.89%"
+  note="47.56 millions sur 132.50 millions de naissances mondiales projetees en 2026 [1]."
+/>
+
+<StatBlock
+  label="Pic annuel des naissances"
+  value="56.54M"
+  note="Projete autour de 2067, avant une baisse vers 52.84 millions en 2100 [1]."
+/>
+
+<StatBlock
+  label="Concentration du top 5"
+  value="45.16%"
+  note="Nigeria, R.D. Congo, Ethiopie, Tanzanie et Egypte representent pres de la moitie des naissances africaines de 2026 [1]."
+/>
+
+<ChartBlock
+  title="Part de l'Afrique, de l'Asie et du reste du monde dans les naissances, 1950-2100"
+  subtitle="Serie de naissances OWID grapher fondee sur les World Population Prospects 2024 de l'ONU"
+  note="L'Afrique et l'Asie sont montrees separement. L'Europe, l'Amerique du Nord, l'Amerique du Sud et l'Oceanie sont regroupees dans le reste du monde."
+>
+  <GlobalBirthSharesByContinentChart lang="fr" />
+</ChartBlock>
+
+### Ce que cela signifie
+
+> La hausse de l'Afrique se fait d'abord face au recul de la part asiatique dans les naissances mondiales, tandis que le reste du monde bouge beaucoup moins.
+
+En 2026, l'Asie represente encore la plus grande part avec 48.98%, mais contre 62.13% en 1950, tandis que l'Afrique passe de 11.85% a 35.89%. Le reste du monde combine passe de 26.02% a 15.13% sur le meme intervalle.<sup><a href="#ref-1">[1]</a></sup>
+
+## La baisse de la fecondite
+
+Le taux de fecondite de l'Afrique ne reste pas haut et fixe sur toute la periode. Il passe de 5.163 enfants par femme en 2000 a 3.878 en 2026, 2.789 en 2050 et 2.020 en 2100 dans la serie de projection de l'ONU utilisee ici. La moyenne mondiale baisse aussi, mais depuis un niveau plus bas: 2.754 en 2000, 2.230 en 2026, 2.097 en 2050 et 1.838 en 2100.<sup><a href="#ref-2">[2]</a></sup>
+
+<ChartBlock
+  title="La fecondite baisse aussi en Afrique, mais depuis un niveau plus eleve"
+  subtitle="Taux de fecondite de l'Afrique et du monde, 1950-2100, serie OWID grapher fondee sur les World Population Prospects 2024 de l'ONU"
+  note="L'ecart ombre se resserre avec le temps, mais l'Afrique reste au-dessus de la moyenne mondiale sur toute la periode visible."
+>
+  <AfricaWorldFertilityTrendChart lang="fr" />
+</ChartBlock>
+
+### Ce que cela signifie
+
+> La fecondite de l'Afrique baisse, et l'ecart avec la moyenne mondiale se resserre.
+
+L'ecart entre l'Afrique et le monde passe de 2.409 enfants par femme en 2000 a 1.648 en 2026, puis a seulement 0.182 en 2100 dans cette meme serie fondee sur l'ONU.<sup><a href="#ref-2">[2]</a></sup>
+
+La fecondite africaine reste pourtant au-dessus du niveau mondial sur toute la periode. La trajectoire est coherente avec le fait que l'Afrique traverse le meme basculement general que la plus grande partie du monde a deja connu, ou les taux de natalite baissent a mesure que le niveau de vie, l'acces a l'education et la participation economique des femmes progressent, mais plus tard que la moyenne mondiale.<sup><a href="#ref-2">[2]</a></sup> C'est un cadre interpretatif tire de la trajectoire, pas une affirmation provenant d'un jeu de donnees distinct.
+
+## Le pic et la trajectoire
+
+Le total annuel des naissances en Afrique passe de 32.16 millions en 2000 a 47.56 millions en 2026, puis atteint un pic projete de 56.54 millions autour de 2067 avant de retomber a 52.84 millions en 2100.<sup><a href="#ref-1">[1]</a></sup> La part de l'Afrique dans les naissances mondiales continue pourtant de monter apres ce pic, de 44.95% en 2067 a 48.02% en 2100, parce que les naissances mondiales baissent plus vite sur la meme periode.<sup><a href="#ref-1">[1]</a></sup>
+
+## La concentration par pays
+
+La serie des naissances 2026 couvre l'ensemble des 54 Etats souverains africains dans la correspondance pays-continent utilisee ici.<sup><a href="#ref-3">[3]</a></sup> En 2026, le Nigeria, la R.D. Congo, l'Ethiopie, la Tanzanie et l'Egypte representent ensemble 45.16% des naissances africaines, tandis que les dix premiers pays en representent 61.53%. Le Nigeria a lui seul represente 16.21% du total continental.<sup><a href="#ref-1">[1]</a></sup>
+
+<ChartBlock
+  title="Ou les naissances de 2026 sont les plus concentrees en Afrique"
+  subtitle="Les 54 Etats souverains africains sont colores selon leur part des naissances africaines projetees en 2026"
+  note="Les pays les plus fonces representent les parts les plus elevees de l'agregat Afrique dans cette meme serie de naissances fondee sur les WPP 2024 de l'ONU."
+>
+  <AfricaBirthsChoroplethMap lang="fr" />
+</ChartBlock>
+
+### Ce que cela signifie
+
+> La hausse continentale est reelle, mais elle n'est pas repartie de facon uniforme sur la carte.
+
+Cela change la facon de lire la tendance continentale. Les cinq premiers pays se repartissent entre l'Afrique de l'Ouest, centrale, de l'Est et du Nord, mais une grande partie du poids reste concentree dans un groupe relativement restreint de pays tres peuples plutot que d'etre repartie de facon uniforme sur l'ensemble du continent.<sup><a href="#ref-1">[1]</a></sup>
+
+Le titre est reel, la baisse de la fecondite est reelle, et la concentration par pays est reelle. Les trois comptent pour lire correctement cette tendance.
+
+<LimitationsList
+  items={[
+    "Les totaux de naissances ici sont des estimations et projections modelisees issues des World Population Prospects 2024 de l'ONU, diffusees par Our World in Data, et non des comptages complets d'etat civil.",
+    "Les valeurs apres 2023 sont des projections. Les chiffres 2026, 2050, 2067 et 2100 dependent donc des hypotheses de l'ONU sur la fecondite, la mortalite et les migrations.",
+    "Cette entree utilise des agregats continentaux pour la tendance principale et ne modele pas separement l'Afrique du Nord et l'Afrique subsaharienne.",
+    "La concentration par pays repose sur des estimations ponctuelles de 2026 couvrant les 54 Etats souverains africains dans la serie OWID/ONU. C'est donc tout de meme un classement instantane, pas une explication complete des pays leaders.",
+    "La fecondite n'est qu'une partie du mecanisme. Cette entree ne modele pas directement la structure par age, l'urbanisation ou les differences de politiques entre pays."
+  ]}
+/>
+
+<details class="entry-collapsible my-8 border-t border-rule pt-4">
+  <summary class="entry-collapsible__summary ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">Sources</summary>
+  <div class="entry-collapsible__body">
+    <h3>References</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li id="ref-1">Our World in Data. <em>Number of births per year</em> (dataset grapher, valeurs historiques plus projections fondees sur les World Population Prospects 2024 de l'ONU). https://ourworldindata.org/grapher/number-of-births-per-year.csv</li>
+      <li id="ref-2">Our World in Data. <em>Fertility rate with projections</em> (dataset grapher, fonde sur les World Population Prospects 2024 de l'ONU). https://ourworldindata.org/grapher/fertility-rate-with-projections.csv</li>
+      <li id="ref-3">Our World in Data. <em>Continents according to Our World in Data</em> (dataset grapher utilise pour la correspondance pays-continent). https://ourworldindata.org/grapher/continents-according-to-our-world-in-data.csv</li>
+      <li id="ref-4">Nations Unies. <em>World Population Prospects 2024</em>. https://population.un.org/wpp/</li>
+    </ol>
+  </div>
+</details>

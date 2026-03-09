@@ -1,0 +1,16 @@
+country,code,birth,tier,survey,survey_year,status,total,urban,rural,noedu,primary,secondary,higher,q1,q2,q3,q4,q5,gap_poorest_richest,gap_rural_urban,gap_noedu_higher,wealth_pattern,note
+Nigeria,NGA,16.21,Tier 1,2024 DHS,2024,usable,4.8,3.9,5.6,6.3,5.3,4.1,3,6.6,5.7,4.8,4,3.3,3.3,1.7,3.3,monotonic decline,Latest standard DHS.
+Democratic Republic of Congo,COD,9.75,Tier 1,2023-24 DHS,2023,usable,5.5,4.2,6.4,6.2,6.7,5,2.8,6.9,6.3,6,5.2,3.6,3.3,2.2,3.4,monotonic decline,Latest standard DHS. Primary exceeds no-education group.
+Ethiopia,ETH,8.86,"Full analysis target, recency caveat",2019 DHS,2019,usable,4.1,3.2,4.5,4.8,3.8,3.8,3.5,5.5,4.9,4.2,3.3,3.1,2.4,1.3,1.3,monotonic decline,Latest completed DHS in official API. Newer DHS wave is still ongoing.
+Tanzania,TZA,5.17,Tier 1,2022 DHS,2022,usable,4.8,3.6,5.5,6.3,5.1,3.9,2.7,6.7,5.9,5.2,4.2,3.3,3.4,1.9,3.6,monotonic decline,Latest standard DHS.
+Egypt,EGY,5.17,Tier 2,2014 DHS,2014,usable,3.5,2.9,3.8,3.8,3.6,3.6,3,3.6,3.6,3.9,3.5,2.8,0.8,0.9,0.8,non-monotonic,Older DHS. Wealth pattern is not monotonic because the middle quintile peaks.
+Uganda,UGA,3.67,Tier 2,2016 DHS,2016,usable,5.4,4,5.9,6.4,5.9,4.4,3.6,7.1,6.3,5.6,4.9,3.8,3.3,1.9,2.8,monotonic decline,Latest standard DHS. Newer MIS exists but is not a full DHS replacement for this comparison.
+Sudan,SDN,3.56,Tier 3,1989-90 DHS,1990,no current socioeconomic comparison data,,,,,,,,,,,,,,,,no current data,Birth share retained. Latest DHS is too old for current household-level comparison.
+Kenya,KEN,3.28,Tier 1,2022 DHS,2022,usable,3.4,2.8,3.9,6.3,3.9,3.1,2.8,5.3,3.8,3.4,3,2.7,2.6,1.1,3.5,monotonic decline,Latest standard DHS. Sharp education gradient.
+Angola,AGO,3.07,Tier 1,2023-24 DHS,2023,usable,4.8,3.8,6.9,6.7,6.2,3.6,2.5,7.3,6.7,5,3.4,2.8,4.5,3.1,4.2,monotonic decline,Largest poorest-richest gap in this comparison.
+Mozambique,MOZ,2.78,Tier 1,2022-23 DHS,2022,usable,4.9,3.6,5.8,5.9,5.4,3.3,2.1,6.8,6.3,5.3,4.3,2.7,4.1,2.2,3.8,monotonic decline,Very steep wealth and education gradients.
+South Africa,ZAF,2.46,Tier 2,2016 DHS,2016,usable,2.6,2.4,3.1,2.8,3.4,2.6,2.2,3.1,2.9,2.7,2.3,2.1,1,0.7,0.6,monotonic decline,Older DHS. Gap is small by regional comparison.
+Niger,NER,2.43,Tier 2,2012 DHS,2012,usable,7.6,5.6,8.1,8,7,5,3.6,8.2,8,8,8.1,6.1,2.1,2.5,4.4,non-monotonic,Older DHS. Bottom four wealth quintiles are almost flat.
+Madagascar,MDG,2.17,Tier 1,2021 DHS,2021,usable,4.3,3.2,4.6,6.1,4.5,3.5,2.4,6.6,5.1,4.3,3.6,2.7,3.9,1.4,3.7,monotonic decline,Latest standard DHS.
+Cote d'Ivoire,CIV,2.16,Tier 1,2021 DHS,2021,usable,4.3,3.6,5.3,5,4.3,3.4,2.7,5.9,5.3,4.4,3.5,3,2.9,1.7,2.3,monotonic decline,Latest standard DHS.
+Mali,MLI,2.11,Tier 1,2023-24 DHS,2023,usable,6,5,6.4,6.5,6.2,5.4,3.7,7.1,6.9,6.2,5.7,4.9,2.2,1.4,2.8,monotonic decline,Latest standard DHS. Gradient exists but stays high even in richest households.

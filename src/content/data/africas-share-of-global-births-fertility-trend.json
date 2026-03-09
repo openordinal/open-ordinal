@@ -1,0 +1,761 @@
+{
+  "topic": "Africa and world fertility rate trend",
+  "source": "Our World in Data grapher fertility series based on UN World Population Prospects 2024",
+  "series": [
+    {
+      "year": 1950,
+      "africa_fertility_rate": 6.437,
+      "world_fertility_rate": 4.852
+    },
+    {
+      "year": 1951,
+      "africa_fertility_rate": 6.451,
+      "world_fertility_rate": 4.816
+    },
+    {
+      "year": 1952,
+      "africa_fertility_rate": 6.464,
+      "world_fertility_rate": 5.001
+    },
+    {
+      "year": 1953,
+      "africa_fertility_rate": 6.483,
+      "world_fertility_rate": 4.922
+    },
+    {
+      "year": 1954,
+      "africa_fertility_rate": 6.493,
+      "world_fertility_rate": 4.998
+    },
+    {
+      "year": 1955,
+      "africa_fertility_rate": 6.506,
+      "world_fertility_rate": 5.003
+    },
+    {
+      "year": 1956,
+      "africa_fertility_rate": 6.519,
+      "world_fertility_rate": 4.931
+    },
+    {
+      "year": 1957,
+      "africa_fertility_rate": 6.531,
+      "world_fertility_rate": 5.068
+    },
+    {
+      "year": 1958,
+      "africa_fertility_rate": 6.544,
+      "world_fertility_rate": 4.932
+    },
+    {
+      "year": 1959,
+      "africa_fertility_rate": 6.551,
+      "world_fertility_rate": 4.74
+    },
+    {
+      "year": 1960,
+      "africa_fertility_rate": 6.562,
+      "world_fertility_rate": 4.696
+    },
+    {
+      "year": 1961,
+      "africa_fertility_rate": 6.573,
+      "world_fertility_rate": 4.571
+    },
+    {
+      "year": 1962,
+      "africa_fertility_rate": 6.588,
+      "world_fertility_rate": 5.022
+    },
+    {
+      "year": 1963,
+      "africa_fertility_rate": 6.597,
+      "world_fertility_rate": 5.308
+    },
+    {
+      "year": 1964,
+      "africa_fertility_rate": 6.6,
+      "world_fertility_rate": 5.123
+    },
+    {
+      "year": 1965,
+      "africa_fertility_rate": 6.597,
+      "world_fertility_rate": 5.071
+    },
+    {
+      "year": 1966,
+      "africa_fertility_rate": 6.607,
+      "world_fertility_rate": 4.961
+    },
+    {
+      "year": 1967,
+      "africa_fertility_rate": 6.609,
+      "world_fertility_rate": 4.852
+    },
+    {
+      "year": 1968,
+      "africa_fertility_rate": 6.609,
+      "world_fertility_rate": 4.963
+    },
+    {
+      "year": 1969,
+      "africa_fertility_rate": 6.607,
+      "world_fertility_rate": 4.866
+    },
+    {
+      "year": 1970,
+      "africa_fertility_rate": 6.608,
+      "world_fertility_rate": 4.825
+    },
+    {
+      "year": 1971,
+      "africa_fertility_rate": 6.617,
+      "world_fertility_rate": 4.679
+    },
+    {
+      "year": 1972,
+      "africa_fertility_rate": 6.617,
+      "world_fertility_rate": 4.545
+    },
+    {
+      "year": 1973,
+      "africa_fertility_rate": 6.61,
+      "world_fertility_rate": 4.416
+    },
+    {
+      "year": 1974,
+      "africa_fertility_rate": 6.609,
+      "world_fertility_rate": 4.259
+    },
+    {
+      "year": 1975,
+      "africa_fertility_rate": 6.607,
+      "world_fertility_rate": 4.08
+    },
+    {
+      "year": 1976,
+      "africa_fertility_rate": 6.603,
+      "world_fertility_rate": 3.974
+    },
+    {
+      "year": 1977,
+      "africa_fertility_rate": 6.592,
+      "world_fertility_rate": 3.85
+    },
+    {
+      "year": 1978,
+      "africa_fertility_rate": 6.566,
+      "world_fertility_rate": 3.787
+    },
+    {
+      "year": 1979,
+      "africa_fertility_rate": 6.546,
+      "world_fertility_rate": 3.771
+    },
+    {
+      "year": 1980,
+      "africa_fertility_rate": 6.515,
+      "world_fertility_rate": 3.744
+    },
+    {
+      "year": 1981,
+      "africa_fertility_rate": 6.474,
+      "world_fertility_rate": 3.711
+    },
+    {
+      "year": 1982,
+      "africa_fertility_rate": 6.434,
+      "world_fertility_rate": 3.712
+    },
+    {
+      "year": 1983,
+      "africa_fertility_rate": 6.393,
+      "world_fertility_rate": 3.581
+    },
+    {
+      "year": 1984,
+      "africa_fertility_rate": 6.325,
+      "world_fertility_rate": 3.553
+    },
+    {
+      "year": 1985,
+      "africa_fertility_rate": 6.257,
+      "world_fertility_rate": 3.515
+    },
+    {
+      "year": 1986,
+      "africa_fertility_rate": 6.184,
+      "world_fertility_rate": 3.504
+    },
+    {
+      "year": 1987,
+      "africa_fertility_rate": 6.113,
+      "world_fertility_rate": 3.476
+    },
+    {
+      "year": 1988,
+      "africa_fertility_rate": 6.037,
+      "world_fertility_rate": 3.39
+    },
+    {
+      "year": 1989,
+      "africa_fertility_rate": 5.949,
+      "world_fertility_rate": 3.347
+    },
+    {
+      "year": 1990,
+      "africa_fertility_rate": 5.854,
+      "world_fertility_rate": 3.31
+    },
+    {
+      "year": 1991,
+      "africa_fertility_rate": 5.775,
+      "world_fertility_rate": 3.131
+    },
+    {
+      "year": 1992,
+      "africa_fertility_rate": 5.697,
+      "world_fertility_rate": 3.044
+    },
+    {
+      "year": 1993,
+      "africa_fertility_rate": 5.625,
+      "world_fertility_rate": 2.98
+    },
+    {
+      "year": 1994,
+      "africa_fertility_rate": 5.527,
+      "world_fertility_rate": 2.933
+    },
+    {
+      "year": 1995,
+      "africa_fertility_rate": 5.463,
+      "world_fertility_rate": 2.889
+    },
+    {
+      "year": 1996,
+      "africa_fertility_rate": 5.387,
+      "world_fertility_rate": 2.846
+    },
+    {
+      "year": 1997,
+      "africa_fertility_rate": 5.315,
+      "world_fertility_rate": 2.809
+    },
+    {
+      "year": 1998,
+      "africa_fertility_rate": 5.252,
+      "world_fertility_rate": 2.776
+    },
+    {
+      "year": 1999,
+      "africa_fertility_rate": 5.207,
+      "world_fertility_rate": 2.75
+    },
+    {
+      "year": 2000,
+      "africa_fertility_rate": 5.163,
+      "world_fertility_rate": 2.754
+    },
+    {
+      "year": 2001,
+      "africa_fertility_rate": 5.121,
+      "world_fertility_rate": 2.714
+    },
+    {
+      "year": 2002,
+      "africa_fertility_rate": 5.078,
+      "world_fertility_rate": 2.684
+    },
+    {
+      "year": 2003,
+      "africa_fertility_rate": 5.046,
+      "world_fertility_rate": 2.659
+    },
+    {
+      "year": 2004,
+      "africa_fertility_rate": 5.024,
+      "world_fertility_rate": 2.647
+    },
+    {
+      "year": 2005,
+      "africa_fertility_rate": 5.009,
+      "world_fertility_rate": 2.63
+    },
+    {
+      "year": 2006,
+      "africa_fertility_rate": 4.985,
+      "world_fertility_rate": 2.625
+    },
+    {
+      "year": 2007,
+      "africa_fertility_rate": 4.958,
+      "world_fertility_rate": 2.623
+    },
+    {
+      "year": 2008,
+      "africa_fertility_rate": 4.941,
+      "world_fertility_rate": 2.626
+    },
+    {
+      "year": 2009,
+      "africa_fertility_rate": 4.902,
+      "world_fertility_rate": 2.621
+    },
+    {
+      "year": 2010,
+      "africa_fertility_rate": 4.867,
+      "world_fertility_rate": 2.602
+    },
+    {
+      "year": 2011,
+      "africa_fertility_rate": 4.821,
+      "world_fertility_rate": 2.588
+    },
+    {
+      "year": 2012,
+      "africa_fertility_rate": 4.775,
+      "world_fertility_rate": 2.607
+    },
+    {
+      "year": 2013,
+      "africa_fertility_rate": 4.719,
+      "world_fertility_rate": 2.572
+    },
+    {
+      "year": 2014,
+      "africa_fertility_rate": 4.669,
+      "world_fertility_rate": 2.564
+    },
+    {
+      "year": 2015,
+      "africa_fertility_rate": 4.609,
+      "world_fertility_rate": 2.537
+    },
+    {
+      "year": 2016,
+      "africa_fertility_rate": 4.53,
+      "world_fertility_rate": 2.536
+    },
+    {
+      "year": 2017,
+      "africa_fertility_rate": 4.465,
+      "world_fertility_rate": 2.504
+    },
+    {
+      "year": 2018,
+      "africa_fertility_rate": 4.374,
+      "world_fertility_rate": 2.437
+    },
+    {
+      "year": 2019,
+      "africa_fertility_rate": 4.297,
+      "world_fertility_rate": 2.397
+    },
+    {
+      "year": 2020,
+      "africa_fertility_rate": 4.225,
+      "world_fertility_rate": 2.322
+    },
+    {
+      "year": 2021,
+      "africa_fertility_rate": 4.163,
+      "world_fertility_rate": 2.291
+    },
+    {
+      "year": 2022,
+      "africa_fertility_rate": 4.109,
+      "world_fertility_rate": 2.265
+    },
+    {
+      "year": 2023,
+      "africa_fertility_rate": 4.056,
+      "world_fertility_rate": 2.251
+    },
+    {
+      "year": 2024,
+      "africa_fertility_rate": 4.001,
+      "world_fertility_rate": 2.248
+    },
+    {
+      "year": 2025,
+      "africa_fertility_rate": 3.939,
+      "world_fertility_rate": 2.239
+    },
+    {
+      "year": 2026,
+      "africa_fertility_rate": 3.878,
+      "world_fertility_rate": 2.23
+    },
+    {
+      "year": 2027,
+      "africa_fertility_rate": 3.817,
+      "world_fertility_rate": 2.221
+    },
+    {
+      "year": 2028,
+      "africa_fertility_rate": 3.759,
+      "world_fertility_rate": 2.213
+    },
+    {
+      "year": 2029,
+      "africa_fertility_rate": 3.702,
+      "world_fertility_rate": 2.204
+    },
+    {
+      "year": 2030,
+      "africa_fertility_rate": 3.643,
+      "world_fertility_rate": 2.196
+    },
+    {
+      "year": 2031,
+      "africa_fertility_rate": 3.587,
+      "world_fertility_rate": 2.187
+    },
+    {
+      "year": 2032,
+      "africa_fertility_rate": 3.53,
+      "world_fertility_rate": 2.178
+    },
+    {
+      "year": 2033,
+      "africa_fertility_rate": 3.476,
+      "world_fertility_rate": 2.169
+    },
+    {
+      "year": 2034,
+      "africa_fertility_rate": 3.424,
+      "world_fertility_rate": 2.161
+    },
+    {
+      "year": 2035,
+      "africa_fertility_rate": 3.371,
+      "world_fertility_rate": 2.153
+    },
+    {
+      "year": 2036,
+      "africa_fertility_rate": 3.323,
+      "world_fertility_rate": 2.146
+    },
+    {
+      "year": 2037,
+      "africa_fertility_rate": 3.272,
+      "world_fertility_rate": 2.139
+    },
+    {
+      "year": 2038,
+      "africa_fertility_rate": 3.228,
+      "world_fertility_rate": 2.134
+    },
+    {
+      "year": 2039,
+      "africa_fertility_rate": 3.185,
+      "world_fertility_rate": 2.129
+    },
+    {
+      "year": 2040,
+      "africa_fertility_rate": 3.143,
+      "world_fertility_rate": 2.127
+    },
+    {
+      "year": 2041,
+      "africa_fertility_rate": 3.102,
+      "world_fertility_rate": 2.123
+    },
+    {
+      "year": 2042,
+      "africa_fertility_rate": 3.063,
+      "world_fertility_rate": 2.121
+    },
+    {
+      "year": 2043,
+      "africa_fertility_rate": 3.025,
+      "world_fertility_rate": 2.12
+    },
+    {
+      "year": 2044,
+      "africa_fertility_rate": 2.987,
+      "world_fertility_rate": 2.118
+    },
+    {
+      "year": 2045,
+      "africa_fertility_rate": 2.95,
+      "world_fertility_rate": 2.116
+    },
+    {
+      "year": 2046,
+      "africa_fertility_rate": 2.916,
+      "world_fertility_rate": 2.113
+    },
+    {
+      "year": 2047,
+      "africa_fertility_rate": 2.883,
+      "world_fertility_rate": 2.109
+    },
+    {
+      "year": 2048,
+      "africa_fertility_rate": 2.85,
+      "world_fertility_rate": 2.106
+    },
+    {
+      "year": 2049,
+      "africa_fertility_rate": 2.819,
+      "world_fertility_rate": 2.101
+    },
+    {
+      "year": 2050,
+      "africa_fertility_rate": 2.789,
+      "world_fertility_rate": 2.097
+    },
+    {
+      "year": 2051,
+      "africa_fertility_rate": 2.76,
+      "world_fertility_rate": 2.091
+    },
+    {
+      "year": 2052,
+      "africa_fertility_rate": 2.734,
+      "world_fertility_rate": 2.085
+    },
+    {
+      "year": 2053,
+      "africa_fertility_rate": 2.706,
+      "world_fertility_rate": 2.079
+    },
+    {
+      "year": 2054,
+      "africa_fertility_rate": 2.68,
+      "world_fertility_rate": 2.072
+    },
+    {
+      "year": 2055,
+      "africa_fertility_rate": 2.654,
+      "world_fertility_rate": 2.065
+    },
+    {
+      "year": 2056,
+      "africa_fertility_rate": 2.629,
+      "world_fertility_rate": 2.058
+    },
+    {
+      "year": 2057,
+      "africa_fertility_rate": 2.606,
+      "world_fertility_rate": 2.051
+    },
+    {
+      "year": 2058,
+      "africa_fertility_rate": 2.584,
+      "world_fertility_rate": 2.044
+    },
+    {
+      "year": 2059,
+      "africa_fertility_rate": 2.562,
+      "world_fertility_rate": 2.037
+    },
+    {
+      "year": 2060,
+      "africa_fertility_rate": 2.54,
+      "world_fertility_rate": 2.03
+    },
+    {
+      "year": 2061,
+      "africa_fertility_rate": 2.519,
+      "world_fertility_rate": 2.022
+    },
+    {
+      "year": 2062,
+      "africa_fertility_rate": 2.498,
+      "world_fertility_rate": 2.016
+    },
+    {
+      "year": 2063,
+      "africa_fertility_rate": 2.477,
+      "world_fertility_rate": 2.009
+    },
+    {
+      "year": 2064,
+      "africa_fertility_rate": 2.457,
+      "world_fertility_rate": 2.002
+    },
+    {
+      "year": 2065,
+      "africa_fertility_rate": 2.438,
+      "world_fertility_rate": 1.996
+    },
+    {
+      "year": 2066,
+      "africa_fertility_rate": 2.42,
+      "world_fertility_rate": 1.99
+    },
+    {
+      "year": 2067,
+      "africa_fertility_rate": 2.403,
+      "world_fertility_rate": 1.984
+    },
+    {
+      "year": 2068,
+      "africa_fertility_rate": 2.386,
+      "world_fertility_rate": 1.978
+    },
+    {
+      "year": 2069,
+      "africa_fertility_rate": 2.369,
+      "world_fertility_rate": 1.972
+    },
+    {
+      "year": 2070,
+      "africa_fertility_rate": 2.352,
+      "world_fertility_rate": 1.967
+    },
+    {
+      "year": 2071,
+      "africa_fertility_rate": 2.337,
+      "world_fertility_rate": 1.962
+    },
+    {
+      "year": 2072,
+      "africa_fertility_rate": 2.321,
+      "world_fertility_rate": 1.957
+    },
+    {
+      "year": 2073,
+      "africa_fertility_rate": 2.306,
+      "world_fertility_rate": 1.952
+    },
+    {
+      "year": 2074,
+      "africa_fertility_rate": 2.291,
+      "world_fertility_rate": 1.947
+    },
+    {
+      "year": 2075,
+      "africa_fertility_rate": 2.276,
+      "world_fertility_rate": 1.943
+    },
+    {
+      "year": 2076,
+      "africa_fertility_rate": 2.263,
+      "world_fertility_rate": 1.939
+    },
+    {
+      "year": 2077,
+      "africa_fertility_rate": 2.249,
+      "world_fertility_rate": 1.935
+    },
+    {
+      "year": 2078,
+      "africa_fertility_rate": 2.235,
+      "world_fertility_rate": 1.93
+    },
+    {
+      "year": 2079,
+      "africa_fertility_rate": 2.222,
+      "world_fertility_rate": 1.926
+    },
+    {
+      "year": 2080,
+      "africa_fertility_rate": 2.209,
+      "world_fertility_rate": 1.922
+    },
+    {
+      "year": 2081,
+      "africa_fertility_rate": 2.197,
+      "world_fertility_rate": 1.917
+    },
+    {
+      "year": 2082,
+      "africa_fertility_rate": 2.187,
+      "world_fertility_rate": 1.914
+    },
+    {
+      "year": 2083,
+      "africa_fertility_rate": 2.175,
+      "world_fertility_rate": 1.909
+    },
+    {
+      "year": 2084,
+      "africa_fertility_rate": 2.165,
+      "world_fertility_rate": 1.905
+    },
+    {
+      "year": 2085,
+      "africa_fertility_rate": 2.154,
+      "world_fertility_rate": 1.901
+    },
+    {
+      "year": 2086,
+      "africa_fertility_rate": 2.143,
+      "world_fertility_rate": 1.896
+    },
+    {
+      "year": 2087,
+      "africa_fertility_rate": 2.133,
+      "world_fertility_rate": 1.892
+    },
+    {
+      "year": 2088,
+      "africa_fertility_rate": 2.123,
+      "world_fertility_rate": 1.888
+    },
+    {
+      "year": 2089,
+      "africa_fertility_rate": 2.113,
+      "world_fertility_rate": 1.883
+    },
+    {
+      "year": 2090,
+      "africa_fertility_rate": 2.103,
+      "world_fertility_rate": 1.879
+    },
+    {
+      "year": 2091,
+      "africa_fertility_rate": 2.094,
+      "world_fertility_rate": 1.874
+    },
+    {
+      "year": 2092,
+      "africa_fertility_rate": 2.084,
+      "world_fertility_rate": 1.87
+    },
+    {
+      "year": 2093,
+      "africa_fertility_rate": 2.076,
+      "world_fertility_rate": 1.866
+    },
+    {
+      "year": 2094,
+      "africa_fertility_rate": 2.067,
+      "world_fertility_rate": 1.861
+    },
+    {
+      "year": 2095,
+      "africa_fertility_rate": 2.059,
+      "world_fertility_rate": 1.857
+    },
+    {
+      "year": 2096,
+      "africa_fertility_rate": 2.051,
+      "world_fertility_rate": 1.853
+    },
+    {
+      "year": 2097,
+      "africa_fertility_rate": 2.042,
+      "world_fertility_rate": 1.849
+    },
+    {
+      "year": 2098,
+      "africa_fertility_rate": 2.035,
+      "world_fertility_rate": 1.845
+    },
+    {
+      "year": 2099,
+      "africa_fertility_rate": 2.027,
+      "world_fertility_rate": 1.842
+    },
+    {
+      "year": 2100,
+      "africa_fertility_rate": 2.02,
+      "world_fertility_rate": 1.838
+    }
+  ]
+}

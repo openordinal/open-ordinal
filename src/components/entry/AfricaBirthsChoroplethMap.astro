@@ -1,0 +1,167 @@
+---
+import mapSvg from "../../content/data/africas-share-of-global-births-choropleth.svg?raw";
+
+const { lang = "en" } = Astro.props;
+
+const copy =
+  lang === "fr"
+    ? {
+        ariaLabel:
+          "Carte choroplethe de l'Afrique montrant la part de chaque pays dans les naissances africaines projetees en 2026",
+        source: "Fond de carte: Natural Earth. Colorisation: parts des naissances 2026 a partir de la serie OWID/ONU.",
+        tiers: [
+          { swatch: "tier-5", label: "5% et plus du total africain" },
+          { swatch: "tier-4", label: "2% a moins de 5%" },
+          { swatch: "tier-3", label: "1% a moins de 2%" },
+          { swatch: "tier-2", label: "0.25% a moins de 1%" },
+          { swatch: "tier-1", label: "Moins de 0.25%" }
+        ]
+      }
+    : {
+        ariaLabel:
+          "Choropleth map of Africa showing each country's share of projected African births in 2026",
+        source: "Base map: Natural Earth. Shading: 2026 births shares from the OWID/UN-based series.",
+        tiers: [
+          { swatch: "tier-5", label: "5% and above" },
+          { swatch: "tier-4", label: "2% to under 5%" },
+          { swatch: "tier-3", label: "1% to under 2%" },
+          { swatch: "tier-2", label: "0.25% to under 1%" },
+          { swatch: "tier-1", label: "Under 0.25%" }
+        ]
+      };
+
+const escapeAttribute = (value: string) => value.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+let svg = mapSvg
+  .replace(/^<\?xml[^>]*>\s*/, "")
+  .replace(
+    "<svg ",
+    `<svg class="js-country-map africa-birth-map__svg" role="img" aria-label="${escapeAttribute(copy.ariaLabel)}" style="width:100%;height:auto;display:block;" `
+  )
+  .replace(/class="tier-/g, 'class="map-country tier-');
+---
+
+<div class="birth-map-choropleth">
+  <div class="birth-map-choropleth__frame" set:html={svg}></div>
+
+  <div class="birth-map-choropleth__meta">
+    <ul class="birth-map-choropleth__legend" aria-label={lang === "fr" ? "Legende de la carte" : "Map legend"}>
+      {copy.tiers.map((tier) => (
+        <li>
+          <span class={`birth-map-choropleth__swatch ${tier.swatch}`}></span>
+          <span>{tier.label}</span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="birth-map-choropleth__source">{copy.source}</p>
+  </div>
+</div>
+
+<style is:global>
+  .birth-map-choropleth {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .birth-map-choropleth__frame {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.75rem;
+  }
+
+  .birth-map-choropleth__meta {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .birth-map-choropleth__source {
+    margin: 0;
+    color: var(--dim);
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .birth-map-choropleth__source {
+    font-family: "Geist Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .birth-map-choropleth__legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.55rem 0.9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Geist Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--ink);
+  }
+
+  .birth-map-choropleth__legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .birth-map-choropleth__swatch {
+    width: 0.9rem;
+    height: 0.9rem;
+    flex: 0 0 0.9rem;
+    border: 1px solid color-mix(in srgb, var(--paper) 20%, var(--rule));
+  }
+
+  .birth-map-choropleth__svg .map-country {
+    fill-opacity: 0.98;
+    transition: stroke 160ms ease, stroke-width 160ms ease, fill-opacity 160ms ease;
+  }
+
+  .birth-map-choropleth__svg .map-country:is(:hover, :focus-visible) {
+    stroke: var(--ink);
+    stroke-width: 1.8;
+    fill-opacity: 1;
+    outline: none;
+  }
+
+  .birth-map-choropleth .tier-5,
+  .birth-map-choropleth__swatch.tier-5 {
+    fill: color-mix(in srgb, var(--accent) 88%, #11253f 12%);
+    background: color-mix(in srgb, var(--accent) 88%, #11253f 12%);
+  }
+
+  .birth-map-choropleth .tier-4,
+  .birth-map-choropleth__swatch.tier-4 {
+    fill: color-mix(in srgb, var(--accent-green) 60%, var(--accent) 40%);
+    background: color-mix(in srgb, var(--accent-green) 60%, var(--accent) 40%);
+  }
+
+  .birth-map-choropleth .tier-3,
+  .birth-map-choropleth__swatch.tier-3 {
+    fill: color-mix(in srgb, var(--accent-green) 38%, var(--paper) 62%);
+    background: color-mix(in srgb, var(--accent-green) 38%, var(--paper) 62%);
+  }
+
+  .birth-map-choropleth .tier-2,
+  .birth-map-choropleth__swatch.tier-2 {
+    fill: color-mix(in srgb, var(--accent-brown) 24%, var(--paper) 76%);
+    background: color-mix(in srgb, var(--accent-brown) 24%, var(--paper) 76%);
+  }
+
+  .birth-map-choropleth .tier-1,
+  .birth-map-choropleth__swatch.tier-1 {
+    fill: color-mix(in srgb, var(--paper) 90%, var(--rule) 10%);
+    background: color-mix(in srgb, var(--paper) 90%, var(--rule) 10%);
+  }
+
+  @media (max-width: 720px) {
+    .birth-map-choropleth__legend {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .birth-map-choropleth__legend {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

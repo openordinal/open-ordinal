@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-label="Remittance Costs to Africa: Why the Gap Stays Wide OG card">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-label="Sending money to Sub-Saharan Africa: why it still costs too much OG card">
   <rect width="1200" height="627" fill="#f7f6f2"/>
   <rect x="36" y="36" width="1128" height="555" fill="none" stroke="#d8d6d0" stroke-width="1"/>
   <text x="72" y="84" fill="#0f0f0f" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="3">OPEN ORDINAL</text>
   <line x1="252" y1="78" x2="1128" y2="78" stroke="#d8d6d0" stroke-width="1"/>
   <rect x="72" y="106" width="129" height="30" fill="none" stroke="#1a3a5c" stroke-width="1"/>
   <text x="86" y="126" fill="#1a3a5c" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="1.8">ECONOMICS</text>
-  <text x="72" y="246" fill="#0f0f0f" font-family="'EB Garamond', Georgia, serif" font-size="66" font-weight="500"><tspan x="72" dy="0">Remittance Costs to Africa: Why</tspan><tspan x="72" dy="74">the Gap Stays Wide</tspan></text>
+  <text x="72" y="246" fill="#0f0f0f" font-family="'EB Garamond', Georgia, serif" font-size="56" font-weight="500"><tspan x="72" dy="0">Sending money to Sub-Saharan</tspan><tspan x="72" dy="62">Africa: why it still costs too</tspan><tspan x="72" dy="62">much</tspan></text>
   <line x1="72" y1="370" x2="1128" y2="370" stroke="#d8d6d0" stroke-width="1"/>
   <text x="72" y="430" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="0.9">KEY CONTEXT</text>
-  <text x="72" y="466" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="0.8">SSA median destination cost fell from 14.81% (2011_1Q) to 6.94% (2025_1...</text>
+  <text x="72" y="466" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="12" letter-spacing="0.8">SSA median destination cost fell from 14.81% (Q1 2011) to 6.94% (Q1 202...</text>
   <text x="1116" y="500" text-anchor="end" fill="#1a3a5c" font-family="'EB Garamond', Georgia, serif" font-size="112" font-weight="500">14.81%</text>
   <line x1="72" y1="536" x2="1128" y2="536" stroke="#d8d6d0" stroke-width="1"/>
   <text x="72" y="562" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="1.3">OPENORDINAL.ORG</text>
-  <text x="1128" y="562" text-anchor="end" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="1.3">ENTRY 004 | 2026-03-06</text>
+  <text x="1128" y="562" text-anchor="end" fill="#999999" font-family="'Geist Mono', 'Courier New', monospace" font-size="11" letter-spacing="1.3">ENTRY 004 | 2026-02-19</text>
 </svg>

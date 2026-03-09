@@ -1,0 +1,203 @@
+---
+import dataset from "../../content/data/africas-share-of-global-births-fertility-trend.json";
+
+const { lang = "en" } = Astro.props;
+
+const copy =
+  lang === "fr"
+    ? {
+        ariaLabel:
+          "Mini-graphique en courbes montrant la baisse du taux de fecondite en Afrique et dans le monde de 1950 a 2100",
+        labels: {
+          africa: "Afrique",
+          world: "Monde"
+        }
+      }
+    : {
+        ariaLabel:
+          "Mini line chart showing Africa and world fertility rates from 1950 to 2100",
+        labels: {
+          africa: "Africa",
+          world: "World"
+        }
+      };
+
+const series = dataset.series as Array<{
+  year: number;
+  africa_fertility_rate: number;
+  world_fertility_rate: number;
+}>;
+
+const width = 860;
+const height = 320;
+const margin = { top: 24, right: 78, bottom: 42, left: 62 };
+const plotWidth = width - margin.left - margin.right;
+const plotHeight = height - margin.top - margin.bottom;
+const maxY = 7;
+const ticksY = [0, 2, 4, 6];
+const ticksX = [1950, 2000, 2026, 2050, 2100];
+const currentYear = 2026;
+const x = (year: number) => margin.left + ((year - 1950) / (2100 - 1950)) * plotWidth;
+const y = (value: number) => margin.top + plotHeight - (value / maxY) * plotHeight;
+const fmt = (value: number) => value.toFixed(3);
+
+const buildPolyline = (key: "africa_fertility_rate" | "world_fertility_rate") =>
+  series.map((row) => `${x(row.year).toFixed(2)},${y(row[key]).toFixed(2)}`).join(" ");
+
+const buildArea = () => {
+  const africa = series.map((row) => `${x(row.year).toFixed(2)},${y(row.africa_fertility_rate).toFixed(2)}`);
+  const world = [...series]
+    .reverse()
+    .map((row) => `${x(row.year).toFixed(2)},${y(row.world_fertility_rate).toFixed(2)}`);
+  return [...africa, ...world].join(" ");
+};
+
+const checkpoints = {
+  africa: {
+    2000: series.find((row) => row.year === 2000)!.africa_fertility_rate,
+    2026: series.find((row) => row.year === 2026)!.africa_fertility_rate,
+    2100: series.find((row) => row.year === 2100)!.africa_fertility_rate
+  },
+  world: {
+    2000: series.find((row) => row.year === 2000)!.world_fertility_rate,
+    2026: series.find((row) => row.year === 2026)!.world_fertility_rate,
+    2100: series.find((row) => row.year === 2100)!.world_fertility_rate
+  }
+};
+
+const currentDots = [
+  {
+    label: copy.labels.africa,
+    value: checkpoints.africa[2026],
+    x: x(currentYear),
+    y: y(checkpoints.africa[2026]),
+    className: "fertility-mini-chart__point--africa",
+    dx: 10,
+    dy: -10
+  },
+  {
+    label: copy.labels.world,
+    value: checkpoints.world[2026],
+    x: x(currentYear),
+    y: y(checkpoints.world[2026]),
+    className: "fertility-mini-chart__point--world",
+    dx: 10,
+    dy: 18
+  }
+];
+---
+
+<div class="fertility-mini-chart">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    viewBox={`0 0 ${width} ${height}`}
+    role="img"
+    aria-label={copy.ariaLabel}
+    style="width:100%;height:auto;display:block;"
+  >
+    <rect width="100%" height="100%" fill="var(--paper)" />
+
+    {ticksY.map((tick) => (
+      <g>
+        <line
+          x1={margin.left}
+          y1={y(tick)}
+          x2={margin.left + plotWidth}
+          y2={y(tick)}
+          stroke="var(--rule)"
+          stroke-width={tick === 0 ? 1.2 : 1}
+          stroke-dasharray={tick === 0 ? undefined : "4 6"}
+        />
+        <text
+          x={margin.left - 12}
+          y={y(tick) + 4}
+          text-anchor="end"
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill="var(--dim)"
+        >
+          {tick}
+        </text>
+      </g>
+    ))}
+
+    {ticksX.map((tick) => (
+      <g>
+        <line
+          x1={x(tick)}
+          y1={margin.top}
+          x2={x(tick)}
+          y2={margin.top + plotHeight}
+          stroke={tick === currentYear ? "var(--accent-green)" : "var(--rule)"}
+          stroke-width={tick === currentYear ? 1.5 : 1}
+          stroke-dasharray="4 6"
+        />
+        <text
+          x={x(tick)}
+          y={height - 16}
+          text-anchor="middle"
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill={tick === currentYear ? "var(--accent-green)" : "var(--dim)"}
+        >
+          {tick}
+        </text>
+      </g>
+    ))}
+
+    <polygon points={buildArea()} class="fertility-mini-chart__gap" />
+
+    <polyline fill="none" points={buildPolyline("africa_fertility_rate")} class="fertility-mini-chart__line--africa" stroke-linecap="round" stroke-linejoin="round" />
+    <polyline fill="none" points={buildPolyline("world_fertility_rate")} class="fertility-mini-chart__line--world" stroke-linecap="round" stroke-linejoin="round" />
+
+    {currentDots.map((dot) => (
+      <g>
+        <circle cx={dot.x} cy={dot.y} r="4.5" class={dot.className} />
+        <text
+          x={dot.x + dot.dx}
+          y={dot.y + dot.dy}
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill="var(--ink)"
+        >
+          {dot.label} {fmt(dot.value)}
+        </text>
+      </g>
+    ))}
+  </svg>
+</div>
+
+<style>
+  .fertility-mini-chart {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  .fertility-mini-chart__gap {
+    fill: color-mix(in srgb, var(--accent-green) 12%, transparent);
+  }
+
+  .fertility-mini-chart__line--africa,
+  .fertility-mini-chart__point--africa {
+    stroke: var(--accent);
+    fill: var(--accent);
+    stroke-width: 3.1;
+  }
+
+  svg .fertility-mini-chart__line--africa {
+    fill: none;
+  }
+
+  .fertility-mini-chart__line--world,
+  .fertility-mini-chart__point--world {
+    stroke: var(--accent-green);
+    fill: var(--accent-green);
+    stroke-width: 2.5;
+  }
+
+  svg .fertility-mini-chart__line--world {
+    fill: none;
+  }
+</style>

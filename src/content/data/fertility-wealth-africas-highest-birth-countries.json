@@ -1,0 +1,40 @@
+{
+  "topic": "Fertility and wealth in Africa's highest-birth countries",
+  "slug": "fertility-wealth-africas-highest-birth-countries",
+  "geography": "15 countries accounting for 72.85% of Africa's projected 2026 births",
+  "source_note": "DHS Program total fertility rate indicator FE_FRTR_W_TFR with breakdown=all, plus Our World in Data births and continent mapping based on UN WPP 2024.",
+  "headline_findings": {
+    "top15_birth_share_2026_percent": 72.85,
+    "countries_with_usable_socioeconomic_tfr_data": 14,
+    "birth_share_with_usable_socioeconomic_tfr_percent": 69.29,
+    "birth_share_with_2021_plus_standard_dhs_percent": 46.7,
+    "weighted_poorest_quintile_tfr": 6.21,
+    "weighted_richest_quintile_tfr": 3.31,
+    "weighted_poorest_richest_gap": 2.91,
+    "largest_poorest_richest_gap": {
+      "country": "Angola",
+      "gap": 4.5,
+      "survey": "2023-24 DHS"
+    },
+    "smallest_poorest_richest_gap": {
+      "country": "Egypt",
+      "gap": 0.8,
+      "survey": "2014 DHS"
+    },
+    "clearest_pattern_breaks": [
+      {
+        "country": "Egypt",
+        "note": "Middle wealth quintile has higher fertility than the two poorer quintiles."
+      },
+      {
+        "country": "Niger",
+        "note": "Bottom four wealth quintiles are nearly flat before fertility falls in the richest quintile."
+      }
+    ],
+    "named_data_gap": {
+      "country": "Sudan",
+      "birth_share_2026_percent": 3.56,
+      "note": "Latest DHS is 1989-90, too old for current household-level socioeconomic comparison."
+    }
+  }
+}

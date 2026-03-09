@@ -1,0 +1,365 @@
+---
+import dataset from "../../content/data/africas-share-of-global-births-continent-shares.json";
+
+const { lang = "en" } = Astro.props;
+
+const copy =
+  lang === "fr"
+    ? {
+        ariaLabel:
+          "Graphique en courbes montrant la part des naissances mondiales de l'Afrique, de l'Asie et du reste du monde de 1950 a 2100",
+        legendTitle: "Part en 2026",
+        yLabel: "Part des naissances mondiales",
+        series: {
+          africa: "Afrique",
+          asia: "Asie",
+          rest: "Reste du monde"
+        }
+      }
+    : {
+        ariaLabel:
+          "Line chart showing Africa, Asia, and the rest of the world's share of world births from 1950 to 2100",
+        legendTitle: "Share in 2026",
+        yLabel: "Share of world births",
+        series: {
+          africa: "Africa",
+          asia: "Asia",
+          rest: "Rest of world"
+        }
+      };
+
+const sourceSeries = dataset.series as Array<{
+  year: number;
+  africa_share_percent: number;
+  asia_share_percent: number;
+  europe_share_percent: number;
+  north_america_share_percent: number;
+  south_america_share_percent: number;
+  oceania_share_percent: number;
+}>;
+
+const series = sourceSeries.map((row) => ({
+  year: row.year,
+  africa_share_percent: row.africa_share_percent,
+  asia_share_percent: row.asia_share_percent,
+  rest_of_world_share_percent: Number((100 - row.africa_share_percent - row.asia_share_percent).toFixed(2))
+}));
+
+const width = 920;
+const height = 430;
+const margin = { top: 34, right: 150, bottom: 54, left: 72 };
+const plotWidth = width - margin.left - margin.right;
+const plotHeight = height - margin.top - margin.bottom;
+const maxY = 70;
+const ticksY = [0, 10, 20, 30, 40, 50, 60, 70];
+const ticksX = [1950, 2000, 2026, 2050, 2100];
+const currentYear = 2026;
+const currentRow = series.find((row) => row.year === currentYear)!;
+const endRow = series.at(-1)!;
+
+const x = (year: number) => margin.left + ((year - 1950) / (2100 - 1950)) * plotWidth;
+const y = (value: number) => margin.top + plotHeight - (value / maxY) * plotHeight;
+const pct = (value: number) => `${value.toFixed(1)}%`;
+
+const lineConfigs = [
+  {
+    key: "africa_share_percent",
+    label: copy.series.africa,
+    legendValue: currentRow.africa_share_percent,
+    className: "birth-share-line--africa"
+  },
+  {
+    key: "asia_share_percent",
+    label: copy.series.asia,
+    legendValue: currentRow.asia_share_percent,
+    className: "birth-share-line--asia"
+  },
+  {
+    key: "rest_of_world_share_percent",
+    label: copy.series.rest,
+    legendValue: currentRow.rest_of_world_share_percent,
+    className: "birth-share-line--rest"
+  }
+] as const;
+
+const buildPolyline = (key: (typeof lineConfigs)[number]["key"]) =>
+  series.map((row) => `${x(row.year).toFixed(2)},${y(row[key]).toFixed(2)}`).join(" ");
+
+const currentDots = [
+  {
+    label: copy.series.asia,
+    value: currentRow.asia_share_percent,
+    x: x(currentYear),
+    y: y(currentRow.asia_share_percent),
+    className: "birth-share-point--asia"
+  },
+  {
+    label: copy.series.africa,
+    value: currentRow.africa_share_percent,
+    x: x(currentYear),
+    y: y(currentRow.africa_share_percent),
+    className: "birth-share-point--africa"
+  },
+  {
+    label: copy.series.rest,
+    value: currentRow.rest_of_world_share_percent,
+    x: x(currentYear),
+    y: y(currentRow.rest_of_world_share_percent),
+    className: "birth-share-point--rest"
+  }
+];
+
+const endLabels = [
+  {
+    label: copy.series.africa,
+    value: endRow.africa_share_percent,
+    x: x(2100),
+    y: y(endRow.africa_share_percent),
+    dx: 10,
+    dy: -8
+  },
+  {
+    label: copy.series.asia,
+    value: endRow.asia_share_percent,
+    x: x(2100),
+    y: y(endRow.asia_share_percent),
+    dx: 10,
+    dy: 14
+  },
+  {
+    label: copy.series.rest,
+    value: endRow.rest_of_world_share_percent,
+    x: x(2100),
+    y: y(endRow.rest_of_world_share_percent),
+    dx: 10,
+    dy: -6
+  }
+];
+---
+
+<div class="birth-share-continents-chart">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    viewBox={`0 0 ${width} ${height}`}
+    role="img"
+    aria-label={copy.ariaLabel}
+    style="width:100%;height:auto;display:block;"
+  >
+    <rect width="100%" height="100%" fill="var(--paper)" />
+
+    {ticksY.map((tick) => (
+      <g>
+        <line
+          x1={margin.left}
+          y1={y(tick)}
+          x2={margin.left + plotWidth}
+          y2={y(tick)}
+          stroke="var(--rule)"
+          stroke-width={tick === 0 ? 1.2 : 1}
+          stroke-dasharray={tick === 0 ? undefined : "4 6"}
+        />
+        <text
+          x={margin.left - 12}
+          y={y(tick) + 4}
+          text-anchor="end"
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill="var(--dim)"
+        >
+          {tick}%
+        </text>
+      </g>
+    ))}
+
+    <line x1={margin.left} y1={margin.top} x2={margin.left} y2={margin.top + plotHeight} stroke="var(--rule)" stroke-width="1" />
+    <line x1={margin.left + plotWidth} y1={margin.top} x2={margin.left + plotWidth} y2={margin.top + plotHeight} stroke="var(--rule)" stroke-width="1" />
+
+    {ticksX.map((tick) => (
+      <g>
+        <line
+          x1={x(tick)}
+          y1={margin.top}
+          x2={x(tick)}
+          y2={margin.top + plotHeight}
+          stroke={tick === currentYear ? "var(--accent-green)" : "var(--rule)"}
+          stroke-width={tick === currentYear ? 1.5 : 1}
+          stroke-dasharray="4 6"
+        />
+        <text
+          x={x(tick)}
+          y={height - 18}
+          text-anchor="middle"
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill={tick === currentYear ? "var(--accent-green)" : "var(--dim)"}
+        >
+          {tick}
+        </text>
+      </g>
+    ))}
+
+    {lineConfigs.map((config) => (
+      <polyline
+        fill="none"
+        points={buildPolyline(config.key)}
+        class={config.className}
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    ))}
+
+    {currentDots.map((dot) => (
+      <g>
+        <circle
+          cx={dot.x}
+          cy={dot.y}
+          r="4.5"
+          class={dot.className}
+          tabindex="0"
+          data-tooltip-title={dot.label}
+          data-tooltip-body={`${copy.legendTitle}: ${pct(dot.value)}`}
+        />
+      </g>
+    ))}
+
+    {endLabels.map((label) => (
+      <text
+        x={label.x + label.dx}
+        y={label.y + label.dy}
+        font-family="Geist Mono, monospace"
+        font-size="11"
+        fill="var(--ink)"
+      >
+        {label.label} {pct(label.value)}
+      </text>
+    ))}
+
+    <text
+      x={margin.left}
+      y={18}
+      font-family="Geist Mono, monospace"
+      font-size="11"
+      fill="var(--dim)"
+      text-transform="uppercase"
+      letter-spacing="0.12em"
+    >
+      {copy.yLabel}
+    </text>
+  </svg>
+
+  <div class="birth-share-continents-chart__legend" aria-label={copy.legendTitle}>
+    <p class="birth-share-continents-chart__legend-title">{copy.legendTitle}</p>
+    <ul>
+      {lineConfigs.map((config) => (
+        <li>
+          <span class={`birth-share-continents-chart__swatch ${config.className}`}></span>
+          <span>{config.label}</span>
+          <strong>{pct(config.legendValue)}</strong>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .birth-share-continents-chart {
+    display: grid;
+    gap: 0.95rem;
+  }
+
+  .birth-share-continents-chart__legend {
+    border-top: 1px solid var(--rule);
+    padding-top: 0.8rem;
+  }
+
+  .birth-share-continents-chart__legend-title {
+    margin: 0 0 0.5rem;
+    font-family: "Geist Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
+  .birth-share-continents-chart__legend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 1rem;
+    font-family: "Geist Mono", monospace;
+    font-size: 0.74rem;
+  }
+
+  .birth-share-continents-chart__legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ink);
+  }
+
+  .birth-share-continents-chart__legend li strong {
+    font-weight: 600;
+  }
+
+  .birth-share-continents-chart__swatch {
+    width: 0.95rem;
+    height: 0.24rem;
+    border-radius: 999px;
+  }
+
+  .birth-share-line--africa,
+  .birth-share-continents-chart__swatch.birth-share-line--africa,
+  .birth-share-point--africa {
+    stroke: var(--accent);
+    background: var(--accent);
+    fill: var(--accent);
+    stroke-width: 3.2;
+  }
+
+  svg .birth-share-line--africa {
+    fill: none;
+  }
+
+  .birth-share-line--asia,
+  .birth-share-continents-chart__swatch.birth-share-line--asia,
+  .birth-share-point--asia {
+    stroke: var(--accent-green);
+    background: var(--accent-green);
+    fill: var(--accent-green);
+    stroke-width: 2.8;
+  }
+
+  svg .birth-share-line--asia {
+    fill: none;
+  }
+
+  .birth-share-line--rest,
+  .birth-share-continents-chart__swatch.birth-share-line--rest,
+  .birth-share-point--rest {
+    stroke: color-mix(in srgb, var(--accent-brown) 45%, var(--dim) 55%);
+    background: color-mix(in srgb, var(--accent-brown) 45%, var(--dim) 55%);
+    fill: color-mix(in srgb, var(--accent-brown) 45%, var(--dim) 55%);
+    stroke-width: 2.2;
+  }
+
+  svg .birth-share-line--rest {
+    fill: none;
+  }
+
+  @media (max-width: 640px) {
+    .birth-share-continents-chart__legend ul {
+      gap: 0.5rem 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .birth-share-continents-chart__legend ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+const { lang = "en" } = Astro.props;
+
+const rows = [
+  { en: "Angola", fr: "Angola", gap: 4.5 },
+  { en: "Mozambique", fr: "Mozambique", gap: 4.1 },
+  { en: "Madagascar", fr: "Madagascar", gap: 3.9 },
+  { en: "Tanzania", fr: "Tanzanie", gap: 3.4 },
+  { en: "Nigeria", fr: "Nigeria", gap: 3.3 },
+  { en: "D.R. Congo", fr: "R.D. Congo", gap: 3.3 },
+  { en: "Uganda", fr: "Ouganda", gap: 3.3 },
+  { en: "Cote d'Ivoire", fr: "Cote d'Ivoire", gap: 2.9 },
+  { en: "Kenya", fr: "Kenya", gap: 2.6 },
+  { en: "Ethiopia", fr: "Ethiopie", gap: 2.4 },
+  { en: "Mali", fr: "Mali", gap: 2.2 },
+  { en: "Niger", fr: "Niger", gap: 2.1 },
+  { en: "South Africa", fr: "Afrique du Sud", gap: 1.0 },
+  { en: "Egypt", fr: "Egypte", gap: 0.8 }
+];
+
+const copy =
+  lang === "fr"
+    ? {
+        ariaLabel:
+          "Graphique en barres horizontales classant quatorze pays africains selon l'ecart de fecondite entre le quintile le plus pauvre et le plus riche"
+      }
+    : {
+        ariaLabel:
+          "Horizontal bar chart ranking fourteen African countries by fertility gap between the poorest and richest wealth quintiles"
+      };
+
+const width = 880;
+const rowHeight = 24;
+const barHeight = 12;
+const margin = { top: 18, right: 72, bottom: 18, left: 178 };
+const plotWidth = width - margin.left - margin.right;
+const height = margin.top + margin.bottom + rows.length * rowHeight;
+const maxGap = Math.max(...rows.map((row) => row.gap));
+const x = (value: number) => margin.left + (value / maxGap) * plotWidth;
+
+const displayRows = rows.map((row, index) => ({
+  ...row,
+  label: lang === "fr" ? row.fr : row.en,
+  y: margin.top + index * rowHeight + (rowHeight - barHeight) / 2,
+  textY: margin.top + index * rowHeight + rowHeight / 2 + 4,
+  width: x(row.gap) - margin.left,
+  opacity: 0.42 + (row.gap / maxGap) * 0.58
+}));
+---
+
+<div class="fertility-gap-rank-chart">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
+    viewBox={`0 0 ${width} ${height}`}
+    role="img"
+    aria-label={copy.ariaLabel}
+    style="width:100%;height:auto;display:block;"
+  >
+    <rect width="100%" height="100%" fill="var(--paper)" />
+
+    {displayRows.map((row, index) => (
+      <g>
+        {index % 2 === 0 && (
+          <rect
+            x={margin.left - 12}
+            y={margin.top + index * rowHeight}
+            width={plotWidth + 52}
+            height={rowHeight - 2}
+            rx="10"
+            fill="var(--accent)"
+            fill-opacity="0.035"
+          />
+        )}
+        <text
+          x={margin.left - 18}
+          y={row.textY}
+          text-anchor="end"
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill="var(--ink)"
+        >
+          {row.label}
+        </text>
+        <rect
+          x={margin.left}
+          y={row.y}
+          width={row.width}
+          height={barHeight}
+          rx="6"
+          fill="var(--accent)"
+          fill-opacity={row.opacity.toFixed(2)}
+        />
+        <text
+          x={x(row.gap) + 8}
+          y={row.textY}
+          font-family="Geist Mono, monospace"
+          font-size="11"
+          fill="var(--ink)"
+        >
+          {row.gap.toFixed(1)}
+        </text>
+      </g>
+    ))}
+  </svg>
+</div>
+
+<style>
+  .fertility-gap-rank-chart {
+    display: grid;
+  }
+</style>

@@ -1,8 +1,8 @@
 ---
-const { title, subtitle = "", note = "" } = Astro.props;
+const { title, subtitle = "", note = "", disableTooltips = false } = Astro.props;
 ---
 
-<figure class="entry-chart my-8 border border-rule p-4">
+<figure class="entry-chart my-8 border border-rule p-4" data-disable-chart-tooltips={disableTooltips ? "true" : undefined}>
   <figcaption>
     <p class="text-lg italic text-ink">{title}</p>
     {subtitle && <p class="ui-meta mt-1 text-[10px] uppercase tracking-[0.14em] text-dim">{subtitle}</p>}

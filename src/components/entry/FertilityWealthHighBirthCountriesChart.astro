@@ -1,0 +1,21 @@
+---
+import chartSvg from "../../content/data/fertility-wealth-africas-highest-birth-countries-chart.svg?raw";
+
+const { lang = "en" } = Astro.props;
+
+const ariaLabel =
+  lang === "fr"
+    ? "Petits multiples montrant la fecondite par quintile de richesse dans dix pays africains ou les naissances sont les plus nombreuses"
+    : "Small multiples chart showing fertility by wealth quintile across ten African countries with the largest projected birth counts";
+
+const escapeAttribute = (value: string) => value.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+
+const svg = chartSvg
+  .replace(/^<\?xml[^>]*>\s*/, "")
+  .replace(
+    "<svg ",
+    `<svg class="fertility-wealth-chart__svg" role="img" aria-label="${escapeAttribute(ariaLabel)}" style="width:100%;height:auto;display:block;" `
+  );
+---
+
+<div class="fertility-wealth-chart" set:html={svg}></div>

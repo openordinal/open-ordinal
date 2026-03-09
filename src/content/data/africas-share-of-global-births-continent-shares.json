@@ -1,0 +1,1365 @@
+{
+  "topic": "Global birth shares by continent",
+  "source": "Our World in Data grapher births series based on UN World Population Prospects 2024",
+  "series": [
+    {
+      "year": 1950,
+      "africa_share_percent": 11.85,
+      "asia_share_percent": 62.13,
+      "europe_share_percent": 13.27,
+      "north_america_share_percent": 7.18,
+      "south_america_share_percent": 5.2,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1951,
+      "africa_share_percent": 12.04,
+      "asia_share_percent": 61.9,
+      "europe_share_percent": 13.06,
+      "north_america_share_percent": 7.32,
+      "south_america_share_percent": 5.3,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1952,
+      "africa_share_percent": 11.71,
+      "asia_share_percent": 63.23,
+      "europe_share_percent": 12.39,
+      "north_america_share_percent": 7.12,
+      "south_america_share_percent": 5.17,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1953,
+      "africa_share_percent": 11.99,
+      "asia_share_percent": 62.71,
+      "europe_share_percent": 12.34,
+      "north_america_share_percent": 7.25,
+      "south_america_share_percent": 5.31,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1954,
+      "africa_share_percent": 11.9,
+      "asia_share_percent": 63.16,
+      "europe_share_percent": 12.03,
+      "north_america_share_percent": 7.24,
+      "south_america_share_percent": 5.29,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1955,
+      "africa_share_percent": 11.98,
+      "asia_share_percent": 63.21,
+      "europe_share_percent": 11.88,
+      "north_america_share_percent": 7.21,
+      "south_america_share_percent": 5.34,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1956,
+      "africa_share_percent": 12.24,
+      "asia_share_percent": 62.65,
+      "europe_share_percent": 11.86,
+      "north_america_share_percent": 7.39,
+      "south_america_share_percent": 5.47,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1957,
+      "africa_share_percent": 12,
+      "asia_share_percent": 63.53,
+      "europe_share_percent": 11.47,
+      "north_america_share_percent": 7.25,
+      "south_america_share_percent": 5.37,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1958,
+      "africa_share_percent": 12.42,
+      "asia_share_percent": 62.55,
+      "europe_share_percent": 11.61,
+      "north_america_share_percent": 7.47,
+      "south_america_share_percent": 5.56,
+      "oceania_share_percent": 0.4
+    },
+    {
+      "year": 1959,
+      "africa_share_percent": 13.01,
+      "asia_share_percent": 61.01,
+      "europe_share_percent": 12,
+      "north_america_share_percent": 7.74,
+      "south_america_share_percent": 5.82,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 1960,
+      "africa_share_percent": 13.26,
+      "asia_share_percent": 60.68,
+      "europe_share_percent": 11.91,
+      "north_america_share_percent": 7.81,
+      "south_america_share_percent": 5.91,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 1961,
+      "africa_share_percent": 13.76,
+      "asia_share_percent": 59.73,
+      "europe_share_percent": 11.96,
+      "north_america_share_percent": 8.01,
+      "south_america_share_percent": 6.1,
+      "oceania_share_percent": 0.44
+    },
+    {
+      "year": 1962,
+      "africa_share_percent": 12.7,
+      "asia_share_percent": 63.61,
+      "europe_share_percent": 10.51,
+      "north_america_share_percent": 7.19,
+      "south_america_share_percent": 5.58,
+      "oceania_share_percent": 0.4
+    },
+    {
+      "year": 1963,
+      "africa_share_percent": 12.14,
+      "asia_share_percent": 65.7,
+      "europe_share_percent": 9.75,
+      "north_america_share_percent": 6.73,
+      "south_america_share_percent": 5.3,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1964,
+      "africa_share_percent": 12.68,
+      "asia_share_percent": 64.83,
+      "europe_share_percent": 9.78,
+      "north_america_share_percent": 6.88,
+      "south_america_share_percent": 5.45,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1965,
+      "africa_share_percent": 12.9,
+      "asia_share_percent": 65.16,
+      "europe_share_percent": 9.43,
+      "north_america_share_percent": 6.69,
+      "south_america_share_percent": 5.45,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1966,
+      "africa_share_percent": 13.28,
+      "asia_share_percent": 64.86,
+      "europe_share_percent": 9.36,
+      "north_america_share_percent": 6.62,
+      "south_america_share_percent": 5.49,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1967,
+      "africa_share_percent": 13.64,
+      "asia_share_percent": 64.47,
+      "europe_share_percent": 9.4,
+      "north_america_share_percent": 6.59,
+      "south_america_share_percent": 5.52,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1968,
+      "africa_share_percent": 13.4,
+      "asia_share_percent": 65.68,
+      "europe_share_percent": 8.86,
+      "north_america_share_percent": 6.36,
+      "south_america_share_percent": 5.31,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1969,
+      "africa_share_percent": 13.69,
+      "asia_share_percent": 65.35,
+      "europe_share_percent": 8.74,
+      "north_america_share_percent": 6.49,
+      "south_america_share_percent": 5.34,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1970,
+      "africa_share_percent": 13.82,
+      "asia_share_percent": 65.41,
+      "europe_share_percent": 8.52,
+      "north_america_share_percent": 6.55,
+      "south_america_share_percent": 5.31,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1971,
+      "africa_share_percent": 14.22,
+      "asia_share_percent": 64.89,
+      "europe_share_percent": 8.61,
+      "north_america_share_percent": 6.46,
+      "south_america_share_percent": 5.39,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 1972,
+      "africa_share_percent": 14.59,
+      "asia_share_percent": 64.75,
+      "europe_share_percent": 8.53,
+      "north_america_share_percent": 6.25,
+      "south_america_share_percent": 5.46,
+      "oceania_share_percent": 0.41
+    },
+    {
+      "year": 1973,
+      "africa_share_percent": 14.94,
+      "asia_share_percent": 64.58,
+      "europe_share_percent": 8.37,
+      "north_america_share_percent": 6.18,
+      "south_america_share_percent": 5.54,
+      "oceania_share_percent": 0.4
+    },
+    {
+      "year": 1974,
+      "africa_share_percent": 15.45,
+      "asia_share_percent": 63.74,
+      "europe_share_percent": 8.52,
+      "north_america_share_percent": 6.26,
+      "south_america_share_percent": 5.64,
+      "oceania_share_percent": 0.4
+    },
+    {
+      "year": 1975,
+      "africa_share_percent": 16.09,
+      "asia_share_percent": 62.84,
+      "europe_share_percent": 8.52,
+      "north_america_share_percent": 6.34,
+      "south_america_share_percent": 5.81,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1976,
+      "africa_share_percent": 16.47,
+      "asia_share_percent": 62.41,
+      "europe_share_percent": 8.48,
+      "north_america_share_percent": 6.36,
+      "south_america_share_percent": 5.9,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1977,
+      "africa_share_percent": 16.97,
+      "asia_share_percent": 61.65,
+      "europe_share_percent": 8.45,
+      "north_america_share_percent": 6.53,
+      "south_america_share_percent": 6.02,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1978,
+      "africa_share_percent": 17.21,
+      "asia_share_percent": 61.57,
+      "europe_share_percent": 8.32,
+      "north_america_share_percent": 6.49,
+      "south_america_share_percent": 6.04,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1979,
+      "africa_share_percent": 17.28,
+      "asia_share_percent": 61.78,
+      "europe_share_percent": 8.14,
+      "north_america_share_percent": 6.46,
+      "south_america_share_percent": 5.98,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1980,
+      "africa_share_percent": 17.38,
+      "asia_share_percent": 61.9,
+      "europe_share_percent": 8.01,
+      "north_america_share_percent": 6.41,
+      "south_america_share_percent": 5.93,
+      "oceania_share_percent": 0.36
+    },
+    {
+      "year": 1981,
+      "africa_share_percent": 17.48,
+      "asia_share_percent": 62.15,
+      "europe_share_percent": 7.79,
+      "north_america_share_percent": 6.33,
+      "south_america_share_percent": 5.89,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1982,
+      "africa_share_percent": 17.46,
+      "asia_share_percent": 62.53,
+      "europe_share_percent": 7.63,
+      "north_america_share_percent": 6.24,
+      "south_america_share_percent": 5.77,
+      "oceania_share_percent": 0.36
+    },
+    {
+      "year": 1983,
+      "africa_share_percent": 18.07,
+      "asia_share_percent": 61.65,
+      "europe_share_percent": 7.74,
+      "north_america_share_percent": 6.31,
+      "south_america_share_percent": 5.85,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1984,
+      "africa_share_percent": 18.09,
+      "asia_share_percent": 62.03,
+      "europe_share_percent": 7.53,
+      "north_america_share_percent": 6.24,
+      "south_america_share_percent": 5.75,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1985,
+      "africa_share_percent": 18.19,
+      "asia_share_percent": 62.21,
+      "europe_share_percent": 7.35,
+      "north_america_share_percent": 6.22,
+      "south_america_share_percent": 5.66,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1986,
+      "africa_share_percent": 18.13,
+      "asia_share_percent": 62.58,
+      "europe_share_percent": 7.27,
+      "north_america_share_percent": 6.11,
+      "south_america_share_percent": 5.55,
+      "oceania_share_percent": 0.36
+    },
+    {
+      "year": 1987,
+      "africa_share_percent": 18.19,
+      "asia_share_percent": 62.8,
+      "europe_share_percent": 7.13,
+      "north_america_share_percent": 6.06,
+      "south_america_share_percent": 5.45,
+      "oceania_share_percent": 0.36
+    },
+    {
+      "year": 1988,
+      "africa_share_percent": 18.56,
+      "asia_share_percent": 62.42,
+      "europe_share_percent": 7.04,
+      "north_america_share_percent": 6.15,
+      "south_america_share_percent": 5.45,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1989,
+      "africa_share_percent": 18.69,
+      "asia_share_percent": 62.6,
+      "europe_share_percent": 6.74,
+      "north_america_share_percent": 6.2,
+      "south_america_share_percent": 5.4,
+      "oceania_share_percent": 0.37
+    },
+    {
+      "year": 1990,
+      "africa_share_percent": 18.81,
+      "asia_share_percent": 62.73,
+      "europe_share_percent": 6.52,
+      "north_america_share_percent": 6.22,
+      "south_america_share_percent": 5.33,
+      "oceania_share_percent": 0.38
+    },
+    {
+      "year": 1991,
+      "africa_share_percent": 19.85,
+      "asia_share_percent": 61.34,
+      "europe_share_percent": 6.48,
+      "north_america_share_percent": 6.42,
+      "south_america_share_percent": 5.52,
+      "oceania_share_percent": 0.39
+    },
+    {
+      "year": 1992,
+      "africa_share_percent": 20.42,
+      "asia_share_percent": 60.89,
+      "europe_share_percent": 6.27,
+      "north_america_share_percent": 6.46,
+      "south_america_share_percent": 5.55,
+      "oceania_share_percent": 0.4
+    },
+    {
+      "year": 1993,
+      "africa_share_percent": 20.9,
+      "asia_share_percent": 60.66,
+      "europe_share_percent": 5.99,
+      "north_america_share_percent": 6.45,
+      "south_america_share_percent": 5.6,
+      "oceania_share_percent": 0.41
+    },
+    {
+      "year": 1994,
+      "africa_share_percent": 21.24,
+      "asia_share_percent": 60.46,
+      "europe_share_percent": 5.86,
+      "north_america_share_percent": 6.42,
+      "south_america_share_percent": 5.61,
+      "oceania_share_percent": 0.41
+    },
+    {
+      "year": 1995,
+      "africa_share_percent": 21.75,
+      "asia_share_percent": 60.14,
+      "europe_share_percent": 5.72,
+      "north_america_share_percent": 6.37,
+      "south_america_share_percent": 5.62,
+      "oceania_share_percent": 0.41
+    },
+    {
+      "year": 1996,
+      "africa_share_percent": 22.21,
+      "asia_share_percent": 59.75,
+      "europe_share_percent": 5.67,
+      "north_america_share_percent": 6.35,
+      "south_america_share_percent": 5.61,
+      "oceania_share_percent": 0.41
+    },
+    {
+      "year": 1997,
+      "africa_share_percent": 22.61,
+      "asia_share_percent": 59.42,
+      "europe_share_percent": 5.61,
+      "north_america_share_percent": 6.33,
+      "south_america_share_percent": 5.61,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 1998,
+      "africa_share_percent": 23.03,
+      "asia_share_percent": 59.06,
+      "europe_share_percent": 5.55,
+      "north_america_share_percent": 6.34,
+      "south_america_share_percent": 5.6,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 1999,
+      "africa_share_percent": 23.51,
+      "asia_share_percent": 58.76,
+      "europe_share_percent": 5.43,
+      "north_america_share_percent": 6.34,
+      "south_america_share_percent": 5.54,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 2000,
+      "africa_share_percent": 23.69,
+      "asia_share_percent": 58.79,
+      "europe_share_percent": 5.39,
+      "north_america_share_percent": 6.31,
+      "south_america_share_percent": 5.4,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 2001,
+      "africa_share_percent": 24.24,
+      "asia_share_percent": 58.35,
+      "europe_share_percent": 5.36,
+      "north_america_share_percent": 6.29,
+      "south_america_share_percent": 5.33,
+      "oceania_share_percent": 0.42
+    },
+    {
+      "year": 2002,
+      "africa_share_percent": 24.7,
+      "asia_share_percent": 57.93,
+      "europe_share_percent": 5.41,
+      "north_america_share_percent": 6.26,
+      "south_america_share_percent": 5.26,
+      "oceania_share_percent": 0.43
+    },
+    {
+      "year": 2003,
+      "africa_share_percent": 25.18,
+      "asia_share_percent": 57.44,
+      "europe_share_percent": 5.51,
+      "north_america_share_percent": 6.26,
+      "south_america_share_percent": 5.17,
+      "oceania_share_percent": 0.43
+    },
+    {
+      "year": 2004,
+      "africa_share_percent": 25.58,
+      "asia_share_percent": 57.08,
+      "europe_share_percent": 5.56,
+      "north_america_share_percent": 6.22,
+      "south_america_share_percent": 5.12,
+      "oceania_share_percent": 0.44
+    },
+    {
+      "year": 2005,
+      "africa_share_percent": 26.11,
+      "asia_share_percent": 56.65,
+      "europe_share_percent": 5.52,
+      "north_america_share_percent": 6.2,
+      "south_america_share_percent": 5.07,
+      "oceania_share_percent": 0.45
+    },
+    {
+      "year": 2006,
+      "africa_share_percent": 26.43,
+      "asia_share_percent": 56.34,
+      "europe_share_percent": 5.58,
+      "north_america_share_percent": 6.22,
+      "south_america_share_percent": 4.98,
+      "oceania_share_percent": 0.45
+    },
+    {
+      "year": 2007,
+      "africa_share_percent": 26.7,
+      "asia_share_percent": 56.1,
+      "europe_share_percent": 5.66,
+      "north_america_share_percent": 6.2,
+      "south_america_share_percent": 4.87,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2008,
+      "africa_share_percent": 26.96,
+      "asia_share_percent": 55.88,
+      "europe_share_percent": 5.79,
+      "north_america_share_percent": 6.1,
+      "south_america_share_percent": 4.78,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2009,
+      "africa_share_percent": 27.23,
+      "asia_share_percent": 55.82,
+      "europe_share_percent": 5.76,
+      "north_america_share_percent": 6,
+      "south_america_share_percent": 4.71,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2010,
+      "africa_share_percent": 27.68,
+      "asia_share_percent": 55.51,
+      "europe_share_percent": 5.75,
+      "north_america_share_percent": 5.9,
+      "south_america_share_percent": 4.67,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2011,
+      "africa_share_percent": 28.05,
+      "asia_share_percent": 55.33,
+      "europe_share_percent": 5.64,
+      "north_america_share_percent": 5.87,
+      "south_america_share_percent": 4.64,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2012,
+      "africa_share_percent": 28.07,
+      "asia_share_percent": 55.54,
+      "europe_share_percent": 5.61,
+      "north_america_share_percent": 5.78,
+      "south_america_share_percent": 4.52,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2013,
+      "africa_share_percent": 28.68,
+      "asia_share_percent": 54.97,
+      "europe_share_percent": 5.53,
+      "north_america_share_percent": 5.8,
+      "south_america_share_percent": 4.54,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2014,
+      "africa_share_percent": 29.05,
+      "asia_share_percent": 54.6,
+      "europe_share_percent": 5.54,
+      "north_america_share_percent": 5.8,
+      "south_america_share_percent": 4.54,
+      "oceania_share_percent": 0.47
+    },
+    {
+      "year": 2015,
+      "africa_share_percent": 29.56,
+      "asia_share_percent": 54.11,
+      "europe_share_percent": 5.52,
+      "north_america_share_percent": 5.79,
+      "south_america_share_percent": 4.54,
+      "oceania_share_percent": 0.48
+    },
+    {
+      "year": 2016,
+      "africa_share_percent": 29.66,
+      "asia_share_percent": 54.25,
+      "europe_share_percent": 5.49,
+      "north_america_share_percent": 5.7,
+      "south_america_share_percent": 4.42,
+      "oceania_share_percent": 0.48
+    },
+    {
+      "year": 2017,
+      "africa_share_percent": 30.22,
+      "asia_share_percent": 53.89,
+      "europe_share_percent": 5.31,
+      "north_america_share_percent": 5.65,
+      "south_america_share_percent": 4.44,
+      "oceania_share_percent": 0.48
+    },
+    {
+      "year": 2018,
+      "africa_share_percent": 31.09,
+      "asia_share_percent": 52.91,
+      "europe_share_percent": 5.26,
+      "north_america_share_percent": 5.73,
+      "south_america_share_percent": 4.51,
+      "oceania_share_percent": 0.5
+    },
+    {
+      "year": 2019,
+      "africa_share_percent": 31.72,
+      "asia_share_percent": 52.45,
+      "europe_share_percent": 5.15,
+      "north_america_share_percent": 5.75,
+      "south_america_share_percent": 4.43,
+      "oceania_share_percent": 0.5
+    },
+    {
+      "year": 2020,
+      "africa_share_percent": 32.94,
+      "asia_share_percent": 51.24,
+      "europe_share_percent": 5.17,
+      "north_america_share_percent": 5.76,
+      "south_america_share_percent": 4.38,
+      "oceania_share_percent": 0.51
+    },
+    {
+      "year": 2021,
+      "africa_share_percent": 33.64,
+      "asia_share_percent": 50.47,
+      "europe_share_percent": 5.18,
+      "north_america_share_percent": 5.83,
+      "south_america_share_percent": 4.36,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2022,
+      "africa_share_percent": 34.32,
+      "asia_share_percent": 50,
+      "europe_share_percent": 4.93,
+      "north_america_share_percent": 5.89,
+      "south_america_share_percent": 4.34,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2023,
+      "africa_share_percent": 34.87,
+      "asia_share_percent": 49.68,
+      "europe_share_percent": 4.81,
+      "north_america_share_percent": 5.81,
+      "south_america_share_percent": 4.31,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2024,
+      "africa_share_percent": 35.21,
+      "asia_share_percent": 49.45,
+      "europe_share_percent": 4.75,
+      "north_america_share_percent": 5.79,
+      "south_america_share_percent": 4.27,
+      "oceania_share_percent": 0.53
+    },
+    {
+      "year": 2025,
+      "africa_share_percent": 35.56,
+      "asia_share_percent": 49.21,
+      "europe_share_percent": 4.7,
+      "north_america_share_percent": 5.78,
+      "south_america_share_percent": 4.23,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2026,
+      "africa_share_percent": 35.89,
+      "asia_share_percent": 48.98,
+      "europe_share_percent": 4.65,
+      "north_america_share_percent": 5.76,
+      "south_america_share_percent": 4.2,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2027,
+      "africa_share_percent": 36.22,
+      "asia_share_percent": 48.75,
+      "europe_share_percent": 4.6,
+      "north_america_share_percent": 5.74,
+      "south_america_share_percent": 4.16,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2028,
+      "africa_share_percent": 36.52,
+      "asia_share_percent": 48.52,
+      "europe_share_percent": 4.57,
+      "north_america_share_percent": 5.73,
+      "south_america_share_percent": 4.13,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2029,
+      "africa_share_percent": 36.82,
+      "asia_share_percent": 48.3,
+      "europe_share_percent": 4.54,
+      "north_america_share_percent": 5.72,
+      "south_america_share_percent": 4.1,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2030,
+      "africa_share_percent": 37.06,
+      "asia_share_percent": 48.13,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.71,
+      "south_america_share_percent": 4.07,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2031,
+      "africa_share_percent": 37.32,
+      "asia_share_percent": 47.93,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.7,
+      "south_america_share_percent": 4.04,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2032,
+      "africa_share_percent": 37.55,
+      "asia_share_percent": 47.74,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.69,
+      "south_america_share_percent": 4.01,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2033,
+      "africa_share_percent": 37.77,
+      "asia_share_percent": 47.56,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.68,
+      "south_america_share_percent": 3.98,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2034,
+      "africa_share_percent": 37.97,
+      "asia_share_percent": 47.38,
+      "europe_share_percent": 4.52,
+      "north_america_share_percent": 5.67,
+      "south_america_share_percent": 3.95,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2035,
+      "africa_share_percent": 38.16,
+      "asia_share_percent": 47.21,
+      "europe_share_percent": 4.53,
+      "north_america_share_percent": 5.66,
+      "south_america_share_percent": 3.91,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2036,
+      "africa_share_percent": 38.36,
+      "asia_share_percent": 47.02,
+      "europe_share_percent": 4.56,
+      "north_america_share_percent": 5.66,
+      "south_america_share_percent": 3.88,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2037,
+      "africa_share_percent": 38.53,
+      "asia_share_percent": 46.86,
+      "europe_share_percent": 4.59,
+      "north_america_share_percent": 5.65,
+      "south_america_share_percent": 3.85,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2038,
+      "africa_share_percent": 38.74,
+      "asia_share_percent": 46.67,
+      "europe_share_percent": 4.62,
+      "north_america_share_percent": 5.64,
+      "south_america_share_percent": 3.82,
+      "oceania_share_percent": 0.52
+    },
+    {
+      "year": 2039,
+      "africa_share_percent": 38.95,
+      "asia_share_percent": 46.47,
+      "europe_share_percent": 4.65,
+      "north_america_share_percent": 5.63,
+      "south_america_share_percent": 3.78,
+      "oceania_share_percent": 0.53
+    },
+    {
+      "year": 2040,
+      "africa_share_percent": 39.15,
+      "asia_share_percent": 46.3,
+      "europe_share_percent": 4.67,
+      "north_america_share_percent": 5.61,
+      "south_america_share_percent": 3.75,
+      "oceania_share_percent": 0.53
+    },
+    {
+      "year": 2041,
+      "africa_share_percent": 39.35,
+      "asia_share_percent": 46.12,
+      "europe_share_percent": 4.7,
+      "north_america_share_percent": 5.59,
+      "south_america_share_percent": 3.71,
+      "oceania_share_percent": 0.53
+    },
+    {
+      "year": 2042,
+      "africa_share_percent": 39.57,
+      "asia_share_percent": 45.94,
+      "europe_share_percent": 4.72,
+      "north_america_share_percent": 5.57,
+      "south_america_share_percent": 3.68,
+      "oceania_share_percent": 0.53
+    },
+    {
+      "year": 2043,
+      "africa_share_percent": 39.78,
+      "asia_share_percent": 45.76,
+      "europe_share_percent": 4.73,
+      "north_america_share_percent": 5.54,
+      "south_america_share_percent": 3.65,
+      "oceania_share_percent": 0.54
+    },
+    {
+      "year": 2044,
+      "africa_share_percent": 40.01,
+      "asia_share_percent": 45.57,
+      "europe_share_percent": 4.74,
+      "north_america_share_percent": 5.52,
+      "south_america_share_percent": 3.62,
+      "oceania_share_percent": 0.54
+    },
+    {
+      "year": 2045,
+      "africa_share_percent": 40.24,
+      "asia_share_percent": 45.39,
+      "europe_share_percent": 4.74,
+      "north_america_share_percent": 5.51,
+      "south_america_share_percent": 3.59,
+      "oceania_share_percent": 0.54
+    },
+    {
+      "year": 2046,
+      "africa_share_percent": 40.51,
+      "asia_share_percent": 45.17,
+      "europe_share_percent": 4.73,
+      "north_america_share_percent": 5.48,
+      "south_america_share_percent": 3.57,
+      "oceania_share_percent": 0.54
+    },
+    {
+      "year": 2047,
+      "africa_share_percent": 40.79,
+      "asia_share_percent": 44.94,
+      "europe_share_percent": 4.71,
+      "north_america_share_percent": 5.47,
+      "south_america_share_percent": 3.55,
+      "oceania_share_percent": 0.55
+    },
+    {
+      "year": 2048,
+      "africa_share_percent": 41.08,
+      "asia_share_percent": 44.7,
+      "europe_share_percent": 4.69,
+      "north_america_share_percent": 5.45,
+      "south_america_share_percent": 3.53,
+      "oceania_share_percent": 0.55
+    },
+    {
+      "year": 2049,
+      "africa_share_percent": 41.38,
+      "asia_share_percent": 44.46,
+      "europe_share_percent": 4.66,
+      "north_america_share_percent": 5.44,
+      "south_america_share_percent": 3.51,
+      "oceania_share_percent": 0.55
+    },
+    {
+      "year": 2050,
+      "africa_share_percent": 41.69,
+      "asia_share_percent": 44.21,
+      "europe_share_percent": 4.62,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.49,
+      "oceania_share_percent": 0.55
+    },
+    {
+      "year": 2051,
+      "africa_share_percent": 42,
+      "asia_share_percent": 43.95,
+      "europe_share_percent": 4.58,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.48,
+      "oceania_share_percent": 0.56
+    },
+    {
+      "year": 2052,
+      "africa_share_percent": 42.33,
+      "asia_share_percent": 43.69,
+      "europe_share_percent": 4.54,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.46,
+      "oceania_share_percent": 0.56
+    },
+    {
+      "year": 2053,
+      "africa_share_percent": 42.61,
+      "asia_share_percent": 43.45,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.44,
+      "oceania_share_percent": 0.56
+    },
+    {
+      "year": 2054,
+      "africa_share_percent": 42.91,
+      "asia_share_percent": 43.21,
+      "europe_share_percent": 4.46,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.43,
+      "oceania_share_percent": 0.56
+    },
+    {
+      "year": 2055,
+      "africa_share_percent": 43.16,
+      "asia_share_percent": 43.01,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.41,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2056,
+      "africa_share_percent": 43.4,
+      "asia_share_percent": 42.82,
+      "europe_share_percent": 4.38,
+      "north_america_share_percent": 5.43,
+      "south_america_share_percent": 3.39,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2057,
+      "africa_share_percent": 43.63,
+      "asia_share_percent": 42.64,
+      "europe_share_percent": 4.36,
+      "north_america_share_percent": 5.44,
+      "south_america_share_percent": 3.37,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2058,
+      "africa_share_percent": 43.85,
+      "asia_share_percent": 42.46,
+      "europe_share_percent": 4.33,
+      "north_america_share_percent": 5.44,
+      "south_america_share_percent": 3.35,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2059,
+      "africa_share_percent": 44.04,
+      "asia_share_percent": 42.3,
+      "europe_share_percent": 4.31,
+      "north_america_share_percent": 5.44,
+      "south_america_share_percent": 3.33,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2060,
+      "africa_share_percent": 44.21,
+      "asia_share_percent": 42.16,
+      "europe_share_percent": 4.29,
+      "north_america_share_percent": 5.45,
+      "south_america_share_percent": 3.31,
+      "oceania_share_percent": 0.57
+    },
+    {
+      "year": 2061,
+      "africa_share_percent": 44.37,
+      "asia_share_percent": 42.02,
+      "europe_share_percent": 4.28,
+      "north_america_share_percent": 5.45,
+      "south_america_share_percent": 3.29,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2062,
+      "africa_share_percent": 44.48,
+      "asia_share_percent": 41.93,
+      "europe_share_percent": 4.28,
+      "north_america_share_percent": 5.46,
+      "south_america_share_percent": 3.27,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2063,
+      "africa_share_percent": 44.59,
+      "asia_share_percent": 41.83,
+      "europe_share_percent": 4.28,
+      "north_america_share_percent": 5.47,
+      "south_america_share_percent": 3.26,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2064,
+      "africa_share_percent": 44.67,
+      "asia_share_percent": 41.75,
+      "europe_share_percent": 4.29,
+      "north_america_share_percent": 5.47,
+      "south_america_share_percent": 3.24,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2065,
+      "africa_share_percent": 44.76,
+      "asia_share_percent": 41.66,
+      "europe_share_percent": 4.3,
+      "north_america_share_percent": 5.48,
+      "south_america_share_percent": 3.22,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2066,
+      "africa_share_percent": 44.86,
+      "asia_share_percent": 41.57,
+      "europe_share_percent": 4.31,
+      "north_america_share_percent": 5.48,
+      "south_america_share_percent": 3.2,
+      "oceania_share_percent": 0.58
+    },
+    {
+      "year": 2067,
+      "africa_share_percent": 44.95,
+      "asia_share_percent": 41.47,
+      "europe_share_percent": 4.32,
+      "north_america_share_percent": 5.49,
+      "south_america_share_percent": 3.18,
+      "oceania_share_percent": 0.59
+    },
+    {
+      "year": 2068,
+      "africa_share_percent": 45.03,
+      "asia_share_percent": 41.38,
+      "europe_share_percent": 4.34,
+      "north_america_share_percent": 5.5,
+      "south_america_share_percent": 3.17,
+      "oceania_share_percent": 0.59
+    },
+    {
+      "year": 2069,
+      "africa_share_percent": 45.12,
+      "asia_share_percent": 41.27,
+      "europe_share_percent": 4.37,
+      "north_america_share_percent": 5.5,
+      "south_america_share_percent": 3.15,
+      "oceania_share_percent": 0.59
+    },
+    {
+      "year": 2070,
+      "africa_share_percent": 45.2,
+      "asia_share_percent": 41.17,
+      "europe_share_percent": 4.39,
+      "north_america_share_percent": 5.51,
+      "south_america_share_percent": 3.13,
+      "oceania_share_percent": 0.59
+    },
+    {
+      "year": 2071,
+      "africa_share_percent": 45.28,
+      "asia_share_percent": 41.08,
+      "europe_share_percent": 4.41,
+      "north_america_share_percent": 5.51,
+      "south_america_share_percent": 3.12,
+      "oceania_share_percent": 0.6
+    },
+    {
+      "year": 2072,
+      "africa_share_percent": 45.37,
+      "asia_share_percent": 40.97,
+      "europe_share_percent": 4.43,
+      "north_america_share_percent": 5.52,
+      "south_america_share_percent": 3.1,
+      "oceania_share_percent": 0.6
+    },
+    {
+      "year": 2073,
+      "africa_share_percent": 45.47,
+      "asia_share_percent": 40.86,
+      "europe_share_percent": 4.46,
+      "north_america_share_percent": 5.52,
+      "south_america_share_percent": 3.09,
+      "oceania_share_percent": 0.6
+    },
+    {
+      "year": 2074,
+      "africa_share_percent": 45.57,
+      "asia_share_percent": 40.76,
+      "europe_share_percent": 4.47,
+      "north_america_share_percent": 5.52,
+      "south_america_share_percent": 3.08,
+      "oceania_share_percent": 0.6
+    },
+    {
+      "year": 2075,
+      "africa_share_percent": 45.67,
+      "asia_share_percent": 40.65,
+      "europe_share_percent": 4.49,
+      "north_america_share_percent": 5.53,
+      "south_america_share_percent": 3.06,
+      "oceania_share_percent": 0.61
+    },
+    {
+      "year": 2076,
+      "africa_share_percent": 45.78,
+      "asia_share_percent": 40.53,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.53,
+      "south_america_share_percent": 3.05,
+      "oceania_share_percent": 0.61
+    },
+    {
+      "year": 2077,
+      "africa_share_percent": 45.89,
+      "asia_share_percent": 40.42,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.54,
+      "south_america_share_percent": 3.04,
+      "oceania_share_percent": 0.61
+    },
+    {
+      "year": 2078,
+      "africa_share_percent": 46.01,
+      "asia_share_percent": 40.29,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.55,
+      "south_america_share_percent": 3.02,
+      "oceania_share_percent": 0.62
+    },
+    {
+      "year": 2079,
+      "africa_share_percent": 46.14,
+      "asia_share_percent": 40.16,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.55,
+      "south_america_share_percent": 3.01,
+      "oceania_share_percent": 0.62
+    },
+    {
+      "year": 2080,
+      "africa_share_percent": 46.26,
+      "asia_share_percent": 40.05,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.55,
+      "south_america_share_percent": 3,
+      "oceania_share_percent": 0.62
+    },
+    {
+      "year": 2081,
+      "africa_share_percent": 46.4,
+      "asia_share_percent": 39.92,
+      "europe_share_percent": 4.51,
+      "north_america_share_percent": 5.56,
+      "south_america_share_percent": 2.99,
+      "oceania_share_percent": 0.63
+    },
+    {
+      "year": 2082,
+      "africa_share_percent": 46.55,
+      "asia_share_percent": 39.79,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.57,
+      "south_america_share_percent": 2.97,
+      "oceania_share_percent": 0.63
+    },
+    {
+      "year": 2083,
+      "africa_share_percent": 46.69,
+      "asia_share_percent": 39.65,
+      "europe_share_percent": 4.49,
+      "north_america_share_percent": 5.57,
+      "south_america_share_percent": 2.96,
+      "oceania_share_percent": 0.63
+    },
+    {
+      "year": 2084,
+      "africa_share_percent": 46.83,
+      "asia_share_percent": 39.52,
+      "europe_share_percent": 4.48,
+      "north_america_share_percent": 5.58,
+      "south_america_share_percent": 2.95,
+      "oceania_share_percent": 0.64
+    },
+    {
+      "year": 2085,
+      "africa_share_percent": 46.95,
+      "asia_share_percent": 39.4,
+      "europe_share_percent": 4.47,
+      "north_america_share_percent": 5.6,
+      "south_america_share_percent": 2.94,
+      "oceania_share_percent": 0.64
+    },
+    {
+      "year": 2086,
+      "africa_share_percent": 47.08,
+      "asia_share_percent": 39.29,
+      "europe_share_percent": 4.45,
+      "north_america_share_percent": 5.61,
+      "south_america_share_percent": 2.93,
+      "oceania_share_percent": 0.64
+    },
+    {
+      "year": 2087,
+      "africa_share_percent": 47.2,
+      "asia_share_percent": 39.17,
+      "europe_share_percent": 4.44,
+      "north_america_share_percent": 5.62,
+      "south_america_share_percent": 2.92,
+      "oceania_share_percent": 0.65
+    },
+    {
+      "year": 2088,
+      "africa_share_percent": 47.31,
+      "asia_share_percent": 39.06,
+      "europe_share_percent": 4.44,
+      "north_america_share_percent": 5.64,
+      "south_america_share_percent": 2.91,
+      "oceania_share_percent": 0.65
+    },
+    {
+      "year": 2089,
+      "africa_share_percent": 47.4,
+      "asia_share_percent": 38.96,
+      "europe_share_percent": 4.43,
+      "north_america_share_percent": 5.65,
+      "south_america_share_percent": 2.9,
+      "oceania_share_percent": 0.65
+    },
+    {
+      "year": 2090,
+      "africa_share_percent": 47.49,
+      "asia_share_percent": 38.87,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.67,
+      "south_america_share_percent": 2.89,
+      "oceania_share_percent": 0.66
+    },
+    {
+      "year": 2091,
+      "africa_share_percent": 47.58,
+      "asia_share_percent": 38.78,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.69,
+      "south_america_share_percent": 2.88,
+      "oceania_share_percent": 0.66
+    },
+    {
+      "year": 2092,
+      "africa_share_percent": 47.64,
+      "asia_share_percent": 38.7,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.71,
+      "south_america_share_percent": 2.87,
+      "oceania_share_percent": 0.66
+    },
+    {
+      "year": 2093,
+      "africa_share_percent": 47.72,
+      "asia_share_percent": 38.62,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.72,
+      "south_america_share_percent": 2.86,
+      "oceania_share_percent": 0.66
+    },
+    {
+      "year": 2094,
+      "africa_share_percent": 47.79,
+      "asia_share_percent": 38.53,
+      "europe_share_percent": 4.42,
+      "north_america_share_percent": 5.74,
+      "south_america_share_percent": 2.85,
+      "oceania_share_percent": 0.67
+    },
+    {
+      "year": 2095,
+      "africa_share_percent": 47.84,
+      "asia_share_percent": 38.46,
+      "europe_share_percent": 4.43,
+      "north_america_share_percent": 5.76,
+      "south_america_share_percent": 2.84,
+      "oceania_share_percent": 0.67
+    },
+    {
+      "year": 2096,
+      "africa_share_percent": 47.88,
+      "asia_share_percent": 38.4,
+      "europe_share_percent": 4.44,
+      "north_america_share_percent": 5.78,
+      "south_america_share_percent": 2.83,
+      "oceania_share_percent": 0.67
+    },
+    {
+      "year": 2097,
+      "africa_share_percent": 47.91,
+      "asia_share_percent": 38.35,
+      "europe_share_percent": 4.45,
+      "north_america_share_percent": 5.8,
+      "south_america_share_percent": 2.82,
+      "oceania_share_percent": 0.67
+    },
+    {
+      "year": 2098,
+      "africa_share_percent": 47.96,
+      "asia_share_percent": 38.28,
+      "europe_share_percent": 4.47,
+      "north_america_share_percent": 5.81,
+      "south_america_share_percent": 2.81,
+      "oceania_share_percent": 0.68
+    },
+    {
+      "year": 2099,
+      "africa_share_percent": 47.98,
+      "asia_share_percent": 38.23,
+      "europe_share_percent": 4.48,
+      "north_america_share_percent": 5.83,
+      "south_america_share_percent": 2.8,
+      "oceania_share_percent": 0.68
+    },
+    {
+      "year": 2100,
+      "africa_share_percent": 48.02,
+      "asia_share_percent": 38.16,
+      "europe_share_percent": 4.5,
+      "north_america_share_percent": 5.85,
+      "south_america_share_percent": 2.79,
+      "oceania_share_percent": 0.68
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+---
+title: "Fertility and wealth in Africa's highest-birth countries"
+title_fr: "Fecondite et richesse dans les pays africains ou les naissances sont les plus nombreuses"
+slug: "fertility-wealth-africas-highest-birth-countries"
+category: "Demographics"
+date: "2026-03-09"
+scope: "15 countries accounting for 72.85% of Africa's projected 2026 births, using latest usable DHS fertility breakdowns by wealth, education, and residence"
+scope_fr: "15 pays representant 72.85% des naissances africaines projetees en 2026, avec les dernieres ventilations DHS utilisables par richesse, education et lieu de residence"
+dataset: "Indicateur DHS de taux de fecondite total FE_FRTR_W_TFR avec ventilations socioeconomiques, plus les series de naissances et de continents de Our World in Data fondees sur les World Population Prospects 2024 de l'ONU"
+source_org: "The DHS Program; Our World in Data; United Nations World Population Prospects 2024"
+entry_number: "006"
+translated: true
+correction_of: ""
+description: "Dans les pays africains ou se concentrent les naissances, la fecondite est le plus souvent plus elevee chez les plus pauvres, mais l'ecart varie fortement."
+key_stat: "Dans 14 pays DHS, la fecondite moyenne va de 6.21 enfants par femme dans le quintile le plus pauvre a 3.31 dans le plus riche."
+draft: false
+---
+
+import FertilityWealthGapRankChart from "../../components/entry/FertilityWealthGapRankChart.astro";
+import FertilityWealthHighBirthCountriesChart from "../../components/entry/FertilityWealthHighBirthCountriesChart.astro";
+
+Un raccourci courant dit que la forte fecondite africaine serait surtout une histoire de menages pauvres qui ont plus d'enfants. Dans les 15 pays qui representent 72.85% des naissances africaines projetees en 2026, les donnees DHS vont globalement dans ce sens, mais sans pente uniforme. Dans la plupart des pays, la fecondite baisse du quintile le plus pauvre au plus riche, mais l'ecart va de 4.5 naissances par femme en Angola a 0.8 en Egypte, et le Soudan reste un trou majeur de donnees dans ce meme groupe a forte natalite.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+## Ce que cette entree demande
+
+- L'ecart fecondite-richesse est-il globalement present dans les pays qui portent l'essentiel des naissances africaines?
+- Quels pays montrent les ecarts les plus larges et les plus faibles entre le quintile le plus pauvre et le plus riche?
+- L'education et l'opposition urbain-rural renforcent-elles le meme schema, ou le brouillent-elles?
+
+## Pourquoi ces 15 pays
+
+Cette entree reprend le meme cadre de concentration des naissances que [Africa's share of global births: from 1 in 8 to nearly 1 in 2](/fr/entries/africas-share-of-global-births). Les 15 premiers pays de la serie 2026 representent 72.85% des naissances africaines projetees. C'est donc une coupe resserree de l'endroit ou se concentre aujourd'hui l'arithmetique des naissances du continent.<sup><a href="#ref-3">[3]</a></sup><sup><a href="#ref-4">[4]</a></sup>
+
+Quatorze des 15 pays disposent de ventilations DHS utilisables pour cette comparaison. Ensemble, ils representent 69.29% des naissances africaines projetees en 2026. Mais les enquetes ne sont pas synchronisees: les vagues DHS standard 2021+ ne couvrent que 46.70% des naissances projetees dans ce cadre, la derniere DHS complete disponible pour l'Ethiopie dans le systeme officiel reste 2019, et la derniere DHS du Soudan est 1989-90, trop ancienne pour une comparaison actuelle au niveau des menages.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+<StatBlock
+  label="Cadre de naissance"
+  value="72.85%"
+  note="Les 15 premiers pays de la serie 2026 representent 72.85% des naissances africaines projetees [3]."
+/>
+
+<StatBlock
+  label="Ecart pondere"
+  value="6.21 vs 3.31"
+  note="Dans le calcul pondere de cette entree, la fecondite moyenne du quintile le plus pauvre est de 6.21 enfants par femme, contre 3.31 dans le plus riche sur les 14 pays avec donnees DHS utilisables [1][3]."
+/>
+
+<StatBlock
+  label="Etendue des ecarts"
+  value="4.5 a 0.8"
+  note="L'Angola montre l'ecart le plus large entre pauvres et riches, l'Egypte le plus faible dans l'ensemble exploitable [1]."
+/>
+
+## Le profil general baisse, mais pas avec une pente fixe
+
+Dans les 10 pays du groupe d'analyse complete, chaque panneau du graphique descend de Q1 vers Q5. C'est le titre le plus net. Le point plus interessant est que l'intensite de cette pente change beaucoup. L'Angola, le Mozambique et Madagascar montrent des baisses tres fortes, alors que le Mali et l'Ethiopie restent eleves meme dans les menages les plus aises.<sup><a href="#ref-1">[1]</a></sup>
+
+<ChartBlock
+  title="Fecondite par quintile de richesse dans le noyau des pays a plus forte natalite"
+  subtitle="Dix pays du groupe des 15 avec comparaison complete, derniere DHS utilisable 2019-2024"
+  note="Q1 est le quintile le plus pauvre et Q5 le plus riche. Lisez chaque panneau de gauche a droite comme le gradient de richesse a l'interieur de ce pays."
+>
+  <FertilityWealthHighBirthCountriesChart lang="fr" />
+</ChartBlock>
+
+### Ce que cela signifie
+
+> La direction generale est coherente dans les principaux pays du groupe recent. Ce n'est pas le cas de la force de l'ecart.
+
+Dans le calcul pondere de cette entree sur les 14 pays avec donnees utilisables, le quintile le plus pauvre affiche 6.21 enfants par femme, contre 3.31 dans le plus riche. Cela confirme un gradient de richesse reel a l'interieur des pays. En revanche, cela ne justifie pas de traiter l'Angola, l'Egypte, le Niger et l'Afrique du Sud comme si le meme ecart operait partout avec la meme intensite.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+## Ou le schema s'affaiblit ou se casse
+
+Aucun pays de cet ensemble ne montre un renversement complet ou le quintile le plus riche aurait une fecondite superieure au plus pauvre. Les cassures sont plus subtiles. L'Egypte est le cas le plus clair: le quintile median est a 3.9 enfants par femme, au-dessus du quintile le plus pauvre et du deuxieme quintile, tous deux a 3.6, avant une nouvelle baisse a 2.8 dans le groupe le plus riche. Le Niger montre une autre cassure, avec quatre premiers quintiles presque plats entre 8.0 et 8.2, puis une baisse vers 6.1 dans le groupe le plus riche.<sup><a href="#ref-1">[1]</a></sup>
+
+En pratique, ces deux cas demandent sans doute des lectures differentes: le profil egyptien doit etre lu avec prudence parce que la comparaison DHS exploitable date de 2014, tandis que le profil plus plat du Niger correspond davantage a un contexte de tres forte fecondite ou les ecarts par richesse restent comprimes jusqu'au groupe le plus riche.
+
+<ChartBlock
+  title="Ecart de fecondite entre le quintile le plus pauvre et le plus riche"
+  subtitle="Q1 moins Q5, enfants par femme, ensemble exploitable de 14 pays"
+  note="Des barres plus longues indiquent un gradient de richesse plus marque a l'interieur du pays."
+  disableTooltips={true}
+>
+  <FertilityWealthGapRankChart lang="fr" />
+</ChartBlock>
+
+L'Afrique du Sud compte aussi, non parce que le sens s'inverse, mais parce que l'ecart y est faible. Son ecart pauvres-riches n'est que de 1.0 enfant par femme, contre 4.5 en Angola et 4.1 au Mozambique. L'Egypte affiche l'ecart le plus faible du groupe, 0.8, mais il repose aussi sur une enquete de 2014. Cette faiblesse doit donc etre lue avec plus de prudence que les resultats de 2022-2024.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+Une lecture trop rapide dirait que les menages pauvres portent toujours l'essentiel de la fecondite dans les grands pays de naissance. Une meilleure lecture est plus etroite: les menages plus pauvres ont le plus souvent une fecondite plus elevee, mais la taille et la forme de cette relation dependent du contexte national, de l'annee d'enquete et de l'etape de transition demographique de chaque pays.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+Une raison pour laquelle le gradient de richesse ne se presente pas partout de la meme facon est que ces pays ne se trouvent pas au meme point de la transition de fecondite. Dans les contextes plus precoces, la fecondite peut rester elevee dans une large partie de la distribution de richesse, avec une separation plus nette seulement au sommet. Dans les contextes plus avances, la fecondite est souvent plus faible dans l'ensemble et les ecarts de richesse peuvent etre plus etroits ou moins reguliers. Cela ne remplace pas l'explication par la richesse, mais aide a comprendre pourquoi le Niger, l'Angola et le Mali ne ressemblent pas a l'Afrique du Sud ou a l'Egypte, meme avec le meme cadre de comparaison par quintiles.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+## Education et lieu de residence vont souvent dans le meme sens
+
+Le profil de richesse est souvent renforce par la scolarite et le lieu de residence. La fecondite rurale depasse la fecondite urbaine dans les 14 pays avec donnees utilisables, avec les plus grands ecarts ruraux-urbains en Angola (3.1), au Niger (2.5), en R.D. Congo (2.2) et au Mozambique (2.2). L'ecart entre femmes sans education et femmes avec enseignement superieur est le plus large au Niger (4.4), en Angola (4.2), au Mozambique (3.8) et a Madagascar (3.7).<sup><a href="#ref-1">[1]</a></sup>
+
+La encore, le schema n'est pas parfaitement mecanique. En R.D. Congo, les femmes ayant seulement le primaire enregistrent une fecondite plus elevee que les femmes sans education. En Afrique du Sud, le primaire est aussi au-dessus du groupe sans education. Ces categories decrivent un profil social, elles ne prouvent pas a elles seules une causalite.<sup><a href="#ref-1">[1]</a></sup>
+
+Pris ensemble, richesse, scolarite et residence urbaine vont souvent dans la meme direction, mais elles ne se reduisent toujours pas a une histoire causale unique. Les donnees soutiennent bien un gradient social. Elles ne disent pas que la richesse fait tout le travail a elle seule. Les quintiles de richesse sont relatifs a l'interieur de chaque pays, et ils emballent souvent ensemble education, urbanisation et composition des menages.<sup><a href="#ref-1">[1]</a></sup>
+
+## Lecture pays par pays
+
+Le tableau ci-dessous combine les parts de naissances 2026 et la derniere comparaison DHS utilisable pour chaque pays du groupe des 15 pays a forte natalite. Le Soudan reste dans le cadre parce qu'il compte demographiquement, meme s'il n'est pas comparable sur les ventilations actuelles de fecondite des menages.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup><sup><a href="#ref-3">[3]</a></sup>
+
+| Pays | Part des naissances 2026 | Derniere DHS utilisable | Q1 plus pauvre | Q5 plus riche | Ecart | Lecture |
+| --- | ---: | --- | ---: | ---: | ---: | --- |
+| Nigeria | 16.21% | 2024 DHS | 6.6 | 3.3 | 3.3 | Baisse nette du quintile le plus pauvre au plus riche |
+| R.D. Congo | 9.75% | 2023-24 DHS | 6.9 | 3.6 | 3.3 | Baisse nette, mais le primaire depasse le groupe sans education |
+| Ethiopie | 8.86% | 2019 DHS | 5.5 | 3.1 | 2.4 | Baisse presente, mais la question de recence est importante |
+| Tanzanie | 5.17% | 2022 DHS | 6.7 | 3.3 | 3.4 | Baisse nette |
+| Egypte | 5.17% | 2014 DHS | 3.6 | 2.8 | 0.8 | Gradient faible, le quintile median est le plus eleve |
+| Ouganda | 3.67% | 2016 DHS | 7.1 | 3.8 | 3.3 | Baisse nette, mais sur une vague ancienne |
+| Soudan | 3.56% | 1989-90 DHS | Pas de donnees | Pas de donnees | Pas de donnees | Part de naissance uniquement, pas de comparaison actuelle exploitable |
+| Kenya | 3.28% | 2022 DHS | 5.3 | 2.7 | 2.6 | Baisse nette, surtout entre Q1 et Q2 |
+| Angola | 3.07% | 2023-24 DHS | 7.3 | 2.8 | 4.5 | Plus grand ecart du groupe |
+| Mozambique | 2.78% | 2022-23 DHS | 6.8 | 2.7 | 4.1 | Baisse tres forte |
+| Afrique du Sud | 2.46% | 2016 DHS | 3.1 | 2.1 | 1.0 | Ecart faible |
+| Niger | 2.43% | 2012 DHS | 8.2 | 6.1 | 2.1 | Les quatre premiers quintiles sont presque plats |
+| Madagascar | 2.17% | 2021 DHS | 6.6 | 2.7 | 3.9 | Baisse forte |
+| Cote d'Ivoire | 2.16% | 2021 DHS | 5.9 | 3.0 | 2.9 | Baisse nette |
+| Mali | 2.11% | 2023-24 DHS | 7.1 | 4.9 | 2.2 | Le gradient existe, mais la fecondite reste elevee meme chez les plus riches |
+
+## Interpretation
+
+Le faible niveau de richesse des menages reste un marqueur solide d'une fecondite plus elevee dans les pays qui portent aujourd'hui la plus grande part des naissances africaines. Les donnees soutiennent cette lecture a l'interieur des pays. En revanche, elles ne soutiennent pas une histoire monocausale ou la pauvrete expliquerait seule le profil continental, ni une photo synchronisee de 2026 pour les 15 pays a la fois.<sup><a href="#ref-1">[1]</a></sup><sup><a href="#ref-2">[2]</a></sup>
+
+Une autre lecture, plus robuste, est que les quintiles de richesse servent en partie de raccourci pour d'autres transitions sociales, surtout l'education, la residence urbaine et le calendrier de la transition de fecondite. Cette lecture colle mieux aux memes donnees, parce qu'elle peut faire tenir ensemble le gradient tres fort de l'Angola et le gradient faible de l'Egypte sans pretendre qu'ils racontent exactement le meme processus.<sup><a href="#ref-1">[1]</a></sup>
+
+<LimitationsList
+  label="Limites"
+  items={[
+    "La comparaison repose sur des enquetes menees entre 2012 et 2024. Ce n'est donc pas une seule annee synchronisee. Cela compte surtout pour l'Egypte, le Niger, l'Ouganda, l'Afrique du Sud et l'Ethiopie.",
+    "Les quintiles de richesse DHS sont des rangs relatifs d'actifs a l'interieur de chaque pays, pas des niveaux de revenu comparables entre pays.",
+    "Le taux de fecondite total est une mesure synthetique de fecondite recente par age, pas la taille finale des familles ni la fecondite desiree.",
+    "Seuls 46.70% des naissances africaines projetees en 2026 dans ce cadre top 15 sont couverts par des DHS standard 2021+, et les 3.56% du Soudan n'ont pas de comparaison actuelle exploitable au niveau des menages.",
+    "L'entree se limite volontairement aux 15 pays qui portent les plus grandes parts de naissances projetees en 2026. C'est donc une coupe a fort poids, pas un recensement complet de tous les gradients de fecondite du continent."
+  ]}
+/>
+
+<details class="entry-collapsible my-8 border-t border-rule pt-4">
+  <summary class="entry-collapsible__summary ui-meta text-[11px] uppercase tracking-[0.14em] text-dim">Sources</summary>
+  <div class="entry-collapsible__body">
+    <h3>References</h3>
+    <ol class="list-decimal pl-5 space-y-2">
+      <li id="ref-1">The DHS Program. <em>Total fertility rate 15-49</em> (indicateur <code>FE_FRTR_W_TFR</code>, <code>breakdown=all</code>, extraction API pour AO, CD, CI, EG, ET, KE, MD, ML, MZ, NI, NG, ZA, SD, TZ, UG). https://api.dhsprogram.com/rest/dhs/data/FE_FRTR_W_TFR?breakdown=all&amp;f=json&amp;countryIds=AO,CD,CI,EG,ET,KE,MD,ML,MZ,NI,NG,ZA,SD,TZ,UG&amp;perpage=5000</li>
+      <li id="ref-2">The DHS Program. <em>Survey metadata API</em> (utilisee pour identifier la derniere vague DHS complete et exploitable dans le meme groupe de pays). https://api.dhsprogram.com/rest/dhs/surveys?countryIds=AO,CD,CI,EG,ET,KE,MD,ML,MZ,NI,NG,ZA,SD,TZ,UG&amp;f=json&amp;perpage=5000</li>
+      <li id="ref-3">Our World in Data. <em>Number of births per year</em> (dataset grapher, valeurs historiques plus projections basees sur les World Population Prospects 2024 de l'ONU). https://ourworldindata.org/grapher/number-of-births-per-year.csv</li>
+      <li id="ref-4">Our World in Data. <em>Continents according to Our World in Data</em> (correspondance pays-continent utilisee pour garder le cadre Afrique cohherent). https://ourworldindata.org/grapher/continents-according-to-our-world-in-data.csv</li>
+    </ol>
+
+    <h3>Primaire</h3>
+    <ul class="mt-2 list-disc pl-5 space-y-1">
+      <li>Ventilations DHS de fecondite par quintile de richesse, niveau d'education et lieu de residence pour les pays selectionnes.</li>
+      <li>Metadonnees DHS utilisees pour choisir la derniere vague standard complete et exploitable dans chaque pays.</li>
+    </ul>
+
+    <h3>Contexte</h3>
+    <ul class="mt-2 list-disc pl-5 space-y-1">
+      <li>Serie de naissances de Our World in Data, fondee sur les World Population Prospects 2024 de l'ONU, utilisee pour definir les 15 pays et leurs parts de naissances 2026.</li>
+      <li>Correspondance des continents de Our World in Data, utilisee dans l'entree liee sur la part de l'Afrique dans les naissances mondiales afin de garder le meme ensemble africain.</li>
+    </ul>
+  </div>
+</details>

@@ -282,6 +282,8 @@ const cookieConsentCopy =
               legal: "Statut juridique",
               sexRatio: "Ratio hommes-femmes a 30 ans",
               duality: "Dualite juridique",
+              shareOfBirths: "Part des naissances africaines en 2026",
+              births2026: "Naissances en 2026",
               value: "Valeur",
               yes: "oui",
               no: "non"
@@ -292,6 +294,8 @@ const cookieConsentCopy =
               legal: "Legal status",
               sexRatio: "Sex ratio at age 30",
               duality: "Legal duality",
+              shareOfBirths: "Share of Africa births in 2026",
+              births2026: "Births in 2026",
               value: "Value",
               yes: "yes",
               no: "no"
@@ -398,6 +402,14 @@ const cookieConsentCopy =
 
         const buildMapTooltip = (target) => {
           const country = cleanText(target.dataset.country);
+          const explicitTitle = cleanText(target.dataset.tooltipTitle);
+          const explicitBody = cleanText(target.dataset.tooltipBody);
+          if (explicitTitle || explicitBody) {
+            return {
+              title: explicitTitle || country || copy.value,
+              body: explicitBody
+            };
+          }
           if (!country) {
             return null;
           }
@@ -406,9 +418,17 @@ const cookieConsentCopy =
           const subregion = cleanText(target.dataset.subregion);
           const legal = cleanText(target.dataset.legal);
           const sexRatio = cleanText(target.dataset.sexRatio30);
+          const share = cleanText(target.dataset.share);
+          const births = cleanText(target.dataset.births);
           const year = cleanText(target.dataset.year);
           const duality = cleanText(target.dataset.duality).toLowerCase();
 
+          if (share) {
+            parts.push(`${copy.shareOfBirths}: ${share}%`);
+          }
+          if (births) {
+            parts.push(`${copy.births2026}: ${births}`);
+          }
           if (prevalence) {
             parts.push(`${copy.prevalence}: ${prevalence}%`);
           }
@@ -455,6 +475,9 @@ const cookieConsentCopy =
         };
 
         const setupChartTooltips = (figure) => {
+          if (figure.dataset.disableChartTooltips === "true") {
+            return;
+          }
           const svg = figure.querySelector("svg");
           if (!svg) {
             return;
@@ -462,7 +485,10 @@ const cookieConsentCopy =
 
           const mapTargets = Array.from(svg.querySelectorAll(".map-country[data-country]"));
           const barTargets = discoverBarTargets(svg);
-          const targets = [...new Set([...mapTargets, ...barTargets])];
+          const explicitTargets = Array.from(
+            svg.querySelectorAll("[data-tooltip-title], [data-tooltip-body]")
+          );
+          const targets = [...new Set([...mapTargets, ...barTargets, ...explicitTargets])];
           if (!targets.length) {
             return;
           }

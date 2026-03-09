@@ -1,0 +1,115 @@
+{
+  "topic": "Africa share of global births",
+  "scope": "Africa aggregate plus country-level breakdown, 1950-2100",
+  "birth_share_checkpoints": [
+    {
+      "year": 1950,
+      "africa_share_percent": 11.85
+    },
+    {
+      "year": 2000,
+      "africa_share_percent": 23.69
+    },
+    {
+      "year": 2026,
+      "africa_share_percent": 35.89
+    },
+    {
+      "year": 2050,
+      "africa_share_percent": 41.69
+    },
+    {
+      "year": 2100,
+      "africa_share_percent": 48.02
+    }
+  ],
+  "births_2026": {
+    "africa": 47561896,
+    "world": 132503470,
+    "share_percent": 35.89
+  },
+  "growth_2000_to_2026_percent": 47.9,
+  "peak_births": {
+    "year": 2067,
+    "births": 56538320,
+    "births_2100": 52836670
+  },
+  "fertility_checkpoints": {
+    "africa": {
+      "2000": 5.163,
+      "2026": 3.878,
+      "2050": 2.789,
+      "2100": 2.02
+    },
+    "world": {
+      "2000": 2.754,
+      "2026": 2.23,
+      "2050": 2.097,
+      "2100": 1.838
+    }
+  },
+  "top_countries_2026": [
+    {
+      "country": "Nigeria",
+      "code": "NGA",
+      "births_2026": 7711752,
+      "share_of_africa_2026_percent": 16.21
+    },
+    {
+      "country": "Democratic Republic of Congo",
+      "code": "COD",
+      "births_2026": 4634979,
+      "share_of_africa_2026_percent": 9.75
+    },
+    {
+      "country": "Ethiopia",
+      "code": "ETH",
+      "births_2026": 4213081,
+      "share_of_africa_2026_percent": 8.86
+    },
+    {
+      "country": "Tanzania",
+      "code": "TZA",
+      "births_2026": 2459538,
+      "share_of_africa_2026_percent": 5.17
+    },
+    {
+      "country": "Egypt",
+      "code": "EGY",
+      "births_2026": 2459317,
+      "share_of_africa_2026_percent": 5.17
+    },
+    {
+      "country": "Uganda",
+      "code": "UGA",
+      "births_2026": 1746979,
+      "share_of_africa_2026_percent": 3.67
+    },
+    {
+      "country": "Sudan",
+      "code": "SDN",
+      "births_2026": 1694024,
+      "share_of_africa_2026_percent": 3.56
+    },
+    {
+      "country": "Kenya",
+      "code": "KEN",
+      "births_2026": 1558303,
+      "share_of_africa_2026_percent": 3.28
+    },
+    {
+      "country": "Angola",
+      "code": "AGO",
+      "births_2026": 1461075,
+      "share_of_africa_2026_percent": 3.07
+    },
+    {
+      "country": "Mozambique",
+      "code": "MOZ",
+      "births_2026": 1323752,
+      "share_of_africa_2026_percent": 2.78
+    }
+  ],
+  "top_5_share_percent": 45.16,
+  "top_10_share_percent": 61.53
+}
