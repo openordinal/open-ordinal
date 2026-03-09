@@ -80,27 +80,13 @@ const buildFallbackDescription = ({ category, scope, lang }) =>
     ? `Nouvelle entree ${category.toLowerCase()} pour ${scope}.`
     : `New ${category.toLowerCase()} entry for ${scope}.`;
 
-const buildBody = ({
-  category,
-  dataset,
-  date,
-  description,
-  entryNumber,
-  keyStat,
-  ogImageUrl,
-  scope,
-  sourceOrg,
-  title,
-  url,
-  lang
-}) => {
+const buildBody = ({ dataset, description, keyStat, ogImageUrl, scope, sourceOrg, url, lang }) => {
   const copy =
     lang === "fr"
       ? {
           cta: "Lire l'entree complete",
           dataset: "Jeu de donnees",
           keyStat: "Chiffre cle",
-          published: "Publie",
           scope: "Perimetre",
           source: "Source"
         }
@@ -108,19 +94,11 @@ const buildBody = ({
           cta: "Read the full entry",
           dataset: "Dataset",
           keyStat: "Key stat",
-          published: "Published",
           scope: "Scope",
           source: "Source"
         };
 
-  const formattedDate = new Intl.DateTimeFormat(lang === "fr" ? "fr-FR" : "en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric"
-  }).format(new Date(date));
-
   const metaRows = [
-    [copy.published, formattedDate],
     [copy.scope, scope],
     [copy.dataset, dataset],
     [copy.source, sourceOrg]
@@ -141,10 +119,7 @@ const buildBody = ({
 
   return `<div style="margin: 0; padding: 0; color: #0f0f0f;">
   <div style="margin: 0 auto; max-width: 640px;">
-    <p style="margin: 0 0 6px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.4; color: #666666;">${escapeHtml(entryNumber)} · ${escapeHtml(category)}</p>
-    <h1 style="margin: 0 0 12px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 38px; line-height: 1.08; font-weight: 500; color: #0f0f0f;">${escapeHtml(title)}</h1>
-    <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.4; color: #666666;">${escapeHtml(formattedDate)}</p>
-    <img src="${escapeHtml(ogImageUrl)}" alt="${escapeHtml(title)}" style="display: block; width: 100%; height: auto; margin: 0 0 22px;" />
+    <img src="${escapeHtml(ogImageUrl)}" alt="${escapeHtml(description)}" style="display: block; width: 100%; height: auto; margin: 0 0 22px;" />
     <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.5; color: #0f0f0f;">${escapeHtml(description)}</p>
 ${keyStatBlock}
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin: 0 0 24px; border-collapse: collapse;">
@@ -193,17 +168,13 @@ const ogImageUrl = new URL(`/og/${slug}.png`, siteUrl).toString();
 const description =
   frontmatter.description || buildFallbackDescription({ category, lang, scope });
 const body = buildBody({
-  category,
   dataset: frontmatter.dataset,
-  date: frontmatter.date,
   description,
-  entryNumber: frontmatter.entry_number || "Open Ordinal",
   keyStat: frontmatter.key_stat,
   lang,
   ogImageUrl,
   scope,
   sourceOrg: frontmatter.source_org,
-  title,
   url
 });
 
@@ -239,8 +210,6 @@ const hasPublishedMatch = matchingEmails.some((email) => email.status !== "draft
 const payload = {
   body,
   canonical_url: url,
-  description,
-  image: ogImageUrl,
   metadata: {
     entry_slug: slug,
     language: lang,
