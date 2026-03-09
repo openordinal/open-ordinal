@@ -1,0 +1,68 @@
+name: Buttondown Drafts
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/content/entries/**/*.mdx"
+      - ".github/workflows/buttondown-drafts.yml"
+      - "scripts/create-buttondown-draft.mjs"
+
+jobs:
+  create-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip when Buttondown API key is missing
+        if: ${{ secrets.BUTTONDOWN_API_KEY == '' }}
+        run: echo "BUTTONDOWN_API_KEY is not set; skipping Buttondown draft creation."
+
+      - name: Checkout
+        if: ${{ secrets.BUTTONDOWN_API_KEY != '' }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        if: ${{ secrets.BUTTONDOWN_API_KEY != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Find newly added entry files
+        if: ${{ secrets.BUTTONDOWN_API_KEY != '' }}
+        id: changes
+        shell: bash
+        run: |
+          before="${{ github.event.before }}"
+          if [[ "$before" == "0000000000000000000000000000000000000000" ]]; then
+            before="$(git rev-list --max-parents=0 HEAD)"
+          fi
+
+          mapfile -t files < <(
+            git diff --name-status "$before" "${{ github.sha }}" \
+              | awk '$1 == "A" && $2 ~ /^src\/content\/entries\/.*\.mdx$/ && $2 !~ /template\.mdx$/ { print $2 }'
+          )
+
+          if [[ "${#files[@]}" -eq 0 ]]; then
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          {
+            echo "has_files=true"
+            echo "files<<EOF"
+            printf '%s\n' "${files[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create Buttondown drafts
+        if: ${{ secrets.BUTTONDOWN_API_KEY != '' && steps.changes.outputs.has_files == 'true' }}
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          BUTTONDOWN_SITE_URL: https://openordinal.org
+        shell: bash
+        run: |
+          while IFS= read -r file; do
+            node scripts/create-buttondown-draft.mjs "$file"
+          done <<< "${{ steps.changes.outputs.files }}"

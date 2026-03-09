@@ -108,6 +108,18 @@ Primary target is Cloudflare Pages.
 - Build command: `npm run build`
 - Output directory: `dist`
 
+## Buttondown draft automation
+
+The repo includes a GitHub Actions workflow that creates Buttondown draft emails for newly added English entries on pushes to `main`.
+
+- Required GitHub Actions secret: `BUTTONDOWN_API_KEY`
+- Workflow file: `.github/workflows/buttondown-drafts.yml`
+- Draft generator: `scripts/create-buttondown-draft.mjs`
+- Scope: new files under `src/content/entries/` only
+- Safety checks: skips `draft: true` entries and skips subjects that already exist in Buttondown
+
+This is a Free-plan workaround for Buttondown when built-in RSS-to-email is unavailable.
+
 ## Bilingual update policy
 
 - Every meaningful content or UI change in English must be mirrored in French in the same update, unless explicitly deferred.
