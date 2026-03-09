@@ -12,6 +12,7 @@
   --accent-brown: #6b4a1a;
   --accent-purple: #4a2e6b;
   --negative: #8b2a2a;
+  --header-offset: calc(3rem + 0.75rem);
 }
 
 :root[data-theme="light"] {
@@ -58,10 +59,20 @@ body {
   color: var(--ink);
 }
 
+html {
+  scroll-padding-top: var(--header-offset);
+}
+
 body {
   font-family: "EB Garamond", serif;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
+}
+
+:target,
+.pagefind-highlight,
+.pagefind__highlight {
+  scroll-margin-top: var(--header-offset);
 }
 
 a {
