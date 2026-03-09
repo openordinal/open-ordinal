@@ -97,7 +97,6 @@ const buildBody = ({
   const copy =
     lang === "fr"
       ? {
-          attribution: "Open Ordinal est un projet de Utopia UGX Group Ltd.",
           cta: "Lire l'entree complete",
           dataset: "Jeu de donnees",
           keyStat: "Chiffre cle",
@@ -106,7 +105,6 @@ const buildBody = ({
           source: "Source"
         }
       : {
-          attribution: "Open Ordinal is a project of Utopia UGX Group Ltd.",
           cta: "Read the full entry",
           dataset: "Dataset",
           keyStat: "Key stat",
@@ -129,49 +127,32 @@ const buildBody = ({
   ]
     .map(
       ([label, value]) => `
-              <tr>
-                <td style="padding: 11px 0; border-bottom: 1px solid #d8d6d0; vertical-align: top; width: 122px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: #777777;">${escapeHtml(label)}</td>
-                <td style="padding: 11px 0; border-bottom: 1px solid #d8d6d0; vertical-align: top; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; color: #0f0f0f;">${escapeHtml(value)}</td>
-              </tr>`
+      <tr>
+        <td style="padding: 8px 0 2px; vertical-align: top; width: 118px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.35; font-weight: 600; color: #0f0f0f;">${escapeHtml(label)}</td>
+        <td style="padding: 8px 0 2px; vertical-align: top; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.55; color: #0f0f0f;">${escapeHtml(value)}</td>
+      </tr>`
     )
     .join("");
 
   const keyStatBlock = keyStat
     ? `
-          <div style="margin: 0 0 28px; border-top: 1px solid #0f0f0f; border-bottom: 1px solid #0f0f0f; padding: 14px 0 16px;">
-            <div style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1.4; letter-spacing: 0.16em; text-transform: uppercase; color: #777777;">${escapeHtml(copy.keyStat)}</div>
-            <div style="margin-top: 8px; font-family: Georgia, 'Times New Roman', serif; font-size: 29px; line-height: 1.24; color: #0f0f0f;">${escapeHtml(keyStat)}</div>
-          </div>`
+      <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.55; color: #0f0f0f;"><strong>${escapeHtml(copy.keyStat)}:</strong> ${escapeHtml(keyStat)}</p>`
     : "";
 
-  return `<!-- buttondown-editor-mode: fancy -->
-<div style="margin: 0; padding: 0; background: #f7f6f2; color: #0f0f0f;">
-  <div style="margin: 0 auto; max-width: 640px; border: 1px solid #d8d6d0; background: #f7f6f2;">
-    <div style="padding: 28px 28px 0;">
-      <div style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1.4; letter-spacing: 0.16em; text-transform: uppercase; color: #777777;">${escapeHtml(entryNumber)} · ${escapeHtml(category)}</div>
-      <h1 style="margin: 14px 0 0; font-family: Georgia, 'Times New Roman', serif; font-size: 42px; line-height: 1.02; font-weight: 500; color: #0f0f0f;">${escapeHtml(title)}</h1>
-      <div style="margin-top: 14px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1.4; color: #777777;">${escapeHtml(formattedDate)}</div>
-    </div>
-
-    <div style="padding: 24px 28px 0;">
-      <img src="${escapeHtml(ogImageUrl)}" alt="${escapeHtml(title)}" style="display: block; width: 100%; height: auto; border: 1px solid #d8d6d0;" />
-    </div>
-
-    <div style="padding: 26px 28px 30px;">
-      <p style="margin: 0 0 26px; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.5; color: #0f0f0f;">${escapeHtml(description)}</p>
+  return `<div style="margin: 0; padding: 0; color: #0f0f0f;">
+  <div style="margin: 0 auto; max-width: 640px;">
+    <p style="margin: 0 0 6px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.4; color: #666666;">${escapeHtml(entryNumber)} · ${escapeHtml(category)}</p>
+    <h1 style="margin: 0 0 12px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 38px; line-height: 1.08; font-weight: 500; color: #0f0f0f;">${escapeHtml(title)}</h1>
+    <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 1.4; color: #666666;">${escapeHtml(formattedDate)}</p>
+    <img src="${escapeHtml(ogImageUrl)}" alt="${escapeHtml(title)}" style="display: block; width: 100%; height: auto; margin: 0 0 22px;" />
+    <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.5; color: #0f0f0f;">${escapeHtml(description)}</p>
 ${keyStatBlock}
-      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="width: 100%; border-collapse: collapse;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin: 0 0 24px; border-collapse: collapse;">
 ${metaRows}
-      </table>
-
-      <div style="margin-top: 26px; padding-top: 18px; border-top: 1px solid #d8d6d0;">
-        <a href="${escapeHtml(url)}" style="display: inline-block; border: 1px solid #0f0f0f; padding: 12px 15px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; color: #0f0f0f;">${escapeHtml(copy.cta)}</a>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin: 14px auto 0; max-width: 640px; padding: 0 4px;">
-    <div style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 11px; line-height: 1.5; color: #777777;">${escapeHtml(copy.attribution)}</div>
+    </table>
+    <p style="margin: 0 0 22px; font-family: 'EB Garamond', Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.5;">
+      <a href="${escapeHtml(url)}" style="color: #0f0f0f; text-decoration: underline;">${escapeHtml(copy.cta)}</a>
+    </p>
   </div>
 </div>`;
 };
