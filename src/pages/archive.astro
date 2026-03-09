@@ -7,7 +7,14 @@ const entries = (await getCollection("entries"))
   .filter((entry) => !entry.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const categories = ["All", "Economics", "Demographics", "Technology", "Governance", "Rankings"];
+const categories = [
+  { value: "All", label: "All" },
+  { value: "Economics", label: "Economics" },
+  { value: "Demographics", label: "Demographics" },
+  { value: "Technology", label: "Technology" },
+  { value: "Governance", label: "Governance" },
+  { value: "Rankings", label: "Rankings" }
+];
 ---
 
 <Layout
@@ -35,14 +42,24 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
             </p>
           </div>
 
-          <div class="no-print mt-6 grid gap-3 py-3 md:grid-cols-[180px,1fr]">
-            <label class="ui-meta flex flex-col gap-1 text-[10px] uppercase tracking-[0.14em] text-dim">
-              Category
-              <select id="category-filter" class="border border-rule bg-paper px-2 py-2 text-[12px] text-ink">
-                {categories.map((category) => <option value={category}>{category}</option>)}
-              </select>
-            </label>
-            <div class="ui-meta hidden md:block"></div>
+          <div class="no-print mt-6 border-b border-rule pb-5">
+            <p class="ui-meta text-[10px] uppercase tracking-[0.14em] text-dim">Category</p>
+            <div class="archive-filter-row mt-3" role="toolbar" aria-label="Filter archive by category">
+              {
+                categories.map((category) => (
+                  <button
+                    type="button"
+                    class="archive-filter-chip"
+                    data-category-filter
+                    data-category-value={category.value}
+                    data-active={category.value === "All" ? "true" : undefined}
+                    aria-pressed={category.value === "All" ? "true" : "false"}
+                  >
+                    {category.label}
+                  </button>
+                ))
+              }
+            </div>
           </div>
 
           <ul id="archive-list" class="mt-2">
@@ -86,6 +103,33 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
 
 <script>
   type PagefindUIConstructor = new (options: Record<string, unknown>) => unknown;
+  const PAGEFIND_INPUT_ID = "archive-search-input";
+  const PAGEFIND_INPUT_NAME = "archive-search";
+
+  const ensureSearchFieldAttributes = (mount: HTMLElement) => {
+    const applyAttributes = () => {
+      const input = mount.querySelector<HTMLInputElement>(".pagefind-ui__search-input");
+      if (!input) {
+        return false;
+      }
+
+      input.id = PAGEFIND_INPUT_ID;
+      input.name = PAGEFIND_INPUT_NAME;
+      return true;
+    };
+
+    if (applyAttributes()) {
+      return;
+    }
+
+    const observer = new MutationObserver(() => {
+      if (applyAttributes()) {
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(mount, { childList: true, subtree: true });
+  };
 
   const initPagefind = () => {
     const mount = document.getElementById("archive-pagefind");
@@ -112,6 +156,8 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
         excerptLength: 16,
         placeholder: "Search entries, scope, and source"
       });
+
+      ensureSearchFieldAttributes(mount);
     };
 
     if ((window as Window & { PagefindUI?: unknown }).PagefindUI) {
@@ -135,19 +181,29 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
 
   const PAGE_SIZE = 20;
   const cards = Array.from(document.querySelectorAll<HTMLElement>("[data-archive-card]"));
-  const categoryFilter = document.getElementById("category-filter");
+  const categoryButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>("[data-category-filter]")
+  );
   const prevButton = document.getElementById("archive-prev");
   const nextButton = document.getElementById("archive-next");
   const pageText = document.getElementById("archive-page");
 
   let page = 1;
+  let activeCategory =
+    categoryButtons.find((button) => button.hasAttribute("data-active"))?.dataset.categoryValue || "All";
+
+  const syncCategoryButtons = () => {
+    categoryButtons.forEach((button) => {
+      const isActive = (button.dataset.categoryValue || "All") === activeCategory;
+      button.toggleAttribute("data-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+  };
 
   const getFilteredCards = () => {
-    const category = categoryFilter instanceof HTMLSelectElement ? categoryFilter.value : "All";
-
     return cards.filter((card) => {
       const cardCategory = card.getAttribute("data-category") || "";
-      const categoryMatch = category === "All" || cardCategory === category;
+      const categoryMatch = activeCategory === "All" || cardCategory === activeCategory;
       return categoryMatch;
     });
   };
@@ -184,10 +240,18 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
     }
   };
 
-  if (categoryFilter) {
-    categoryFilter.addEventListener("change", () => {
-      page = 1;
-      render();
+  if (categoryButtons.length) {
+    categoryButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const nextCategory = button.dataset.categoryValue || "All";
+        if (nextCategory === activeCategory) {
+          return;
+        }
+        activeCategory = nextCategory;
+        page = 1;
+        syncCategoryButtons();
+        render();
+      });
     });
   }
 
@@ -205,5 +269,6 @@ const categories = ["All", "Economics", "Demographics", "Technology", "Governanc
     });
   }
 
+  syncCategoryButtons();
   render();
 </script>

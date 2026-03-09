@@ -95,6 +95,39 @@ summary,
   padding: 64px 48px;
 }
 
+.archive-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.archive-filter-chip {
+  flex: 0 0 auto;
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--paper) 90%, var(--rule));
+  color: color-mix(in srgb, var(--ink) 68%, var(--paper));
+  padding: 0.5rem 0.7rem;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.archive-filter-chip:hover,
+.archive-filter-chip:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+  outline: none;
+}
+
+.archive-filter-chip[data-active] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .entry-prose {
   font-size: 1.1rem;
   line-height: 1.68;
@@ -190,6 +223,19 @@ summary,
   background: color-mix(in srgb, var(--paper) 85%, var(--rule));
 }
 
+.pagefind-ui {
+  --pagefind-ui-scale: 0.8;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: color-mix(in srgb, var(--paper) 96%, var(--ink) 4%);
+  --pagefind-ui-border: var(--rule);
+  --pagefind-ui-tag: color-mix(in srgb, var(--paper) 86%, var(--rule));
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 0px;
+  --pagefind-ui-image-border-radius: 0px;
+  --pagefind-ui-font: "Geist Mono", monospace;
+}
+
 .pagefind-ui__search-input {
   width: 100%;
   border: 1px solid var(--rule);
@@ -202,15 +248,32 @@ summary,
   letter-spacing: 0.08em;
 }
 
+.pagefind-ui__search-input:focus,
+.pagefind-ui__search-input:focus-visible {
+  outline: none;
+  border-color: var(--rule);
+  box-shadow: none;
+}
+
 .pagefind-ui__search-input::placeholder {
-  color: var(--dim);
+  color: color-mix(in srgb, var(--ink) 46%, var(--paper));
+  opacity: 1;
+}
+
+.pagefind-ui__search-clear {
+  border-left: 1px solid var(--rule);
+  color: color-mix(in srgb, var(--ink) 58%, var(--paper));
+}
+
+.pagefind-ui__search-clear:hover {
+  color: var(--ink);
 }
 
 .pagefind-ui__message {
   margin-top: 0.6rem;
   font-family: "Geist Mono", monospace;
   font-size: 11px;
-  color: var(--dim);
+  color: color-mix(in srgb, var(--ink) 62%, var(--paper));
 }
 
 .pagefind-ui__results {
@@ -229,10 +292,27 @@ summary,
   line-height: 1.2;
 }
 
+.pagefind-ui__result-link:hover {
+  color: var(--accent);
+}
+
+.pagefind-ui__result-nested .pagefind-ui__result-link {
+  color: color-mix(in srgb, var(--ink) 74%, var(--paper));
+}
+
 .pagefind-ui__result-excerpt {
   margin-top: 0.35rem;
-  color: var(--dim);
+  color: color-mix(in srgb, var(--ink) 68%, var(--paper));
   font-size: 0.95rem;
+}
+
+.pagefind-ui__result-tag {
+  color: color-mix(in srgb, var(--ink) 76%, var(--paper));
+}
+
+.pagefind-ui mark {
+  background: color-mix(in srgb, var(--accent) 24%, var(--paper));
+  color: var(--ink);
 }
 
 .pagefind-ui__button {
@@ -244,6 +324,14 @@ summary,
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+}
+
+.pagefind-ui__button:hover,
+.pagefind-ui__button:focus-visible {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
 }
 
 .entry-collapsible {
@@ -436,6 +524,14 @@ summary,
 @media (max-width: 768px) {
   .archive-shell {
     padding: 64px 20px;
+  }
+
+  .archive-filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    padding-bottom: 0.3rem;
   }
 
   .entry-prose table {
